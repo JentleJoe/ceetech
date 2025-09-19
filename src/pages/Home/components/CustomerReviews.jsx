@@ -1,0 +1,132 @@
+import { Star, Quote } from "lucide-react"
+
+const CustomerReviews = () => {
+  const reviews = [
+    {
+      id: 1,
+      name: "Sarah Johnson",
+      location: "New York, NY",
+      rating: 5,
+      text: "Absolutely love my dining set from Ceetech! The craftsmanship is exceptional and it's become the centerpiece of our home. The wood quality is outstanding."
+    },
+    {
+      id: 2,
+      name: "Michael Chen",
+      location: "Los Angeles, CA",
+      rating: 5,
+      text: "The attention to detail in every piece is remarkable. Our living room has been completely transformed with Ceetech's furniture. Highly recommend!"
+    },
+    {
+      id: 3,
+      name: "Emily Rodriguez",
+      location: "Austin, TX",
+      rating: 5,
+      text: "From ordering to delivery, everything was seamless. The furniture exceeded my expectations and the customer service was exceptional throughout."
+    }
+  ]
+
+  const stats = [
+    { number: "200+", label: "Happy Customers" },
+    { number: "4.9/5", label: "Average Rating" },
+    { number: "98%", label: "Would Recommend" },
+    { number: "5-Year", label: "Warranty" }
+  ]
+
+  const renderStars = (rating) => {
+    return Array.from({ length: 5 }, (_, index) => (
+      <Star
+        key={index}
+        className={`w-4 h-4 ${
+          index < rating ? "fill-amber-400 text-amber-400" : "text-gray-300"
+        }`}
+      />
+    ))
+  }
+
+  return (
+    <section id="reviews" className="py-20 relative" style={{ background: 'linear-gradient(to bottom, #f5f1eb, #f8f4ee)' }}>
+      {/* Subtle pattern overlay for texture */}
+      <div className="absolute inset-0 opacity-20" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D2691E' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10 10-4.5 10-10 10-10-4.5-10-10 4.5-10 10-10 10 4.5 10 10z'/%3E%3C/g%3E%3C/svg%3E")`
+      }}></div>
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown mb-6 leading-tight">
+            What Our <span className="italic text-warm-brown">Customers</span> Say
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Discover why thousands of families trust Ceetech to bring warmth and beauty to their homes
+          </p>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-3xl md:text-4xl font-playfair text-warm-brown font-semibold mb-2">
+                {stat.number}
+              </div>
+              <div className="text-muted-foreground font-medium">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Reviews Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {reviews.map((review, index) => (
+            <div
+              key={review.id}
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in-up"
+              style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+            >
+              {/* Quote Icon */}
+              <div className="mb-6">
+                <Quote className="w-8 h-8 text-warm-brown opacity-60" />
+              </div>
+
+              {/* Review Text */}
+              <p className="text-muted-foreground leading-relaxed mb-6 italic">
+                "{review.text}"
+              </p>
+
+              {/* Rating */}
+              <div className="flex items-center mb-4">
+                {renderStars(review.rating)}
+              </div>
+
+              {/* Customer Info */}
+              <div>
+                <h4 className="font-semibold text-dark-brown">
+                  {review.name}
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  {review.location}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
+            <h3 className="text-2xl font-playfair text-dark-brown mb-4">
+              Join Our Community of Satisfied Customers
+            </h3>
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              Experience the Ceetech difference with furniture that tells your story
+            </p>
+            <button className="bg-warm-brown text-white px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-dark-brown transition-all duration-300 transform hover:scale-105">
+              Shop Collection
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default CustomerReviews

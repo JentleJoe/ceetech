@@ -1,0 +1,265 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Reset any potential spacing from Radix UI or other components */
+[data-radix-popper-content-wrapper] {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.tooltip, .toast, .sonner {
+  margin: 0 !important;
+}
+
+/* Fix Toaster component spacing */
+[data-lov-name="ToastViewport"] {
+  padding: 0 !important;
+  top: 0 !important;
+  margin: 0 !important;
+}
+
+/* Override Toaster styles that might add spacing */
+div[role="region"][aria-label*="Notifications"] {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+div[role="region"][aria-label*="Notifications"] ol {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 25 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 15% 15%;
+
+    --primary: 25 45% 35%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 28 25% 85%;
+    --secondary-foreground: 25 15% 25%;
+
+    --muted: 28 20% 95%;
+    --muted-foreground: 25 10% 45%;
+
+    --accent: 32 35% 75%;
+    --accent-foreground: 25 15% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 28 15% 90%;
+    --input: 28 15% 90%;
+    --ring: 25 45% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom furniture colors */
+    --warm-brown: 25 45% 35%;
+    --light-tan: 32 35% 75%;
+    --cream: 28 25% 92%;
+    --sage: 95 25% 45%;
+    --dark-brown: 20 35% 25%;
+    --soft-beige: 35 20% 88%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+    height: 100%;
+  }
+
+  #root {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .dark {
+    --background: 25 15% 8%;
+    --foreground: 28 25% 92%;
+    --card: 25 15% 10%;
+    --card-foreground: 28 25% 92%;
+    --popover: 25 15% 10%;
+    --popover-foreground: 28 25% 92%;
+    --primary: 32 35% 75%;
+    --primary-foreground: 25 15% 15%;
+    --secondary: 25 25% 15%;
+    --secondary-foreground: 28 25% 85%;
+    --muted: 25 20% 12%;
+    --muted-foreground: 28 15% 60%;
+    --accent: 25 25% 18%;
+    --accent-foreground: 28 25% 85%;
+    --border: 25 20% 18%;
+    --input: 25 20% 18%;
+    --ring: 32 35% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-warm-brown {
+    background-color: hsl(var(--warm-brown));
+  }
+  .bg-light-tan {
+    background-color: hsl(var(--light-tan));
+  }
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+  .bg-sage {
+    background-color: hsl(var(--sage));
+  }
+  .bg-dark-brown {
+    background-color: hsl(var(--dark-brown));
+  }
+  .bg-soft-beige {
+    background-color: hsl(var(--soft-beige));
+  }
+  
+  .text-warm-brown {
+    color: hsl(var(--warm-brown));
+  }
+  .text-light-tan {
+    color: hsl(var(--light-tan));
+  }
+  .text-cream {
+    color: hsl(var(--cream));
+  }
+  .text-sage {
+    color: hsl(var(--sage));
+  }
+  .text-dark-brown {
+    color: hsl(var(--dark-brown));
+  }
+  .text-soft-beige {
+    color: hsl(var(--soft-beige));
+  }
+
+  /* Animations */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out forwards;
+    opacity: 0;
+  }
+}
