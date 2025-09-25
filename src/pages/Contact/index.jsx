@@ -37,10 +37,10 @@ const Contact = () => {
   ]
 
   const socialMediaLinks = [
-    { icon: Facebook, name: 'Facebook', url: socialMedia.facebook, color: 'hover:text-blue-600' },
-    { icon: Instagram, name: 'Instagram', url: socialMedia.instagram, color: 'hover:text-pink-600' },
-    { icon: Twitter, name: 'Twitter', url: socialMedia.twitter, color: 'hover:text-blue-400' },
-    { icon: Youtube, name: 'YouTube', url: socialMedia.youtube, color: 'hover:text-red-600' }
+    { icon: Facebook, name: 'Facebook', url: 'https://facebook.com/ceetechfurniture', color: 'hover:text-blue-600' },
+    { icon: Instagram, name: 'Instagram', url: 'https://instagram.com/ceetechfurniture', color: 'hover:text-pink-600' },
+    { icon: Twitter, name: 'Twitter', url: 'https://twitter.com/ceetechfurniture', color: 'hover:text-blue-400' },
+    { icon: Youtube, name: 'YouTube', url: 'https://youtube.com/ceetechfurniture', color: 'hover:text-red-600' }
   ]
 
   return (
