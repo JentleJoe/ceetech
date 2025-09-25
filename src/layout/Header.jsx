@@ -12,10 +12,11 @@ const Header = () => {
   const needsSolidBackground = location.pathname !== '/'
 
   const navigation = [
-    { name: 'Collection', href: '#collection', type: 'scroll' },
-    { name: 'About', href: '#about', type: 'scroll' },
-    { name: 'Products', href: '#products', type: 'scroll' },
-    { name: 'Reviews', href: '#reviews', type: 'scroll' },
+    { name: 'Home', href: '/', type: 'route' },
+    { name: 'About Us', href: '/about', type: 'route' },
+    { name: 'Furniture', href: '/furniture', type: 'route' },
+    { name: 'Interiors', href: '/interiors', type: 'route' },
+    { name: 'Academy', href: '/academy', type: 'route' },
     { name: 'Contact', href: '/contact', type: 'route' }
   ]
 
