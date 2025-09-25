@@ -1,103 +1,216 @@
 import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
-import { Home, Briefcase, Store, Users, Palette, Lightbulb } from 'lucide-react'
+import { 
+  ArrowRight, CheckCircle, Users, Eye, Wrench, Truck, 
+  Paintbrush, Brush, Palette, Layers, Grid, Square, 
+  Blinds, Sun, Lightbulb, Wind, Sparkles, Home
+} from 'lucide-react'
 
 const Interiors = () => {
-  const interiorServices = [
+  const interiorCategories = [
     {
-      icon: Home,
-      title: "Residential Interiors",
-      description: "Transform your home with our comprehensive residential interior design services",
+      title: "POP & Painting",
+      description: "Professional plaster of paris work and premium painting services to transform your walls and ceilings",
+      icon: "🎨",
+      mainIcon: Paintbrush,
       services: [
-        "Living Room Design",
-        "Bedroom Makeovers",
-        "Kitchen Interiors",
-        "Bathroom Design",
-        "Dining Room Setup",
-        "Home Office Design"
+        {
+          name: "POP (Plaster of Paris) Work",
+          items: [
+            "False Ceiling Design & Installation",
+            "Decorative Wall Panels",
+            "Cornices & Moldings",
+            "Archways & Columns",
+            "3D Wall Textures",
+            "Custom POP Designs"
+          ]
+        },
+        {
+          name: "Professional Painting Services",
+          items: [
+            "Interior Wall Painting",
+            "Exterior Building Painting",
+            "Texture & Designer Paints",
+            "Emulsion & Distemper",
+            "Wood & Metal Painting",
+            "Wall Paper Installation"
+          ]
+        }
       ],
-      features: ["Space Planning", "Color Consultation", "Furniture Selection", "Lighting Design"]
+      benefits: [
+        "Dust-free & clean work environment",
+        "Premium quality paints & materials",
+        "Expert color consultation",
+        "Long-lasting finish guarantee",
+        "Professional surface preparation",
+        "Timely project completion"
+      ]
     },
     {
-      icon: Briefcase,
-      title: "Commercial Interiors",
-      description: "Create professional and productive work environments with our commercial design expertise",
+      title: "Tiling & Stampede Floor",
+      description: "Expert tiling and modern stampede flooring solutions for durable and beautiful surfaces",
+      icon: "🏗️",
+      mainIcon: Grid,
       services: [
-        "Office Design",
-        "Reception Areas",
-        "Conference Rooms",
-        "Co-working Spaces",
-        "Executive Offices",
-        "Break Room Design"
+        {
+          name: "Professional Tiling Services",
+          items: [
+            "Floor Tile Installation",
+            "Wall Tile Installation",
+            "Bathroom & Kitchen Tiling",
+            "Mosaic & Designer Tiles",
+            "Marble & Granite Tiling",
+            "Outdoor & Patio Tiling"
+          ]
+        },
+        {
+          name: "Stampede Flooring Solutions",
+          items: [
+            "Residential Stampede Floors",
+            "Commercial Stampede Surfaces",
+            "Decorative Concrete Floors",
+            "Polished Concrete Finishes",
+            "Industrial Floor Coatings",
+            "Floor Repairs & Maintenance"
+          ]
+        }
       ],
-      features: ["Ergonomic Solutions", "Brand Integration", "Workflow Optimization", "Modern Aesthetics"]
+      benefits: [
+        "Water-resistant & durable materials",
+        "Professional installation techniques",
+        "Wide range of designs & patterns",
+        "Easy maintenance solutions",
+        "Cost-effective flooring options",
+        "Expert surface preparation"
+      ]
     },
     {
-      icon: Store,
-      title: "Retail Interiors",
-      description: "Design retail spaces that enhance customer experience and drive sales",
+      title: "Curtain, Window Blind & Lightning",
+      description: "Complete window treatment and lighting solutions to enhance comfort and ambiance in your space",
+      icon: "💡",
+      mainIcon: Blinds,
       services: [
-        "Store Layout Design",
-        "Display Solutions",
-        "Checkout Areas",
-        "Storage Spaces",
-        "Window Displays",
-        "Branding Integration"
+        {
+          name: "Window Treatments",
+          items: [
+            "Custom Curtains & Drapes",
+            "Vertical & Horizontal Blinds",
+            "Roman & Roller Blinds",
+            "Motorized Window Blinds",
+            "Outdoor Awnings & Shades",
+            "Commercial Window Solutions"
+          ]
+        },
+        {
+          name: "Lighting Solutions",
+          items: [
+            "LED Lighting Installation",
+            "Decorative Light Fixtures",
+            "Recessed & Track Lighting",
+            "Chandelier Installation",
+            "Smart Lighting Systems",
+            "Emergency & Security Lighting"
+          ]
+        }
       ],
-      features: ["Customer Flow", "Visual Merchandising", "Brand Consistency", "Sales Optimization"]
+      benefits: [
+        "Energy-efficient lighting solutions",
+        "Custom window measurements",
+        "Professional installation service",
+        "Remote control & automation options",
+        "UV protection & privacy control",
+        "Maintenance & repair services"
+      ]
     }
   ]
 
-  const designProcess = [
+  const workProcess = [
     {
-      step: "1",
-      title: "Consultation",
-      description: "We start with an in-depth consultation to understand your vision, needs, and budget",
-      icon: Users
+      step: 1,
+      title: "Site Consultation",
+      description: "Free consultation to assess your space, understand requirements, and provide expert recommendations",
+      icon: Users,
+      details: ["Space assessment", "Requirement analysis", "Budget discussion", "Timeline planning"]
     },
     {
-      step: "2", 
-      title: "Space Analysis",
-      description: "Our team conducts a thorough analysis of your space, taking measurements and photos",
-      icon: Home
+      step: 2,
+      title: "Design & Planning",
+      description: "Detailed planning with material selection, color schemes, and comprehensive project timeline",
+      icon: Eye,
+      details: ["Material selection", "Color consultation", "Design visualization", "Project scheduling"]
     },
     {
-      step: "3",
-      title: "Design Development",
-      description: "We create detailed design concepts with 3D renderings and material specifications",
-      icon: Palette
+      step: 3,
+      title: "Professional Execution",
+      description: "Expert installation and execution by our skilled craftsmen using premium materials",
+      icon: Wrench,
+      details: ["Quality materials", "Skilled workmanship", "Progress monitoring", "Quality control"]
     },
     {
-      step: "4",
-      title: "Implementation",
-      description: "Our expert team brings your design to life with professional installation and styling",
-      icon: Lightbulb
+      step: 4,
+      title: "Final Inspection",
+      description: "Thorough quality check and client walkthrough to ensure complete satisfaction",
+      icon: CheckCircle,
+      details: ["Quality inspection", "Client walkthrough", "Touch-up services", "Completion certificate"]
+    }
+  ]
+
+  const whyChooseUs = [
+    {
+      title: "Expert Craftsmanship",
+      description: "Skilled professionals with years of experience in interior finishing",
+      icon: "👨‍🔧"
+    },
+    {
+      title: "Quality Materials",
+      description: "We use only premium brands and high-quality materials for lasting results",
+      icon: "⭐"
+    },
+    {
+      title: "Timely Completion",
+      description: "Projects completed on schedule with minimal disruption to your daily routine",
+      icon: "⏰"
+    },
+    {
+      title: "Competitive Pricing",
+      description: "Fair and transparent pricing with detailed quotations and no hidden costs",
+      icon: "💰"
+    },
+    {
+      title: "After-Sales Support",
+      description: "Comprehensive warranty and ongoing maintenance support for all our work",
+      icon: "🛠️"
+    },
+    {
+      title: "Clean Work Environment",
+      description: "Dust-free and organized work practices to maintain cleanliness during projects",
+      icon: "✨"
     }
   ]
 
   const portfolioProjects = [
     {
-      title: "Modern Executive Office",
-      category: "Commercial",
-      description: "A sleek and professional workspace designed for productivity and client meetings",
+      title: "Luxury Living Room Makeover",
+      category: "POP & Painting",
+      description: "Complete ceiling design with decorative POP work and premium paint finish",
       image: "/placeholder.svg"
     },
     {
-      title: "Luxury Family Home",
-      category: "Residential",
-      description: "Elegant family living spaces that balance comfort with sophisticated design",
+      title: "Modern Kitchen Tiling",
+      category: "Tiling & Flooring",
+      description: "Beautiful ceramic tile installation with waterproof grouting",
       image: "/placeholder.svg"
     },
     {
-      title: "Boutique Retail Store",
-      category: "Retail",
-      description: "An inviting retail environment designed to enhance the shopping experience",
+      title: "Office Lighting & Blinds",
+      category: "Lighting & Blinds",
+      description: "Professional LED lighting with motorized window blinds installation",
       image: "/placeholder.svg"
     },
     {
-      title: "Contemporary Living Room",
-      category: "Residential",
-      description: "A stylish living space combining modern aesthetics with cozy comfort",
+      title: "Residential Stampede Flooring",
+      category: "Tiling & Flooring",
+      description: "Durable and decorative stampede flooring for modern home",
       image: "/placeholder.svg"
     }
   ]
@@ -107,132 +220,217 @@ const Interiors = () => {
       <Header />
       
       {/* Hero Section */}
-      <div className="pt-24 pb-16 bg-cream">
+      <section className="pt-32 pb-16 bg-cream relative">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-6">
-              Interior <span className="text-warm-brown">Design</span>
+            <h1 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-6 leading-tight">
+              Professional <span className="text-warm-brown italic">Interior</span> Solutions
             </h1>
-            <p className="text-xl text-dark-brown/80 leading-relaxed mb-8">
-              Transform your spaces with our expert interior design services that blend functionality with aesthetic excellence
+            <p className="text-xl text-dark-brown/80 leading-relaxed mb-8 max-w-3xl mx-auto">
+              Transform your spaces with our comprehensive interior services including POP & Painting, Tiling & Flooring, and Window Treatments & Lighting solutions.
             </p>
-            <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200 mr-4">
-              Start Your Project
-            </button>
-            <button className="border-2 border-warm-brown text-warm-brown px-8 py-3 rounded-lg text-lg font-semibold hover:bg-warm-brown hover:text-cream transition-colors duration-200">
-              View Portfolio
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Interior Services */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown text-center mb-12">
-              Our Interior Design Services
-            </h2>
-            <div className="space-y-12">
-              {interiorServices.map((service, index) => (
-                <div key={index} className="bg-soft-beige rounded-lg p-8">
-                  <div className="grid lg:grid-cols-3 gap-8">
-                    <div className="text-center lg:text-left">
-                      <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-4">
-                        <service.icon className="w-8 h-8 text-warm-brown" />
-                      </div>
-                      <h3 className="text-2xl font-playfair text-dark-brown mb-4">{service.title}</h3>
-                      <p className="text-dark-brown/80 mb-6">{service.description}</p>
-                      <div className="space-y-2">
-                        <h4 className="font-semibold text-dark-brown mb-2">Key Features:</h4>
-                        {service.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center text-sm text-dark-brown/70">
-                            <span className="w-2 h-2 bg-warm-brown rounded-full mr-2"></span>
-                            {feature}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="lg:col-span-2">
-                      <h4 className="font-semibold text-dark-brown mb-4">Services Include:</h4>
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        {service.services.map((item, itemIndex) => (
-                          <div key={itemIndex} className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                            <div className="flex items-center">
-                              <span className="w-3 h-3 bg-warm-brown rounded-full mr-3"></span>
-                              <span className="font-medium text-dark-brown">{item}</span>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Design Process */}
-      <section className="py-16 bg-soft-beige">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown text-center mb-12">
-              Our Design Process
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {designProcess.map((process, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-warm-brown text-cream w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                    {process.step}
-                  </div>
-                  <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <process.icon className="w-8 h-8 text-warm-brown" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-dark-brown mb-3">{process.title}</h3>
-                  <p className="text-dark-brown/80">{process.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Preview */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown text-center mb-12">
-              Recent Projects
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {portfolioProjects.map((project, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-warm-brown text-cream px-3 py-1 rounded-full text-xs font-medium">
-                        {project.category}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-semibold text-dark-brown mb-2">{project.title}</h3>
-                    <p className="text-dark-brown/80 text-sm">{project.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-12">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200">
-                View Full Portfolio
+                Free Consultation
+              </button>
+              <button className="border-2 border-warm-brown text-warm-brown px-8 py-3 rounded-lg text-lg font-semibold hover:bg-warm-brown hover:text-cream transition-colors duration-200">
+                View Our Work
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories Overview */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
+              Our Interior Services
+            </h2>
+            <p className="text-lg text-dark-brown/70 max-w-3xl mx-auto">
+              We specialize in three core areas of interior finishing, each designed to enhance the beauty, functionality, and comfort of your spaces.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {interiorCategories.map((category, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-light-tan w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <category.mainIcon className="w-10 h-10 text-warm-brown" />
+                </div>
+                <h3 className="text-2xl font-playfair text-dark-brown mb-4">{category.title}</h3>
+                <p className="text-dark-brown/70 mb-6">{category.description}</p>
+                <button className="text-warm-brown hover:text-dark-brown font-medium flex items-center mx-auto">
+                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Detailed Service Sections */}
+      {interiorCategories.map((category, categoryIndex) => (
+        <section key={categoryIndex} className={`py-16 ${categoryIndex % 2 === 0 ? 'bg-soft-beige' : 'bg-white'}`}>
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="text-5xl mb-4">{category.icon}</div>
+                <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
+                  {category.title}
+                </h2>
+                <p className="text-lg text-dark-brown/70 max-w-3xl mx-auto">
+                  {category.description}
+                </p>
+              </div>
+              
+              <div className="grid lg:grid-cols-3 gap-12">
+                {/* Services */}
+                <div className="lg:col-span-2">
+                  <div className="space-y-8">
+                    {category.services.map((service, serviceIndex) => (
+                      <div key={serviceIndex} className="bg-white rounded-lg p-6 shadow-lg">
+                        <h3 className="text-xl font-playfair text-dark-brown mb-4">{service.name}</h3>
+                        <div className="grid sm:grid-cols-2 gap-3">
+                          {service.items.map((item, itemIndex) => (
+                            <div key={itemIndex} className="flex items-start">
+                              <CheckCircle className="w-4 h-4 text-warm-brown mr-2 mt-1 flex-shrink-0" />
+                              <span className="text-dark-brown/80 text-sm">{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Benefits */}
+                <div>
+                  <div className="bg-light-tan rounded-lg p-6">
+                    <h3 className="text-xl font-playfair text-dark-brown mb-6">Why Choose Our Services?</h3>
+                    <div className="space-y-4">
+                      {category.benefits.map((benefit, benefitIndex) => (
+                        <div key={benefitIndex} className="flex items-start">
+                          <Sparkles className="w-4 h-4 text-warm-brown mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-dark-brown/80 text-sm">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
+
+      {/* Work Process Section */}
+      <section className="py-16 bg-soft-beige">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
+              Our Work Process
+            </h2>
+            <p className="text-lg text-dark-brown/70 max-w-3xl mx-auto">
+              From initial consultation to final inspection, we ensure a seamless experience with our proven 4-step process.
+            </p>
+          </div>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {workProcess.map((process, index) => (
+                <div key={index} className="text-center">
+                  <div className="relative mb-6">
+                    <div className="bg-warm-brown text-cream w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                      {process.step}
+                    </div>
+                    <div className="bg-white p-4 rounded-lg shadow-md mb-4">
+                      <process.icon className="w-8 h-8 text-warm-brown mx-auto" />
+                    </div>
+                    {index < workProcess.length - 1 && (
+                      <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-warm-brown/30 transform -translate-y-1/2"></div>
+                    )}
+                  </div>
+                  <h3 className="text-lg font-playfair text-dark-brown mb-3">{process.title}</h3>
+                  <p className="text-sm text-dark-brown/70 mb-4">{process.description}</p>
+                  <div className="space-y-1">
+                    {process.details.map((detail, detailIndex) => (
+                      <div key={detailIndex} className="text-xs text-dark-brown/60">
+                        • {detail}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
+              Why Choose Ceetech Interiors?
+            </h2>
+            <p className="text-lg text-dark-brown/70 max-w-2xl mx-auto">
+              We combine expertise, quality materials, and professional service to deliver exceptional interior solutions.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {whyChooseUs.map((feature, index) => (
+              <div key={index} className="text-center bg-soft-beige p-6 rounded-lg">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-lg font-playfair text-dark-brown mb-3">{feature.title}</h3>
+                <p className="text-sm text-dark-brown/70">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Preview Section */}
+      <section className="py-16 bg-light-tan">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
+              Recent Interior Projects
+            </h2>
+            <p className="text-lg text-dark-brown/70 max-w-2xl mx-auto">
+              Take a look at some of our recent interior projects showcasing our expertise across all service categories.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {portfolioProjects.map((project, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-warm-brown text-cream px-3 py-1 rounded-full text-xs font-medium">
+                      {project.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-dark-brown mb-2">{project.title}</h3>
+                  <p className="text-dark-brown/80 text-sm">{project.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200">
+              View Complete Portfolio
+            </button>
           </div>
         </div>
       </section>
@@ -242,40 +440,40 @@ const Interiors = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-playfair text-cream mb-6">
-              Ready to Transform Your Space?
+              Ready to Transform Your Interior?
             </h2>
             <p className="text-xl text-cream/90 mb-8">
-              Let our expert interior designers bring your vision to life with our comprehensive design services
+              Get professional interior solutions that combine quality craftsmanship with modern aesthetics. Contact us today for a free consultation and detailed quote.
             </p>
             <div className="grid sm:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
-                <div className="bg-cream bg-opacity-30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="bg-cream bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">📞</span>
                 </div>
-                <h3 className="text-lg font-semibold text-cream mb-2">Free Consultation</h3>
-                <p className="text-cream/80 text-sm">Book your complimentary design consultation</p>
+                <h3 className="text-lg font-semibold text-cream mb-2">Free Site Visit</h3>
+                <p className="text-cream/80 text-sm">Complimentary consultation and assessment</p>
               </div>
               <div className="text-center">
-                <div className="bg-cream bg-opacity-30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-2xl">📐</span>
+                <div className="bg-cream bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-2xl">�</span>
                 </div>
-                <h3 className="text-lg font-semibold text-cream mb-2">3D Visualization</h3>
-                <p className="text-cream/80 text-sm">See your space before we begin work</p>
+                <h3 className="text-lg font-semibold text-cream mb-2">Detailed Quote</h3>
+                <p className="text-cream/80 text-sm">Transparent pricing with no hidden costs</p>
               </div>
               <div className="text-center">
-                <div className="bg-cream bg-opacity-30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-2xl">🚀</span>
+                <div className="bg-cream bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-2xl">🎯</span>
                 </div>
-                <h3 className="text-lg font-semibold text-cream mb-2">Full Service</h3>
-                <p className="text-cream/80 text-sm">From concept to completion, we handle everything</p>
+                <h3 className="text-lg font-semibold text-cream mb-2">Quality Guarantee</h3>
+                <p className="text-cream/80 text-sm">Premium materials with warranty coverage</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-cream text-warm-brown px-8 py-3 rounded-lg text-lg font-semibold hover:bg-soft-beige transition-colors duration-200">
-                Schedule Consultation
+                Schedule Free Consultation
               </button>
               <button className="border-2 border-cream text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-cream hover:text-warm-brown transition-colors duration-200">
-                Get Quote
+                Get Instant Quote
               </button>
             </div>
           </div>
