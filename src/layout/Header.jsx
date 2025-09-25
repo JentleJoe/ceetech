@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import { Menu, X, Search, ShoppingBag, User } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,6 +12,14 @@ const Header = () => {
   const needsSolidBackground = location.pathname !== '/'
 
   const navigation = [
+    { name: 'Home', href: '/', type: 'route' },
+    { name: 'About Us', href: '/about', type: 'route' },
+    { name: 'Furniture', href: '/furniture', type: 'route' },
+    { name: 'Interiors', href: '/interiors', type: 'route' },
+    { name: 'Academy', href: '/academy', type: 'route' }
+  ]
+
+  const mobileNavigation = [
     { name: 'Home', href: '/', type: 'route' },
     { name: 'About Us', href: '/about', type: 'route' },
     { name: 'Furniture', href: '/furniture', type: 'route' },
@@ -66,15 +74,25 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Right side icons */}
-          <div className="flex items-center space-x-4">
-            <Search className={`w-5 h-5 cursor-pointer transition-colors duration-300 ${needsSolidBackground ? 'text-dark-brown hover:text-warm-brown' : 'text-white hover:text-light-tan'}`} />
-            <User className={`w-5 h-5 cursor-pointer transition-colors duration-300 ${needsSolidBackground ? 'text-dark-brown hover:text-warm-brown' : 'text-white hover:text-light-tan'}`} />
-            <ShoppingBag className={`w-5 h-5 cursor-pointer transition-colors duration-300 ${needsSolidBackground ? 'text-dark-brown hover:text-warm-brown' : 'text-white hover:text-light-tan'}`} />
+          {/* Right side - Contact Us button for desktop, hamburger for mobile */}
+          <div className="flex items-center">
+            {/* Contact Us button - Desktop only */}
+            <Link
+              to="/contact"
+              className={`hidden lg:block px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                needsSolidBackground 
+                  ? 'bg-warm-brown text-cream hover:bg-dark-brown' 
+                  : 'bg-warm-brown text-cream hover:bg-light-tan hover:text-dark-brown'
+              }`}
+            >
+              Contact Us
+            </Link>
             
             {/* Mobile menu button */}
             <button
-              className={`lg:hidden ${needsSolidBackground ? 'text-dark-brown' : 'text-white'}`}
+              className={`lg:hidden ml-4 ${
+                needsSolidBackground ? 'text-dark-brown' : 'text-white'
+              }`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -86,15 +104,34 @@ const Header = () => {
         {isMenuOpen && (
           <div className={`lg:hidden mt-6 py-4 backdrop-blur-sm rounded-lg animate-fade-in ${needsSolidBackground ? 'bg-white shadow-lg border' : 'bg-black/80'}`}>
             <div className="flex flex-col space-y-4 px-6">
-              {navigation.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => handleNavigation(item)}
-                  className={`transition-colors duration-300 text-sm font-medium tracking-wide text-left ${needsSolidBackground ? 'text-dark-brown hover:text-warm-brown' : 'text-white hover:text-light-tan'}`}
-                >
-                  {item.name}
-                </button>
-              ))}
+              {mobileNavigation.map((item) => {
+                // Render Contact as a button, others as regular nav items
+                if (item.name === 'Contact') {
+                  return (
+                    <button
+                      key={item.name}
+                      onClick={() => handleNavigation(item)}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 text-center ${
+                        needsSolidBackground 
+                          ? 'bg-warm-brown text-cream hover:bg-dark-brown' 
+                          : 'bg-warm-brown text-cream hover:bg-light-tan hover:text-dark-brown'
+                      }`}
+                    >
+                      {item.name} Us
+                    </button>
+                  )
+                }
+                
+                return (
+                  <button
+                    key={item.name}
+                    onClick={() => handleNavigation(item)}
+                    className={`transition-colors duration-300 text-sm font-medium tracking-wide text-left ${needsSolidBackground ? 'text-dark-brown hover:text-warm-brown' : 'text-white hover:text-light-tan'}`}
+                  >
+                    {item.name}
+                  </button>
+                )
+              })}
             </div>
           </div>
         )}
