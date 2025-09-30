@@ -48,12 +48,17 @@ const Contact = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-cream text-dark-brown relative">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-playfair mb-6 leading-tight text-dark-brown">
-            Get in <span className="italic text-warm-brown">Touch</span>
+      <section 
+        className="pt-32 pb-16 relative min-h-[55vh] flex items-center bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
+        }}
+      >
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-playfair mb-6 leading-tight text-white drop-shadow-lg">
+            Get in <span className="italic text-light-tan">Touch</span>
           </h1>
-          <p className="text-xl text-dark-brown/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
             Ready to transform your space? We'd love to hear from you. Reach out and let's create something beautiful together.
           </p>
         </div>

@@ -205,20 +205,25 @@ const Furniture = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-cream relative">
-        <div className="container mx-auto px-4">
+      <section 
+        className="pt-32 pb-16 relative min-h-[65vh] flex items-center bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
+        }}
+      >
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-6 leading-tight">
-              Ceetech Crafts <span className="text-warm-brown italic">Furniture</span> Solutions
+            <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 leading-tight drop-shadow-lg">
+              Ceetech Crafts <span className="text-light-tan italic">Furniture</span> Solutions
             </h1>
-            <p className="text-xl text-dark-brown/80 leading-relaxed mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto drop-shadow-md">
               From custom kitchen cabinets to complete office fit-outs, we create exceptional furniture that combines functionality, style, and durability to transform your spaces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200">
+              <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200 shadow-lg hover:shadow-xl">
                 View Portfolio
               </button>
-              <button className="border-2 border-warm-brown text-warm-brown px-8 py-3 rounded-lg text-lg font-semibold hover:bg-warm-brown hover:text-cream transition-colors duration-200">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-dark-brown transition-colors duration-200 shadow-lg">
                 Free Consultation
               </button>
             </div>

@@ -7,13 +7,18 @@ const About = () => {
       <Header />
       
       {/* Hero Section */}
-      <div className="pt-24 pb-16 bg-cream">
-        <div className="container mx-auto px-4">
+      <div 
+        className="pt-24 pb-16 relative min-h-[60vh] flex items-center bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
+        }}
+      >
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-6">
-              About <span className="text-warm-brown">Ceetech Crafts</span>
+            <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 drop-shadow-lg">
+              About <span className="text-light-tan">Ceetech Crafts</span>
             </h1>
-            <p className="text-xl text-dark-brown/80 leading-relaxed">
+            <p className="text-xl text-white/90 leading-relaxed drop-shadow-md">
               Transforming spaces with exceptional furniture and interior design solutions
             </p>
           </div>

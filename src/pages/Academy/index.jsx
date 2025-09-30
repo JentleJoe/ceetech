@@ -62,16 +62,21 @@ const Academy = () => {
       <Header />
       
       {/* Hero Section */}
-      <div className="pt-24 pb-16 bg-cream">
-        <div className="container mx-auto px-4">
+      <div 
+        className="pt-24 pb-16 relative min-h-[60vh] flex items-center bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
+        }}
+      >
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-6">
-              Ceetech Crafts <span className="text-warm-brown">Academy</span>
+            <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 drop-shadow-lg">
+              Ceetech Crafts <span className="text-light-tan">Academy</span>
             </h1>
-            <p className="text-xl text-dark-brown/80 leading-relaxed mb-8">
+            <p className="text-xl text-white/90 leading-relaxed mb-8 drop-shadow-md">
               Master the art of furniture design and interior decoration with our comprehensive training programs
             </p>
-            <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200">
+            <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200 shadow-lg hover:shadow-xl">
               Enroll Today
             </button>
           </div>

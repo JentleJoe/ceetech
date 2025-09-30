@@ -6,6 +6,73 @@ import {
   Blinds, Sun, Lightbulb, Wind, Sparkles, Home
 } from 'lucide-react'
 
+// Add custom animations
+const customStyles = `
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounce-gentle {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-5px);
+    }
+    60% {
+      transform: translateY(-3px);
+    }
+  }
+  
+  @keyframes pulse-gentle {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounce-gentle 2s infinite;
+  }
+  
+  .animate-pulse-gentle {
+    animation: pulse-gentle 2s infinite;
+  }
+`
+
 const Interiors = () => {
   const interiorCategories = [
     {
@@ -220,23 +287,93 @@ const Interiors = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <style>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        
+        @keyframes bounce-gentle {
+          0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+          }
+          40% {
+            transform: translateY(-5px);
+          }
+          60% {
+            transform: translateY(-3px);
+          }
+        }
+        
+        @keyframes pulse-gentle {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+        }
+        
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out;
+        }
+        
+        .animate-bounce-gentle {
+          animation: bounce-gentle 2s infinite;
+        }
+        
+        .animate-pulse-gentle {
+          animation: pulse-gentle 2s infinite;
+        }
+      `}</style>
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-cream relative">
-        <div className="container mx-auto px-4">
+      <section 
+        className="pt-32 pb-16 relative min-h-[65vh] flex items-center bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
+        }}
+      >
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-6 leading-tight">
-              Professional <span className="text-warm-brown italic">Interior</span> Solutions
+            <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 leading-tight drop-shadow-lg">
+              Professional <span className="text-light-tan italic">Interior</span> Solutions
             </h1>
-            <p className="text-xl text-dark-brown/80 leading-relaxed mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto drop-shadow-md">
               Transform your spaces with our comprehensive interior services including POP & Painting, Tiling & Flooring, and Window Treatments & Lighting solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200">
+              <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200 shadow-lg hover:shadow-xl">
                 Free Consultation
               </button>
-              <button className="border-2 border-warm-brown text-warm-brown px-8 py-3 rounded-lg text-lg font-semibold hover:bg-warm-brown hover:text-cream transition-colors duration-200">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-dark-brown transition-colors duration-200 shadow-lg">
                 View Our Work
               </button>
             </div>
@@ -258,12 +395,15 @@ const Interiors = () => {
           
           <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {interiorCategories.map((category, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-light-tan w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <category.mainIcon className="w-10 h-10 text-warm-brown" />
+              <div 
+                key={index} 
+                className="text-center group hover:transform hover:scale-105 transition-all duration-300 cursor-pointer p-6 rounded-xl hover:bg-light-tan/20"
+              >
+                <div className="bg-light-tan w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-warm-brown group-hover:scale-110 transition-all duration-300">
+                  <category.mainIcon className="w-10 h-10 text-warm-brown group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="text-2xl font-playfair text-dark-brown mb-4">{category.title}</h3>
-                <p className="text-dark-brown/70 mb-6">{category.description}</p>
+                <h3 className="text-2xl font-playfair text-dark-brown mb-4 group-hover:text-warm-brown transition-colors duration-300">{category.title}</h3>
+                <p className="text-dark-brown/70 mb-6 group-hover:text-dark-brown transition-colors duration-300">{category.description}</p>
                 <button 
                   onClick={() => {
                     const sectionId = category.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/--+/g, '-').replace(/^-|-$/g, '');
@@ -293,16 +433,16 @@ const Interiors = () => {
             <div className="max-w-7xl mx-auto">
               {/* Hero Image Section */}
               <div className="mb-12">
-                <div className="relative h-64 md:h-96 lg:h-[28rem] rounded-xl overflow-hidden mb-8">
+                <div className="relative h-64 md:h-96 lg:h-[28rem] rounded-xl overflow-hidden mb-8 group cursor-pointer">
                   <img 
                     src={category.image} 
                     alt={`${category.title} services`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 animate-fade-in"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <div className="text-4xl mb-2">{category.icon}</div>
-                    <h2 className="text-2xl md:text-3xl font-playfair font-bold mb-2">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/70 group-hover:via-black/30 transition-all duration-500"></div>
+                  <div className="absolute bottom-6 left-6 text-white transform transition-all duration-500 group-hover:translate-y-[-8px]">
+                    <div className="text-4xl mb-2 animate-bounce-gentle">{category.icon}</div>
+                    <h2 className="text-2xl md:text-3xl font-playfair font-bold mb-2 group-hover:text-light-tan transition-colors duration-300">
                       {category.title}
                     </h2>
                   </div>
@@ -319,13 +459,23 @@ const Interiors = () => {
                 <div className="lg:col-span-2">
                   <div className="space-y-8">
                     {category.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="bg-white rounded-lg p-6 shadow-lg">
-                        <h3 className="text-xl font-playfair text-dark-brown mb-4">{service.name}</h3>
+                      <div 
+                        key={serviceIndex} 
+                        className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl hover:transform hover:scale-105 transition-all duration-300 border border-transparent hover:border-warm-brown/20 group"
+                        style={{
+                          animationDelay: `${serviceIndex * 0.2}s`,
+                          animation: 'slideInLeft 0.6s ease-out forwards'
+                        }}
+                      >
+                        <h3 className="text-xl font-playfair text-dark-brown mb-4 group-hover:text-warm-brown transition-colors duration-300">{service.name}</h3>
                         <div className="grid sm:grid-cols-2 gap-3">
                           {service.items.map((item, itemIndex) => (
-                            <div key={itemIndex} className="flex items-start">
-                              <CheckCircle className="w-4 h-4 text-warm-brown mr-2 mt-1 flex-shrink-0" />
-                              <span className="text-dark-brown/80 text-sm">{item}</span>
+                            <div 
+                              key={itemIndex} 
+                              className="flex items-start hover:bg-light-tan/30 rounded p-2 transition-all duration-200 hover:transform hover:translate-x-2"
+                            >
+                              <CheckCircle className="w-4 h-4 text-warm-brown mr-2 mt-1 flex-shrink-0 hover:scale-110 transition-transform duration-200" />
+                              <span className="text-dark-brown/80 text-base hover:text-dark-brown transition-colors duration-200">{item}</span>
                             </div>
                           ))}
                         </div>
@@ -342,7 +492,7 @@ const Interiors = () => {
                       {category.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-start">
                           <Sparkles className="w-4 h-4 text-warm-brown mr-2 mt-1 flex-shrink-0" />
-                          <span className="text-dark-brown/80 text-sm">{benefit}</span>
+                          <span className="text-dark-brown/80 text-base">{benefit}</span>
                         </div>
                       ))}
                     </div>
@@ -369,23 +519,30 @@ const Interiors = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {workProcess.map((process, index) => (
-                <div key={index} className="text-center">
+                <div 
+                  key={index} 
+                  className="text-center group hover:transform hover:scale-105 transition-all duration-300"
+                  style={{
+                    animationDelay: `${index * 0.15}s`,
+                    animation: 'fadeInUp 0.6s ease-out forwards'
+                  }}
+                >
                   <div className="relative mb-6">
-                    <div className="bg-warm-brown text-cream w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                    <div className="bg-warm-brown text-cream w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold group-hover:bg-dark-brown group-hover:scale-110 transition-all duration-300 animate-pulse-gentle">
                       {process.step}
                     </div>
-                    <div className="bg-white p-4 rounded-lg shadow-md mb-4">
-                      <process.icon className="w-8 h-8 text-warm-brown mx-auto" />
+                    <div className="bg-white p-4 rounded-lg shadow-md mb-4 group-hover:shadow-xl group-hover:bg-light-tan/20 transition-all duration-300">
+                      <process.icon className="w-8 h-8 text-warm-brown mx-auto group-hover:text-dark-brown group-hover:scale-110 transition-all duration-300" />
                     </div>
                     {index < workProcess.length - 1 && (
                       <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-warm-brown/30 transform -translate-y-1/2"></div>
                     )}
                   </div>
-                  <h3 className="text-lg font-playfair text-dark-brown mb-3">{process.title}</h3>
-                  <p className="text-sm text-dark-brown/70 mb-4">{process.description}</p>
+                  <h3 className="text-lg font-playfair text-dark-brown mb-3 group-hover:text-warm-brown transition-colors duration-300">{process.title}</h3>
+                  <p className="text-base text-dark-brown/70 mb-4 group-hover:text-dark-brown transition-colors duration-300">{process.description}</p>
                   <div className="space-y-1">
                     {process.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} className="text-xs text-dark-brown/60">
+                      <div key={detailIndex} className="text-sm text-dark-brown/60">
                         • {detail}
                       </div>
                     ))}
@@ -414,7 +571,7 @@ const Interiors = () => {
               <div key={index} className="text-center bg-soft-beige p-6 rounded-lg">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-lg font-playfair text-dark-brown mb-3">{feature.title}</h3>
-                <p className="text-sm text-dark-brown/70">{feature.description}</p>
+                <p className="text-base text-dark-brown/70">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -443,14 +600,14 @@ const Interiors = () => {
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-warm-brown text-cream px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-warm-brown text-cream px-3 py-1 rounded-full text-sm font-medium">
                       {project.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-lg font-semibold text-dark-brown mb-2">{project.title}</h3>
-                  <p className="text-dark-brown/80 text-sm">{project.description}</p>
+                  <p className="text-dark-brown/80 text-base">{project.description}</p>
                 </div>
               </div>
             ))}
@@ -480,21 +637,21 @@ const Interiors = () => {
                   <span className="text-2xl">📞</span>
                 </div>
                 <h3 className="text-lg font-semibold text-cream mb-2">Free Site Visit</h3>
-                <p className="text-cream/80 text-sm">Complimentary consultation and assessment</p>
+                <p className="text-cream/80 text-base">Complimentary consultation and assessment</p>
               </div>
               <div className="text-center">
                 <div className="bg-cream bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">�</span>
                 </div>
                 <h3 className="text-lg font-semibold text-cream mb-2">Detailed Quote</h3>
-                <p className="text-cream/80 text-sm">Transparent pricing with no hidden costs</p>
+                <p className="text-cream/80 text-base">Transparent pricing with no hidden costs</p>
               </div>
               <div className="text-center">
                 <div className="bg-cream bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-2xl">🎯</span>
                 </div>
                 <h3 className="text-lg font-semibold text-cream mb-2">Quality Guarantee</h3>
-                <p className="text-cream/80 text-sm">Premium materials with warranty coverage</p>
+                <p className="text-cream/80 text-base">Premium materials with warranty coverage</p>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
