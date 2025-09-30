@@ -13,6 +13,7 @@ const Interiors = () => {
       description: "Professional plaster of paris work and premium painting services to transform your walls and ceilings",
       icon: "🎨",
       mainIcon: Paintbrush,
+      image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         {
           name: "POP (Plaster of Paris) Work",
@@ -51,6 +52,7 @@ const Interiors = () => {
       description: "Expert tiling and modern stampede flooring solutions for durable and beautiful surfaces",
       icon: "🏗️",
       mainIcon: Grid,
+      image: "https://images.unsplash.com/photo-1631545806609-73a2ca64d4e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         {
           name: "Professional Tiling Services",
@@ -89,6 +91,7 @@ const Interiors = () => {
       description: "Complete window treatment and lighting solutions to enhance comfort and ambiance in your space",
       icon: "💡",
       mainIcon: Blinds,
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         {
           name: "Window Treatments",
@@ -261,7 +264,16 @@ const Interiors = () => {
                 </div>
                 <h3 className="text-2xl font-playfair text-dark-brown mb-4">{category.title}</h3>
                 <p className="text-dark-brown/70 mb-6">{category.description}</p>
-                <button className="text-warm-brown hover:text-dark-brown font-medium flex items-center mx-auto">
+                <button 
+                  onClick={() => {
+                    const sectionId = category.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/--+/g, '-').replace(/^-|-$/g, '');
+                    const element = document.getElementById(sectionId);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                  className="text-warm-brown hover:text-dark-brown font-medium flex items-center mx-auto transition-colors duration-200 cursor-pointer"
+                >
                   Learn More <ArrowRight className="ml-2 w-4 h-4" />
                 </button>
               </div>
@@ -272,17 +284,34 @@ const Interiors = () => {
 
       {/* Detailed Service Sections */}
       {interiorCategories.map((category, categoryIndex) => (
-        <section key={categoryIndex} className={`py-16 ${categoryIndex % 2 === 0 ? 'bg-soft-beige' : 'bg-white'}`}>
+        <section 
+          key={categoryIndex} 
+          id={category.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/--+/g, '-').replace(/^-|-$/g, '')}
+          className={`py-16 ${categoryIndex % 2 === 0 ? 'bg-soft-beige' : 'bg-white'}`}
+        >
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-12">
-                <div className="text-5xl mb-4">{category.icon}</div>
-                <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
-                  {category.title}
-                </h2>
-                <p className="text-lg text-dark-brown/70 max-w-3xl mx-auto">
-                  {category.description}
-                </p>
+              {/* Hero Image Section */}
+              <div className="mb-12">
+                <div className="relative h-64 md:h-96 lg:h-[28rem] rounded-xl overflow-hidden mb-8">
+                  <img 
+                    src={category.image} 
+                    alt={`${category.title} services`}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <div className="text-4xl mb-2">{category.icon}</div>
+                    <h2 className="text-2xl md:text-3xl font-playfair font-bold mb-2">
+                      {category.title}
+                    </h2>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <p className="text-lg text-dark-brown/70 max-w-3xl mx-auto">
+                    {category.description}
+                  </p>
+                </div>
               </div>
               
               <div className="grid lg:grid-cols-3 gap-12">
@@ -326,7 +355,7 @@ const Interiors = () => {
       ))}
 
       {/* Work Process Section */}
-      <section className="py-16 bg-soft-beige">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
