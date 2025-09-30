@@ -11,7 +11,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-6">
-              About <span className="text-warm-brown">Ceetech</span>
+              About <span className="text-warm-brown">Ceetech Crafts</span>
             </h1>
             <p className="text-xl text-dark-brown/80 leading-relaxed">
               Transforming spaces with exceptional furniture and interior design solutions

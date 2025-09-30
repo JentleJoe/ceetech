@@ -7,7 +7,7 @@ const BrandStory = () => {
           {/* Text Content */}
           <div className="animate-slide-in-left">
             <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown mb-8 leading-tight">
-              At Ceetech, <span className="italic">we believe</span> furniture after all, do more than just <span className="italic">fill a space</span>. It could tell a story.
+              At Ceetech Crafts, <span className="italic">we believe</span> furniture after all, do more than just <span className="italic">fill a space</span>. It could tell a story.
             </h2>
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">

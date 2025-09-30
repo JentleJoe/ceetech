@@ -49,7 +49,7 @@ const Header = () => {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className={`font-playfair text-2xl font-semibold tracking-wide transition-colors duration-300 ${needsSolidBackground ? 'text-dark-brown hover:text-warm-brown' : 'text-white hover:text-light-tan'}`}>
-            Ceetech
+            Ceetech Crafts
           </Link>
 
           {/* Desktop Navigation */}

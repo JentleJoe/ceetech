@@ -33,7 +33,7 @@ const InteriorsByCeetech = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown">
-            Interiors by Ceetech.
+            Interiors by Ceetech Crafts.
           </h2>
           
           <div className="hidden md:flex items-center space-x-4">

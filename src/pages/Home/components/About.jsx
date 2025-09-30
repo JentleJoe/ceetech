@@ -31,7 +31,7 @@ const About = () => {
           {/* Content */}
           <div className="animate-slide-in-left">
             <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown mb-8 leading-tight">
-              About <span className="italic text-warm-brown">Ceetech</span>
+              About <span className="italic text-warm-brown">Ceetech Crafts</span>
             </h2>
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">

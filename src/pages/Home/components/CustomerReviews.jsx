@@ -7,14 +7,14 @@ const CustomerReviews = () => {
       name: "Sarah Johnson",
       location: "New York, NY",
       rating: 5,
-      text: "Absolutely love my dining set from Ceetech! The craftsmanship is exceptional and it's become the centerpiece of our home. The wood quality is outstanding."
+      text: "Absolutely love my dining set from Ceetech Crafts! The craftsmanship is exceptional and it's become the centerpiece of our home. The wood quality is outstanding."
     },
     {
       id: 2,
       name: "Michael Chen",
       location: "Los Angeles, CA",
       rating: 5,
-      text: "The attention to detail in every piece is remarkable. Our living room has been completely transformed with Ceetech's furniture. Highly recommend!"
+      text: "The attention to detail in every piece is remarkable. Our living room has been completely transformed with Ceetech Crafts' furniture. Highly recommend!"
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ const CustomerReviews = () => {
             What Our <span className="italic text-warm-brown">Customers</span> Say
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Discover why thousands of families trust Ceetech to bring warmth and beauty to their homes
+            Discover why thousands of families trust Ceetech Crafts to bring warmth and beauty to their homes
           </p>
         </div>
 
@@ -117,7 +117,7 @@ const CustomerReviews = () => {
               Join Our Community of Satisfied Customers
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Experience the Ceetech difference with furniture that tells your story
+              Experience the Ceetech Crafts difference with furniture that tells your story
             </p>
             <button className="bg-warm-brown text-white px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-dark-brown transition-all duration-300 transform hover:scale-105">
               Shop Collection

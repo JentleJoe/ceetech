@@ -209,7 +209,7 @@ const Furniture = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-6 leading-tight">
-              Ceetech <span className="text-warm-brown italic">Furniture</span> Solutions
+              Ceetech Crafts <span className="text-warm-brown italic">Furniture</span> Solutions
             </h1>
             <p className="text-xl text-dark-brown/80 leading-relaxed mb-8 max-w-3xl mx-auto">
               From custom kitchen cabinets to complete office fit-outs, we create exceptional furniture that combines functionality, style, and durability to transform your spaces.
@@ -384,7 +384,7 @@ const Furniture = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
-              Why Choose Ceetech?
+              Why Choose Ceetech Crafts?
             </h2>
             <p className="text-lg text-dark-brown/70 max-w-2xl mx-auto">
               We combine traditional craftsmanship with modern technology to deliver exceptional furniture solutions.

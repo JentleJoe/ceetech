@@ -14,7 +14,7 @@ const Contact = () => {
       icon: MessageCircle,
       label: 'WhatsApp',
       value: '08165410110',
-      action: 'https://wa.me/2348165410110?text=Hello%20Ceetech%2C%20I%27m%20interested%20in%20your%20furniture%20collection'
+      action: 'https://wa.me/2348165410110?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20furniture%20collection'
     },
     {
       icon: Mail,
@@ -128,7 +128,7 @@ const Contact = () => {
                 Call Now: 08165410110
               </a>
               <a
-                href="https://wa.me/2348165410110?text=Hello%20Ceetech%2C%20I%27m%20interested%20in%20your%20furniture%20collection"
+                href="https://wa.me/2348165410110?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20furniture%20collection"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-green-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"

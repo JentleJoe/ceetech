@@ -66,7 +66,7 @@ const Academy = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-6">
-              Ceetech <span className="text-warm-brown">Academy</span>
+              Ceetech Crafts <span className="text-warm-brown">Academy</span>
             </h1>
             <p className="text-xl text-dark-brown/80 leading-relaxed mb-8">
               Master the art of furniture design and interior decoration with our comprehensive training programs
