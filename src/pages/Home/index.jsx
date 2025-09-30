@@ -6,6 +6,7 @@ import About from './components/About'
 import BrandStory from './components/BrandStory'
 import ProductShowcase from './components/ProductShowcase'
 import InteriorsByCeetech from './components/InteriorsByCeetech'
+import InteriorServices from './components/InteriorServices'
 import CustomerReviews from './components/CustomerReviews'
 import StayClose from './components/StayClose'
 import Footer from '../../layout/Footer'
@@ -20,6 +21,7 @@ const Index = () => {
       <BrandStory />
       <ProductShowcase />
       <InteriorsByCeetech />
+      <InteriorServices />
       <CustomerReviews />
       <StayClose />
       <Footer />

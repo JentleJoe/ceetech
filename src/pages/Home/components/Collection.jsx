@@ -1,108 +1,176 @@
 
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 
 const Collection = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [hoveredService, setHoveredService] = useState(null)
 
-  const products = [
+  const services = [
     {
       id: 1,
-      name: 'Sideboard Tables & Coffee Tables',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      category: 'Tables'
+      name: 'Commercial Furniture Solutions',
+      description: 'Professional office, school & healthcare furniture designed for durability and productivity',
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      category: 'Commercial',
+      link: '/furniture'
     },
     {
       id: 2,
-      name: 'Beds & Mattresses',
-      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      category: 'Bedroom'
+      name: 'Residential Furniture & Kitchens',
+      description: 'Custom home furniture and kitchen solutions tailored to your lifestyle',
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      category: 'Residential',
+      link: '/furniture'
     },
     {
       id: 3,
-      name: 'Dining Table & Chairs',
-      image: 'https://images.unsplash.com/photo-1549497538-303791108f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      category: 'Dining'
+      name: 'Interior Design & Renovation',
+      description: 'Complete interior transformation with modern design and expert craftsmanship',
+      image: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      category: 'Interiors',
+      link: '/interiors'
     },
     {
       id: 4,
-      name: 'Armchairs',
-      image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      category: 'Seating'
+      name: 'Professional Training Academy',
+      description: 'Learn furniture design and interior skills from industry experts',
+      image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      category: 'Academy',
+      link: '/academy'
+    },
+    {
+      id: 5,
+      name: 'POP Ceiling Installation',
+      description: 'Modern ceiling designs with professional installation and finishing',
+      image: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      category: 'Interiors',
+      link: '/interiors'
+    },
+    {
+      id: 6,
+      name: 'Tiling & Flooring Services',
+      description: 'Expert tiling and modern flooring solutions for all spaces',
+      image: 'https://images.unsplash.com/photo-1631545806609-73a2ca64d4e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      category: 'Interiors',
+      link: '/interiors'
     }
   ]
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % products.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + products.length) % products.length)
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1200 },
+      items: 4,
+      slidesToSlide: 2
+    },
+    desktop: {
+      breakpoint: { max: 1200, min: 1024 },
+      items: 3,
+      slidesToSlide: 1
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 1
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1
+    }
   }
 
   return (
     <section id="collection" className="py-20 bg-cream">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-12">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown mb-2">Explore</h2>
-            <h3 className="text-2xl md:text-3xl font-playfair text-warm-brown">The Collection</h3>
-          </div>
-          
-          <div className="flex space-x-2">
-            <button
-              onClick={prevSlide}
-              className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <ChevronLeft className="w-5 h-5 text-dark-brown" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              <ChevronRight className="w-5 h-5 text-dark-brown" />
-            </button>
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-4">Our</h2>
+          <h3 className="text-2xl md:text-4xl font-playfair text-warm-brown mb-6">Services</h3>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Discover our comprehensive range of furniture and interior services designed to transform your spaces
+          </p>
         </div>
 
-        {/* Product Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, index) => (
-            <div
-              key={product.id}
-              className="group cursor-pointer animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-500 transform group-hover:scale-105">
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-muted-foreground mb-1 font-medium tracking-wide">
-                    {product.category}
-                  </p>
-                  <h4 className="text-lg font-medium text-dark-brown group-hover:text-warm-brown transition-colors duration-300">
-                    {product.name}
-                  </h4>
+        {/* Interactive Carousel */}
+        <div className="services-carousel">
+          <Carousel
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            customTransition="transform 300ms ease-in-out"
+            transitionDuration={300}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+            arrows={true}
+            showDots={true}
+            pauseOnHover={true}
+            swipeable={true}
+            draggable={true}
+          >
+            {services.map((service, index) => (
+              <div
+                key={service.id}
+                className="mx-2 group cursor-pointer animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+                onMouseEnter={() => setHoveredService(service.id)}
+                onMouseLeave={() => setHoveredService(null)}
+              >
+                <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform group-hover:scale-105 h-full">
+                  <div className="aspect-square overflow-hidden relative">
+                    <img
+                      src={service.image}
+                      alt={service.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    {/* Overlay Content */}
+                    <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-sm mb-2">{service.description}</p>
+                      <div className="flex items-center text-xs">
+                        <span>Learn More</span>
+                        <ArrowRight className="w-3 h-3 ml-1" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs text-warm-brown font-semibold tracking-wide uppercase">
+                        {service.category}
+                      </span>
+                      {hoveredService === service.id && (
+                        <div className="w-2 h-2 bg-warm-brown rounded-full animate-pulse"></div>
+                      )}
+                    </div>
+                    <h4 className="text-lg font-semibold text-dark-brown group-hover:text-warm-brown transition-colors duration-300 line-clamp-2">
+                      {service.name}
+                    </h4>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </Carousel>
         </div>
 
-        {/* View Products Link */}
-        <div className="text-center mt-12">
-          <a
-            href="#"
-            className="inline-flex items-center text-dark-brown hover:text-warm-brown font-medium tracking-wide transition-colors duration-300"
-          >
-            View Products
-            <ChevronRight className="w-4 h-4 ml-1" />
-          </a>
+        {/* Enhanced CTA Section */}
+        <div className="text-center mt-16">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg max-w-md mx-auto">
+            <h3 className="text-xl font-playfair text-dark-brown mb-3">Ready to Get Started?</h3>
+            <p className="text-gray-600 mb-6 text-sm">Explore our complete service portfolio</p>
+            <a
+              href="/about"
+              className="inline-flex items-center bg-warm-brown text-white px-6 py-3 rounded-lg font-medium tracking-wide hover:bg-dark-brown transition-all duration-300 transform hover:scale-105"
+            >
+              View All Services
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </a>
+          </div>
         </div>
       </div>
     </section>

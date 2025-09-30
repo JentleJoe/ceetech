@@ -263,3 +263,109 @@ div[role="region"][aria-label*="Notifications"] ol {
     opacity: 0;
   }
 }
+
+/* React Multi Carousel Custom Styles */
+.carousel-container {
+  padding-bottom: 50px;
+}
+
+.react-multi-carousel-list {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: static;
+}
+
+.react-multi-carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
+}
+
+.carousel-item-padding-40-px {
+  padding: 0 8px;
+}
+
+/* Custom Arrow Styles */
+.react-multiple-carousel__arrow {
+  position: absolute;
+  outline: 0;
+  transition: all .5s;
+  border-radius: 50%;
+  z-index: 1000;
+  border: 0;
+  background: white;
+  min-width: 43px;
+  min-height: 43px;
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-multiple-carousel__arrow:hover {
+  background: #8B4513;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.react-multiple-carousel__arrow--left {
+  left: calc(4% + 1px);
+}
+
+.react-multiple-carousel__arrow--right {
+  right: calc(4% + 1px);
+}
+
+.react-multiple-carousel__arrow::before {
+  color: #4A4A4A;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.react-multiple-carousel__arrow:hover::before {
+  color: white;
+}
+
+/* Custom Dot Styles */
+.custom-dot-list-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+.react-multi-carousel-dot button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  background: #D2B48C;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+.react-multi-carousel-dot--active button {
+  background: #8B4513;
+  transform: scale(1.3);
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.2);
+}
+
+.react-multi-carousel-dot button:hover {
+  background: #8B4513;
+  transform: scale(1.2);
+}

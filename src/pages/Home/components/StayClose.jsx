@@ -26,7 +26,7 @@ const StayClose = () => {
           </p>
 
           <button className="bg-white text-dark-brown px-8 py-4 rounded-lg font-medium tracking-wide hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            Explore Crafts
+            View Our Work
           </button>
         </div>
       </div>

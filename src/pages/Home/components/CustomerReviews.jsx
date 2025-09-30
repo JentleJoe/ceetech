@@ -4,22 +4,22 @@ const CustomerReviews = () => {
   const reviews = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      location: "New York, NY",
+      name: "Adebayo Okafor",
+      location: "Benin City, Edo",
       rating: 5,
       text: "Absolutely love my dining set from Ceetech Crafts! The craftsmanship is exceptional and it's become the centerpiece of our home. The wood quality is outstanding."
     },
     {
       id: 2,
-      name: "Michael Chen",
-      location: "Los Angeles, CA",
+      name: "Chioma Nwankwo",
+      location: "Lagos, Nigeria",
       rating: 5,
       text: "The attention to detail in every piece is remarkable. Our living room has been completely transformed with Ceetech Crafts' furniture. Highly recommend!"
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
-      location: "Austin, TX",
+      name: "Ahmed Yusuf",
+      location: "Abuja, FCT",
       rating: 5,
       text: "From ordering to delivery, everything was seamless. The furniture exceeded my expectations and the customer service was exceptional throughout."
     }
@@ -120,7 +120,7 @@ const CustomerReviews = () => {
               Experience the Ceetech Crafts difference with furniture that tells your story
             </p>
             <button className="bg-warm-brown text-white px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-dark-brown transition-all duration-300 transform hover:scale-105">
-              Shop Collection
+              Get Started Today
             </button>
           </div>
         </div>

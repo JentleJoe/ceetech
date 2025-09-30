@@ -12,7 +12,10 @@ const BrandStory = () => {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Our pieces are thoughtfully designed to blend <span className="text-warm-brown font-medium">warmth</span>, <span className="text-warm-brown font-medium">function</span>, and enduring <span className="text-warm-brown font-medium">beauty</span>.
+                From <span className="text-warm-brown font-medium">custom furniture solutions</span> to <span className="text-warm-brown font-medium">complete interior transformations</span>, we craft spaces that reflect your unique style and needs.
+              </p>
+              <p>
+                Our comprehensive services include residential and commercial furniture, interior design, POP ceilings, tiling, and professional training through <span className="text-warm-brown font-medium">Ceetech Academy</span>.
               </p>
             </div>
 
