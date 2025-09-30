@@ -382,7 +382,7 @@ const Interiors = () => {
       </section>
 
       {/* Service Categories Overview */}
-      <section className="py-20 bg-gradient-to-br from-soft-beige to-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
@@ -393,61 +393,29 @@ const Interiors = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {interiorCategories.map((category, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group overflow-hidden border border-gray-100 hover:border-warm-brown/20"
-                style={{
-                  animationDelay: `${index * 0.2}s`,
-                  animation: 'fadeInUp 0.8s ease-out forwards'
-                }}
+                className="text-center group hover:transform hover:scale-105 transition-all duration-300 cursor-pointer p-6 rounded-xl hover:bg-light-tan/20"
               >
-                {/* Card Header with Icon */}
-                <div className="relative h-32 bg-gradient-to-br from-light-tan to-warm-brown/20 flex items-center justify-center group-hover:from-warm-brown group-hover:to-dark-brown transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/10 group-hover:to-black/20 transition-all duration-500"></div>
-                  <div className="relative z-10 bg-white/90 group-hover:bg-white w-20 h-20 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
-                    <category.mainIcon className="w-10 h-10 text-warm-brown group-hover:text-dark-brown transition-colors duration-300" />
-                  </div>
-                  {/* Decorative Elements */}
-                  <div className="absolute top-4 right-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity duration-500">
-                    {category.icon}
-                  </div>
+                <div className="bg-light-tan w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-warm-brown group-hover:scale-110 transition-all duration-300">
+                  <category.mainIcon className="w-10 h-10 text-warm-brown group-hover:text-white transition-colors duration-300" />
                 </div>
-
-                {/* Card Content */}
-                <div className="p-8">
-                  <h3 className="text-2xl font-playfair text-dark-brown mb-4 group-hover:text-warm-brown transition-colors duration-300">
-                    {category.title}
-                  </h3>
-                  <p className="text-dark-brown/70 mb-6 leading-relaxed group-hover:text-dark-brown/80 transition-colors duration-300">
-                    {category.description}
-                  </p>
-                  
-                  {/* Service Preview */}
-                  <div className="mb-6 space-y-2">
-                    {category.services.slice(0, 2).map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="text-sm text-dark-brown/60 flex items-center">
-                        <div className="w-1.5 h-1.5 bg-warm-brown rounded-full mr-2 group-hover:bg-dark-brown transition-colors duration-300"></div>
-                        {service.name}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Learn More Button */}
-                  <button 
-                    onClick={() => {
-                      const sectionId = category.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/--+/g, '-').replace(/^-|-$/g, '');
-                      const element = document.getElementById(sectionId);
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }
-                    }}
-                    className="w-full bg-warm-brown text-white py-3 px-6 rounded-lg font-medium hover:bg-dark-brown transition-all duration-300 flex items-center justify-center group-hover:shadow-lg"
-                  >
-                    Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </button>
-                </div>
+                <h3 className="text-2xl font-playfair text-dark-brown mb-4 group-hover:text-warm-brown transition-colors duration-300">{category.title}</h3>
+                <p className="text-dark-brown/70 mb-6 group-hover:text-dark-brown transition-colors duration-300">{category.description}</p>
+                <button 
+                  onClick={() => {
+                    const sectionId = category.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/--+/g, '-').replace(/^-|-$/g, '');
+                    const element = document.getElementById(sectionId);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                  className="text-warm-brown hover:text-dark-brown font-medium flex items-center mx-auto transition-colors duration-200 cursor-pointer"
+                >
+                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                </button>
               </div>
             ))}
           </div>
