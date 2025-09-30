@@ -8,6 +8,7 @@ const Furniture = () => {
       title: "Office Furniture",
       description: "Complete office solutions designed for productivity and comfort",
       icon: "🏢",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         "Executive Desks & Workstations",
         "Ergonomic Office Chairs",
@@ -21,6 +22,7 @@ const Furniture = () => {
       title: "School Furniture",
       description: "Durable and safe furniture designed for educational environments",
       icon: "🎓",
+      image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         "Student Desks & Chairs",
         "Teacher's Furniture",
@@ -34,6 +36,7 @@ const Furniture = () => {
       title: "Hospitality Furniture",
       description: "Elegant furniture for hotels, restaurants, and hospitality venues",
       icon: "🏨",
+      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         "Restaurant Tables & Chairs",
         "Bar Furniture & Counter Stools",
@@ -47,6 +50,7 @@ const Furniture = () => {
       title: "Healthcare Furniture",
       description: "Specialized furniture for hospitals, clinics, and medical facilities",
       icon: "🏥",
+      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         "Patient Room Furniture",
         "Waiting Area Seating",
@@ -63,6 +67,7 @@ const Furniture = () => {
       title: "Kitchen Cabinets",
       description: "Custom kitchen solutions with modern designs and premium finishes",
       icon: "🍽️",
+      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         "Upper & Base Cabinets",
         "Kitchen Islands",
@@ -76,6 +81,7 @@ const Furniture = () => {
       title: "Wardrobes",
       description: "Spacious and organized storage solutions for your bedroom",
       icon: "👔",
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         "Built-in Wardrobes",
         "Walk-in Closets",
@@ -89,6 +95,7 @@ const Furniture = () => {
       title: "TV Consoles",
       description: "Modern entertainment centers with smart cable management",
       icon: "📺",
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         "Wall-mounted Units",
         "Floor-standing Consoles",
@@ -102,6 +109,7 @@ const Furniture = () => {
       title: "Sofas & Seating",
       description: "Comfortable and stylish seating for every living space",
       icon: "🛋️",
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         "L-shaped Sectionals",
         "3-Seater & 2-Seater Sofas",
@@ -115,6 +123,7 @@ const Furniture = () => {
       title: "Dining Furniture",
       description: "Beautiful dining sets for family gatherings and entertaining",
       icon: "🍴",
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         "Dining Tables (4-12 Seaters)",
         "Dining Chairs & Benches",
@@ -128,6 +137,7 @@ const Furniture = () => {
       title: "Custom Furniture",
       description: "Bespoke furniture pieces designed specifically for your needs",
       icon: "⚒️",
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: [
         "Made-to-measure Solutions",
         "Unique Design Concepts",
@@ -274,32 +284,58 @@ const Furniture = () => {
       </section>
 
       {/* Commercial Furniture Section */}
-      <section className="py-16 bg-soft-beige">
+      <section className="py-20 bg-soft-beige">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-playfair text-dark-brown mb-6">
               Commercial Furniture Solutions
             </h2>
-            <p className="text-lg text-dark-brown/70 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-dark-brown/70 max-w-4xl mx-auto">
               Professional furniture solutions designed to enhance productivity, comfort, and aesthetics in commercial environments.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-16">
             {commercialFurniture.map((category, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="text-center mb-4">
-                  <div className="text-4xl mb-3">{category.icon}</div>
-                  <h3 className="text-xl font-playfair text-dark-brown mb-3">{category.title}</h3>
-                  <p className="text-sm text-dark-brown/70 mb-4">{category.description}</p>
-                </div>
-                <div className="space-y-2">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="flex items-start text-sm text-dark-brown/80">
-                      <CheckCircle className="w-4 h-4 text-warm-brown mr-2 mt-0.5 flex-shrink-0" />
-                      {service}
+              <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                {/* Image */}
+                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div className="relative h-80 md:h-96 rounded-xl overflow-hidden group">
+                    <img 
+                      src={category.image} 
+                      alt={`${category.title} solutions`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                    <div className="absolute top-6 left-6">
+                      <div className="bg-warm-brown text-cream px-4 py-2 rounded-full text-sm font-semibold">
+                        {category.icon} {category.title}
+                      </div>
                     </div>
-                  ))}
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                  <div className="bg-white rounded-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    <h3 className="text-2xl md:text-3xl font-playfair text-dark-brown mb-4">{category.title}</h3>
+                    <p className="text-lg text-dark-brown/70 mb-6">{category.description}</p>
+                    
+                    <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                      {category.services.map((service, serviceIndex) => (
+                        <div key={serviceIndex} className="flex items-start">
+                          <CheckCircle className="w-5 h-5 text-warm-brown mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-dark-brown/80">{service}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="">
+                      <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg font-semibold hover:bg-dark-brown transition-colors duration-200 w-full sm:w-auto">
+                        Free Consultation
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -308,32 +344,54 @@ const Furniture = () => {
       </section>
 
       {/* Residential Furniture Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-5xl font-playfair text-dark-brown mb-6">
               Residential Furniture Collection
             </h2>
-            <p className="text-lg text-dark-brown/70 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-dark-brown/70 max-w-4xl mx-auto">
               Transform your home with our custom furniture solutions, designed to perfectly fit your space and reflect your personal style.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {householdFurniture.map((category, index) => (
-              <div key={index} className="bg-light-tan rounded-lg p-6 hover:bg-cream transition-colors duration-300">
-                <div className="text-center mb-4">
-                  <div className="text-4xl mb-3">{category.icon}</div>
-                  <h3 className="text-xl font-playfair text-dark-brown mb-3">{category.title}</h3>
-                  <p className="text-sm text-dark-brown/70 mb-4">{category.description}</p>
-                </div>
-                <div className="space-y-2">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="flex items-start text-sm text-dark-brown/80">
-                      <CheckCircle className="w-4 h-4 text-warm-brown mr-2 mt-0.5 flex-shrink-0" />
-                      {service}
+              <div key={index} className="group">
+                {/* Image */}
+                <div className="relative h-64 rounded-xl overflow-hidden mb-6">
+                  <img 
+                    src={category.image} 
+                    alt={`${category.title} collection`}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="text-white">
+                      <div className="text-2xl mb-2">{category.icon}</div>
+                      <h3 className="text-xl font-playfair font-bold">{category.title}</h3>
                     </div>
-                  ))}
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="bg-light-tan rounded-xl p-6 hover:bg-cream transition-colors duration-300 group-hover:shadow-lg">
+                  <p className="text-dark-brown/70 mb-4">{category.description}</p>
+                  
+                  <div className="space-y-2 mb-6">
+                    {category.services.map((service, serviceIndex) => (
+                      <div key={serviceIndex} className="flex items-start text-dark-brown/80">
+                        <CheckCircle className="w-4 h-4 text-warm-brown mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm">{service}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="">
+                    <button className="w-full bg-warm-brown text-cream px-6 py-3 rounded-lg font-semibold hover:bg-dark-brown transition-colors duration-200">
+                      Free Consultation
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
