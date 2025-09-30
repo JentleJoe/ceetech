@@ -53,7 +53,7 @@ const Header = () => {
   }
 
   return (
-    <header className={`absolute top-0 left-0 right-0 z-50 ${needsSolidBackground ? 'bg-white shadow-lg' : 'bg-transparent'} transition-all duration-300`}>
+    <header className={`absolute top-0 left-0 right-0 z-[100] ${needsSolidBackground ? 'bg-white shadow-lg' : 'bg-transparent'} transition-all duration-300`}>
       <div className="container mx-auto px-4 py-6">
         <nav className="flex items-center justify-between">
           {/* Logo */}
@@ -102,7 +102,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className={`lg:hidden mt-6 py-4 backdrop-blur-sm rounded-lg animate-fade-in ${needsSolidBackground ? 'bg-white shadow-lg border' : 'bg-black/80'}`}>
+          <div className={`lg:hidden mt-6 py-4 backdrop-blur-sm rounded-lg relative z-[110] ${needsSolidBackground ? 'bg-white shadow-xl border border-gray-200' : 'bg-black/90 shadow-2xl'}`}>
             <div className="flex flex-col space-y-4 px-6">
               {mobileNavigation.map((item) => {
                 // Render Contact as a button, others as regular nav items

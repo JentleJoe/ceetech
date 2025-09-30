@@ -216,8 +216,8 @@ const Furniture = () => {
             <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 leading-tight drop-shadow-lg">
               Ceetech Crafts <span className="text-light-tan italic">Furniture</span> Solutions
             </h1>
-            <p className="text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto drop-shadow-md">
-              From custom kitchen cabinets to complete office fit-outs, we create exceptional furniture that combines functionality, style, and durability to transform your spaces.
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto drop-shadow-md">
+              Custom furniture solutions that combine functionality, style, and durability to transform your spaces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200 shadow-lg hover:shadow-xl">

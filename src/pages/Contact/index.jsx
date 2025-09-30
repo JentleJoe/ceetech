@@ -58,7 +58,7 @@ const Contact = () => {
           <h1 className="text-4xl md:text-6xl font-playfair mb-6 leading-tight text-white drop-shadow-lg">
             Get in <span className="italic text-light-tan">Touch</span>
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
             Ready to transform your space? We'd love to hear from you. Reach out and let's create something beautiful together.
           </p>
         </div>

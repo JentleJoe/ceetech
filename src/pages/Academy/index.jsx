@@ -73,7 +73,7 @@ const Academy = () => {
             <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 drop-shadow-lg">
               Ceetech Crafts <span className="text-light-tan">Academy</span>
             </h1>
-            <p className="text-xl text-white/90 leading-relaxed mb-8 drop-shadow-md">
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 drop-shadow-md">
               Master the art of furniture design and interior decoration with our comprehensive training programs
             </p>
             <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200 shadow-lg hover:shadow-xl">

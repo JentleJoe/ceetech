@@ -18,7 +18,7 @@ const About = () => {
             <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 drop-shadow-lg">
               About <span className="text-light-tan">Ceetech Crafts</span>
             </h1>
-            <p className="text-xl text-white/90 leading-relaxed drop-shadow-md">
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed drop-shadow-md">
               Transforming spaces with exceptional furniture and interior design solutions
             </p>
           </div>

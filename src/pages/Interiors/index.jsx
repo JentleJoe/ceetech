@@ -286,9 +286,9 @@ const Interiors = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white interiors-page">
       <style>{`
-        @keyframes fadeInUp {
+        .interiors-page @keyframes fadeInUp {
           from {
             opacity: 0;
             transform: translateY(30px);
@@ -366,8 +366,8 @@ const Interiors = () => {
             <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 leading-tight drop-shadow-lg">
               Professional <span className="text-light-tan italic">Interior</span> Solutions
             </h1>
-            <p className="text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto drop-shadow-md">
-              Transform your spaces with our comprehensive interior services including POP & Painting, Tiling & Flooring, and Window Treatments & Lighting solutions.
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto drop-shadow-md">
+              Complete interior solutions from painting and tiling to lighting and window treatments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200 shadow-lg hover:shadow-xl">
