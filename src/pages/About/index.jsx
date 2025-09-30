@@ -30,7 +30,7 @@ const About = () => {
                   Our Story
                 </h2>
                 <p className="text-lg text-dark-brown/80 mb-6">
-                  At Ceetech Furniture and Interiors, we believe that every space tells a story. 
+                  At Ceetech Crafts, we believe that every space tells a story. 
                   Founded with a passion for exceptional design and quality craftsmanship, we've been 
                   transforming homes and offices with our carefully curated furniture collections and 
                   bespoke interior design services.

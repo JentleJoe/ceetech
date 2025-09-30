@@ -1,3 +1,3 @@
-# Ceetech Furniture and Interiors
+# Ceetech Crafts
 
-Furniture Website for Ceetech Furniture and Interiors - Where Craft Meets Class
+Furniture Website for Ceetech Crafts - Where Craft Meets Class

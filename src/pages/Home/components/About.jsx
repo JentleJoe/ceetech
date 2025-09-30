@@ -36,7 +36,7 @@ const About = () => {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Ceetech Furniture and Interiors has been synonymous with <span className="text-warm-brown font-medium">exceptional furniture craftsmanship</span>. What started as a small family workshop has grown into a trusted name in premium furniture design.
+                Ceetech Crafts has been synonymous with <span className="text-warm-brown font-medium">exceptional furniture craftsmanship</span>. What started as a small family workshop has grown into a trusted name in premium furniture design.
               </p>
               
               <p>

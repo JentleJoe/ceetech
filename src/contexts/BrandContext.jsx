@@ -13,7 +13,7 @@ export const useBrand = () => {
 
 export const BrandProvider = ({ children, brandConfig }) => {
   const defaultConfig = {
-    brandName: 'Ceetech Furniture and Interiors',
+    brandName: 'Ceetech Crafts',
     brandNameShort: 'Ceetech',
     tagline: 'Where Craft Meets Class',
     description: 'Experience the perfect harmony of traditional craftsmanship and contemporary elegance in every piece.',

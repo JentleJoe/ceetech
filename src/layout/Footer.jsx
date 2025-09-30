@@ -57,7 +57,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-8 mb-6 md:mb-0">
-            <div className="text-2xl font-playfair font-semibold">Ceetech Furniture and Interiors</div>
+            <div className="text-2xl font-playfair font-semibold">Ceetech Crafts</div>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/share/15y5a4wA4b/" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-5 h-5 text-gray-300 hover:text-light-tan cursor-pointer transition-colors duration-300" />
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8 text-gray-400 text-sm">
-            <p>&copy; 2024 Ceetech Furniture and Interiors. All rights reserved.</p>
+            <p>&copy; 2024 Ceetech Crafts. All rights reserved.</p>
             <div className="flex space-x-6">
               {['Privacy Policy', 'Terms of Service'].map((link) => (
                 <a key={link} href="#" className="hover:text-light-tan transition-colors duration-300">
