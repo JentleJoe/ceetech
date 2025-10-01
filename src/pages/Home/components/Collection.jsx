@@ -13,7 +13,7 @@ const Collection = () => {
       name: 'Commercial Furniture Solutions',
       description: 'Professional office, school & healthcare furniture designed for durability and productivity',
       image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      category: 'Commercial',
+      category: 'Furniture',
       link: '/furniture'
     },
     {
@@ -21,7 +21,7 @@ const Collection = () => {
       name: 'Residential Furniture & Kitchens',
       description: 'Custom home furniture and kitchen solutions tailored to your lifestyle',
       image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      category: 'Residential',
+      category: 'Furniture',
       link: '/furniture'
     },
     {
@@ -148,7 +148,7 @@ const Collection = () => {
                         <div className="w-2 h-2 bg-warm-brown rounded-full animate-pulse"></div>
                       )}
                     </div>
-                    <h4 className="text-lg font-semibold text-dark-brown group-hover:text-warm-brown transition-colors duration-300 line-clamp-2">
+                    <h4 className="text-base font-semibold text-dark-brown group-hover:text-warm-brown transition-colors duration-300 line-clamp-2">
                       {service.name}
                     </h4>
                   </div>
