@@ -93,7 +93,7 @@ const Collection = () => {
         </div>
 
         {/* Interactive Carousel */}
-        <div className="services-carousel">
+        <div className="services-carousel relative overflow-hidden">
           <Carousel
             responsive={responsive}
             infinite={true}

@@ -266,14 +266,15 @@ div[role="region"][aria-label*="Notifications"] ol {
 
 /* React Multi Carousel Custom Styles */
 .carousel-container {
-  padding-bottom: 50px;
+  position: relative;
+  padding-bottom: 60px;
 }
 
 .react-multi-carousel-list {
   display: flex;
   align-items: center;
   overflow: hidden;
-  position: static;
+  position: relative;
 }
 
 .react-multi-carousel-track {
@@ -338,13 +339,17 @@ div[role="region"][aria-label*="Notifications"] ol {
 
 /* Custom Dot Styles */
 .custom-dot-list-style {
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
   padding: 0;
-  margin-left: 0;
   list-style: none;
+  z-index: 10;
 }
 
 .react-multi-carousel-dot button {
@@ -368,4 +373,19 @@ div[role="region"][aria-label*="Notifications"] ol {
 .react-multi-carousel-dot button:hover {
   background: #8B4513;
   transform: scale(1.2);
+}
+
+/* Ensure dots don't interfere with other page elements */
+.react-multi-carousel-dot-list {
+  position: relative !important;
+  bottom: auto !important;
+}
+
+/* Override any conflicting positioning */
+.services-carousel .react-multi-carousel-dot-list {
+  position: absolute !important;
+  bottom: 10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
 }
