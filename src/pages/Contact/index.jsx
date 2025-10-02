@@ -253,12 +253,7 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <h4 className="font-semibold text-dark-brown mb-2">Factory & Main Showroom</h4>
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">2nd Entrance Ebvuabugun Sawmill Off Sapele Road, Benin City</p>
-                  <div className="space-y-2 text-xs text-gray-500 mb-4">
-                    <p>✓ Full furniture collection</p>
-                    <p>✓ Custom manufacturing</p>
-                    <p>✓ Design consultation</p>
-                  </div>
+                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">2nd Entrance Ebvuabugun Sawmill Off Sapele Road, Benin City</p>
                   <a
                     href="https://maps.google.com/?q=2nd+Entrance+Ebvuabugun+Sawmill+Off+Sapele+Road+Benin+City"
                     target="_blank"
@@ -277,15 +272,10 @@ const Contact = () => {
                   <div className="bg-light-tan p-3 rounded-lg w-fit mx-auto mb-4">
                     <MapPin className="w-6 h-6 text-warm-brown" />
                   </div>
-                  <h4 className="font-semibold text-dark-brown mb-2">Showroom 1</h4>
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">123 Ring Road, GRA Benin City, Edo State</p>
-                  <div className="space-y-2 text-xs text-gray-500 mb-4">
-                    <p>✓ Display furniture</p>
-                    <p>✓ Customer consultation</p>
-                    <p>✓ Order placement</p>
-                  </div>
+                  <h4 className="font-semibold text-dark-brown mb-2">Showroom 1 - Oka</h4>
+                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">40 Country Home Rd, Oka, Benin City 300102, Edo</p>
                   <a
-                    href="https://maps.google.com/?q=123+Ring+Road+GRA+Benin+City"
+                    href="https://maps.google.com/?q=40+Country+Home+Rd+Oka+Benin+City+300102+Edo"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-1 bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors duration-200"
@@ -303,12 +293,7 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-warm-brown" />
                   </div>
                   <h4 className="font-semibold text-dark-brown mb-2">Showroom 2</h4>
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">456 Mission Road, Benin City, Edo State</p>
-                  <div className="space-y-2 text-xs text-gray-500 mb-4">
-                    <p>✓ Display furniture</p>
-                    <p>✓ Customer consultation</p>
-                    <p>✓ Order placement</p>
-                  </div>
+                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">456 Mission Road, Benin City, Edo State</p>
                   <a
                     href="https://maps.google.com/?q=456+Mission+Road+Benin+City"
                     target="_blank"
