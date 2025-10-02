@@ -1,6 +1,11 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useState } from 'react'
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 
 const FurnituresByCeetech = () => {
+  const [hoveredProduct, setHoveredProduct] = useState(null)
+
   const furnitureProducts = [
     {
       id: 1,
@@ -25,67 +30,129 @@ const FurnituresByCeetech = () => {
       name: 'Bedroom Wardrobes',
       description: 'Spacious wardrobes with custom organization solutions',
       image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+    },
+    {
+      id: 5,
+      name: 'TV Console Units',
+      description: 'Stylish TV stands with integrated storage and modern cable management',
+      image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
     }
   ]
+
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1200 },
+      items: 4,
+      slidesToSlide: 2
+    },
+    desktop: {
+      breakpoint: { max: 1200, min: 1024 },
+      items: 3,
+      slidesToSlide: 1
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 1
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1
+    }
+  }
 
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between mb-12">
-          <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown mb-4">
             Ceetech Crafts Furnitures
           </h2>
-          
-          <div className="hidden md:flex items-center space-x-4">
-            <button className="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-300">
-              <ChevronLeft className="w-5 h-5 text-dark-brown" />
-            </button>
-            <button className="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-300">
-              <ChevronRight className="w-5 h-5 text-dark-brown" />
-            </button>
-          </div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Discover our handcrafted furniture collection designed to enhance your living spaces
+          </p>
         </div>
 
-        {/* Furniture Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {furnitureProducts.map((product, index) => (
-            <div
-              key={product.id}
-              className="group cursor-pointer animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative overflow-hidden rounded-2xl mb-4">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
-              </div>
-              
-              <div className="space-y-3">
-                <div>
-                  <h3 className="text-lg font-medium text-dark-brown mb-1 group-hover:text-warm-brown transition-colors duration-300">
-                    {product.name}
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    {product.description}
-                  </p>
+        {/* Interactive Furniture Carousel */}
+        <div className="furniture-carousel relative overflow-hidden">
+          <Carousel
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            keyBoardControl={true}
+            customTransition="transform 300ms ease-in-out"
+            transitionDuration={300}
+            containerClass="carousel-container"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+            arrows={true}
+            showDots={true}
+            pauseOnHover={true}
+            swipeable={true}
+            draggable={true}
+          >
+            {furnitureProducts.map((product, index) => (
+              <div
+                key={product.id}
+                className="mx-2 group cursor-pointer animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+                onMouseEnter={() => setHoveredProduct(product.id)}
+                onMouseLeave={() => setHoveredProduct(null)}
+              >
+                <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform group-hover:scale-105 h-full">
+                  <div className="aspect-square overflow-hidden relative">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    {/* Overlay Content */}
+                    <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-sm mb-2">{product.description}</p>
+                      <div className="flex items-center text-xs">
+                        <span>View Details</span>
+                        <ArrowRight className="w-3 h-3 ml-1" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs text-warm-brown font-semibold tracking-wide uppercase">
+                        Furniture
+                      </span>
+                      {hoveredProduct === product.id && (
+                        <div className="w-2 h-2 bg-warm-brown rounded-full animate-pulse"></div>
+                      )}
+                    </div>
+                    <h4 className="text-base font-semibold text-dark-brown group-hover:text-warm-brown transition-colors duration-300 line-clamp-2">
+                      {product.name}
+                    </h4>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </Carousel>
         </div>
 
-        {/* View Furniture Link */}
-        <div className="text-center mt-12">
-          <a
-            href="#furniture"
-            className="inline-flex items-center text-dark-brown hover:text-warm-brown font-medium tracking-wide transition-colors duration-300"
-          >
-            View All Furniture
-            <ChevronRight className="w-4 h-4 ml-1" />
-          </a>
+        {/* Enhanced CTA Section */}
+        <div className="text-center mt-16">
+          <div className="bg-soft-beige/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg max-w-md mx-auto">
+            <h3 className="text-xl font-playfair text-dark-brown mb-3">Need Custom Furniture?</h3>
+            <p className="text-gray-600 mb-6 text-sm">Let us create something unique for your space</p>
+            <a
+              href="/furniture"
+              className="inline-flex items-center bg-warm-brown text-white px-6 py-3 rounded-lg font-medium tracking-wide hover:bg-dark-brown transition-all duration-300 transform hover:scale-105"
+            >
+              View All Furniture
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
