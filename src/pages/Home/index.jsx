@@ -5,8 +5,8 @@ import Collection from './components/Collection'
 import About from './components/About'
 import BrandStory from './components/BrandStory'
 import ProductShowcase from './components/ProductShowcase'
+import FurnituresByCeetech from './components/FurnituresByCeetech'
 import InteriorsByCeetech from './components/InteriorsByCeetech'
-import InteriorServices from './components/InteriorServices'
 import CustomerReviews from './components/CustomerReviews'
 import StayClose from './components/StayClose'
 import Footer from '../../layout/Footer'
@@ -20,8 +20,8 @@ const Index = () => {
       <About />
       <BrandStory />
       <ProductShowcase />
+      <FurnituresByCeetech />
       <InteriorsByCeetech />
-      <InteriorServices />
       <CustomerReviews />
       <StayClose />
       <Footer />

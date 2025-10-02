@@ -1,39 +1,43 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Home, Palette, Hammer, Grid } from 'lucide-react'
 
 const InteriorsByCeetech = () => {
-  const furnitureProducts = [
+  const interiorServices = [
     {
       id: 1,
-      name: 'Custom Living Room Sets',
-      description: 'Elegant and comfortable living room furniture tailored to your space',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      name: 'Complete Interior Design',
+      description: 'Full interior transformation from concept to completion',
+      icon: Home,
+      image: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
     },
     {
       id: 2,
-      name: 'Kitchen Cabinet Solutions',
-      description: 'Modern kitchen cabinets with superior storage and functionality',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      name: 'POP Ceiling Installation',
+      description: 'Modern ceiling designs with expert installation',
+      icon: Palette,
+      image: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
     },
     {
       id: 3,
-      name: 'Office Workstations',
-      description: 'Professional office furniture designed for productivity',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      name: 'Consultation & Design',
+      description: 'Professional design consultation and space planning',
+      icon: Hammer,
+      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
     },
     {
       id: 4,
-      name: 'Bedroom Wardrobes',
-      description: 'Spacious wardrobes with custom organization solutions',
-      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      name: 'Tiling & Flooring',
+      description: 'Expert tiling and modern flooring solutions',
+      icon: Grid,
+      image: 'https://images.unsplash.com/photo-1631545806609-73a2ca64d4e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
     }
   ]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-soft-beige">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown">
-            Custom Furniture Solutions.
+            Ceetech Crafts Interiors
           </h2>
           
           <div className="hidden md:flex items-center space-x-4">
@@ -46,30 +50,35 @@ const InteriorsByCeetech = () => {
           </div>
         </div>
 
-        {/* Furniture Grid */}
+        {/* Interior Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {furnitureProducts.map((product, index) => (
+          {interiorServices.map((service, index) => (
             <div
-              key={product.id}
+              key={service.id}
               className="group cursor-pointer animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative overflow-hidden rounded-2xl mb-4">
                 <img
-                  src={product.image}
-                  alt={product.name}
+                  src={service.image}
+                  alt={service.name}
                   className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
+                
+                {/* Service Icon Overlay */}
+                <div className="absolute top-4 left-4 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <service.icon className="w-6 h-6 text-warm-brown" />
+                </div>
               </div>
               
               <div className="space-y-3">
                 <div>
                   <h3 className="text-lg font-medium text-dark-brown mb-1 group-hover:text-warm-brown transition-colors duration-300">
-                    {product.name}
+                    {service.name}
                   </h3>
                   <p className="text-sm text-gray-600">
-                    {product.description}
+                    {service.description}
                   </p>
                 </div>
               </div>
@@ -77,13 +86,13 @@ const InteriorsByCeetech = () => {
           ))}
         </div>
 
-        {/* View Furniture Link */}
+        {/* View Services Link */}
         <div className="text-center mt-12">
           <a
-            href="#furniture"
+            href="#interiors"
             className="inline-flex items-center text-dark-brown hover:text-warm-brown font-medium tracking-wide transition-colors duration-300"
           >
-            View All Furniture
+            View All Interior Services
             <ChevronRight className="w-4 h-4 ml-1" />
           </a>
         </div>
