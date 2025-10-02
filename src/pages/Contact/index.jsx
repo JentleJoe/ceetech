@@ -40,7 +40,7 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      label: 'Address',
+      label: 'Primary Location (Factory)',
       value: '2nd Entrance Ebvuabugun Sawmill Off Sapele Road Benin City, Edo State',
       displayValue: '2nd Entrance Ebvuabugun Sawmill Off Sapele Road Benin City, Edo State',
       copyValue: '2nd Entrance Ebvuabugun Sawmill Off Sapele Road Benin City, Edo State',
@@ -235,12 +235,124 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Location & Map */}
+          {/* All Locations Section */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-playfair text-dark-brown mb-4 text-center">Our Locations in Benin City</h3>
+            <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+              Visit us at any of our locations. Our factory showroom is our primary location with the full collection and manufacturing facility.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {/* Primary Factory Location */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-warm-brown relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-warm-brown text-white px-4 py-1 rounded-full text-sm font-semibold">PRIMARY LOCATION</span>
+                </div>
+                <div className="text-center pt-4">
+                  <div className="bg-warm-brown p-3 rounded-lg w-fit mx-auto mb-4">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="font-semibold text-dark-brown mb-2">Factory & Main Showroom</h4>
+                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">2nd Entrance Ebvuabugun Sawmill Off Sapele Road, Benin City</p>
+                  <div className="space-y-2 text-xs text-gray-500 mb-4">
+                    <p>✓ Full furniture collection</p>
+                    <p>✓ Custom manufacturing</p>
+                    <p>✓ Design consultation</p>
+                  </div>
+                  <a
+                    href="https://maps.google.com/?q=2nd+Entrance+Ebvuabugun+Sawmill+Off+Sapele+Road+Benin+City"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-1 bg-warm-brown text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-dark-brown transition-colors duration-200"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <span>Get Directions</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Showroom 1 */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <div className="text-center">
+                  <div className="bg-light-tan p-3 rounded-lg w-fit mx-auto mb-4">
+                    <MapPin className="w-6 h-6 text-warm-brown" />
+                  </div>
+                  <h4 className="font-semibold text-dark-brown mb-2">Showroom 1</h4>
+                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">123 Ring Road, GRA Benin City, Edo State</p>
+                  <div className="space-y-2 text-xs text-gray-500 mb-4">
+                    <p>✓ Display furniture</p>
+                    <p>✓ Customer consultation</p>
+                    <p>✓ Order placement</p>
+                  </div>
+                  <a
+                    href="https://maps.google.com/?q=123+Ring+Road+GRA+Benin+City"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-1 bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors duration-200"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <span>Get Directions</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Showroom 2 */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <div className="text-center">
+                  <div className="bg-light-tan p-3 rounded-lg w-fit mx-auto mb-4">
+                    <MapPin className="w-6 h-6 text-warm-brown" />
+                  </div>
+                  <h4 className="font-semibold text-dark-brown mb-2">Showroom 2</h4>
+                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">456 Mission Road, Benin City, Edo State</p>
+                  <div className="space-y-2 text-xs text-gray-500 mb-4">
+                    <p>✓ Display furniture</p>
+                    <p>✓ Customer consultation</p>
+                    <p>✓ Order placement</p>
+                  </div>
+                  <a
+                    href="https://maps.google.com/?q=456+Mission+Road+Benin+City"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-1 bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors duration-200"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    <span>Get Directions</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Recommendation Banner */}
+            <div className="bg-warm-brown/10 border border-warm-brown/20 rounded-xl p-6 text-center">
+              <h4 className="font-semibold text-dark-brown mb-2">📍 Recommended Visit</h4>
+              <p className="text-gray-700 mb-4">For the best experience and full collection access, we recommend visiting our <strong>Factory & Main Showroom</strong> location.</p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                  href="tel:+2348165410110"
+                  className="flex items-center justify-center space-x-2 bg-warm-brown text-white px-6 py-3 rounded-lg font-medium hover:bg-dark-brown transition-colors duration-200"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call Before Visit</span>
+                </a>
+                <a
+                  href="https://wa.me/2348165410110?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20to%20visit%20your%20main%20showroom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center space-x-2 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors duration-200"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>WhatsApp Us</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Factory Location Map */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="p-8 pb-0">
-              <h3 className="text-2xl font-playfair text-dark-brown mb-4 text-center">Visit Our Showroom</h3>
+              <h3 className="text-2xl font-playfair text-dark-brown mb-4 text-center">Factory & Main Showroom Location</h3>
               <p className="text-gray-600 text-center mb-6 max-w-2xl mx-auto">
-                Experience our furniture collections in person. Visit our showroom in Benin City to see the quality and craftsmanship up close.
+                Experience our furniture collections in person at our main factory location. See the quality, craftsmanship, and manufacturing process up close.
               </p>
               
               {/* Location Details */}
@@ -252,7 +364,7 @@ const Contact = () => {
                 </div>
                 <div className="text-center bg-gray-50 p-4 rounded-lg">
                   <MapPin className="w-6 h-6 text-warm-brown mx-auto mb-2" />
-                  <h4 className="font-semibold text-dark-brown text-sm mb-1">Easy Access</h4>
+                  <h4 className="font-semibold text-dark-brown text-sm mb-1">Factory Location</h4>
                   <p className="text-xs text-gray-600">Off Sapele Road, Benin City</p>
                 </div>
                 <div className="text-center bg-gray-50 p-4 rounded-lg">
@@ -284,9 +396,10 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-dark-brown text-sm mb-1">Ceetech Crafts</h4>
-                    <p className="text-xs text-gray-600 leading-relaxed">2nd Entrance Ebvuabugun Sawmill, Off Sapele Road, Benin City</p>
-                    <div className="flex items-center space-x-4 mt-3">
+                    <h4 className="font-semibold text-dark-brown text-sm mb-1">Ceetech Crafts Factory</h4>
+                    <p className="text-xs text-warm-brown font-medium mb-1">PRIMARY LOCATION</p>
+                    <p className="text-xs text-gray-600 leading-relaxed mb-2">2nd Entrance Ebvuabugun Sawmill, Off Sapele Road, Benin City</p>
+                    <div className="flex items-center space-x-3 mt-3">
                       <a
                         href="https://maps.google.com/?q=2nd+Entrance+Ebvuabugun+Sawmill+Off+Sapele+Road+Benin+City"
                         target="_blank"
