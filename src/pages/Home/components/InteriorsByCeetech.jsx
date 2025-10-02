@@ -117,10 +117,6 @@ const InteriorsByCeetech = () => {
                     {/* Overlay Content */}
                     <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <p className="text-sm mb-2">{service.description}</p>
-                      <div className="flex items-center text-xs">
-                        <span>Learn More</span>
-                        <ArrowRight className="w-3 h-3 ml-1" />
-                      </div>
                     </div>
                   </div>
                   
