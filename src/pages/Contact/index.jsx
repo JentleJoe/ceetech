@@ -242,32 +242,75 @@ const Contact = () => {
               <p className="text-gray-600 text-center mb-6 max-w-2xl mx-auto">
                 Experience our furniture collections in person. Visit our showroom in Benin City to see the quality and craftsmanship up close.
               </p>
+              
+              {/* Location Details */}
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="text-center bg-gray-50 p-4 rounded-lg">
+                  <Clock className="w-6 h-6 text-warm-brown mx-auto mb-2" />
+                  <h4 className="font-semibold text-dark-brown text-sm mb-1">Opening Hours</h4>
+                  <p className="text-xs text-gray-600">Mon - Sat: 7AM - 6PM</p>
+                </div>
+                <div className="text-center bg-gray-50 p-4 rounded-lg">
+                  <MapPin className="w-6 h-6 text-warm-brown mx-auto mb-2" />
+                  <h4 className="font-semibold text-dark-brown text-sm mb-1">Easy Access</h4>
+                  <p className="text-xs text-gray-600">Off Sapele Road, Benin City</p>
+                </div>
+                <div className="text-center bg-gray-50 p-4 rounded-lg">
+                  <Phone className="w-6 h-6 text-warm-brown mx-auto mb-2" />
+                  <h4 className="font-semibold text-dark-brown text-sm mb-1">Call Ahead</h4>
+                  <p className="text-xs text-gray-600">+234 816 541 0110</p>
+                </div>
+              </div>
             </div>
             
-            {/* Interactive Map Placeholder */}
+            {/* Google Maps Embed */}
             <div className="relative">
-              <div 
-                className="h-80 bg-cover bg-center bg-no-repeat relative"
-                style={{
-                  backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
-                }}
-              >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <MapPin className="w-12 h-12 mx-auto mb-3" />
-                    <h4 className="text-xl font-semibold mb-2">Ceetech Crafts Showroom</h4>
-                    <p className="text-sm opacity-90 mb-4">2nd Entrance Ebvuabugun Sawmill<br />Off Sapele Road, Benin City</p>
-                    <a
-                      href="https://maps.google.com/?q=2nd+Entrance+Ebvuabugun+Sawmill+Off+Sapele+Road+Benin+City"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 bg-white text-dark-brown px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span>Get Directions</span>
-                    </a>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.0123456789!2d5.6037168!3d6.3350000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjAnMDYuMCJOIDXCsDM2JzEzLjQiRQ!5e0!3m2!1sen!2sng!4v1234567890123!5m2!1sen!2sng&q=Ebvuabugun+Sawmill+Sapele+Road+Benin+City"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-b-2xl"
+                title="Ceetech Crafts Location Map"
+              ></iframe>
+              
+              {/* Map Overlay Info */}
+              <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg max-w-xs">
+                <div className="flex items-start space-x-3">
+                  <div className="bg-warm-brown p-2 rounded-lg flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-dark-brown text-sm mb-1">Ceetech Crafts</h4>
+                    <p className="text-xs text-gray-600 leading-relaxed">2nd Entrance Ebvuabugun Sawmill, Off Sapele Road, Benin City</p>
+                    <div className="flex items-center space-x-4 mt-3">
+                      <a
+                        href="https://maps.google.com/?q=2nd+Entrance+Ebvuabugun+Sawmill+Off+Sapele+Road+Benin+City"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-1 bg-warm-brown text-white px-3 py-1.5 rounded-md text-xs font-medium hover:bg-dark-brown transition-colors duration-200"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        <span>Directions</span>
+                      </a>
+                      <a
+                        href="tel:+2348165410110"
+                        className="inline-flex items-center space-x-1 bg-green-600 text-white px-3 py-1.5 rounded-md text-xs font-medium hover:bg-green-700 transition-colors duration-200"
+                      >
+                        <Phone className="w-3 h-3" />
+                        <span>Call</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
+              </div>
+              
+              {/* Map Controls Helper */}
+              <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-2 shadow-md">
+                <p className="text-xs text-gray-600">📍 Click and drag to explore the map</p>
               </div>
             </div>
           </div>
