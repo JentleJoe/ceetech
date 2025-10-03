@@ -28,7 +28,7 @@ const BrandStory = () => {
           <div className="animate-slide-in-right">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/src/assets/workshop.jpg"
                 alt="Crafted wooden furniture detail"
                 className="w-full rounded-2xl shadow-2xl"
               />

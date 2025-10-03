@@ -12,7 +12,7 @@ const Collection = () => {
       id: 1,
       name: 'Commercial Furniture Solutions',
       description: 'Professional office, school & healthcare furniture designed for durability and productivity',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/src/assets/office-furniture.jpg',
       category: 'Furniture',
       link: '/furniture'
     },
@@ -20,7 +20,7 @@ const Collection = () => {
       id: 2,
       name: 'Residential Furniture & Kitchens',
       description: 'Custom home furniture and kitchen solutions tailored to your lifestyle',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/src/assets/residential-furniture.jpg',
       category: 'Furniture',
       link: '/furniture'
     },
@@ -28,7 +28,7 @@ const Collection = () => {
       id: 3,
       name: 'Interior Design & Renovation',
       description: 'Complete interior transformation with modern design and expert craftsmanship',
-      image: 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/src/assets/interiror.jpg',
       category: 'Interiors',
       link: '/interiors'
     },
@@ -36,7 +36,7 @@ const Collection = () => {
       id: 4,
       name: 'Professional Training Academy',
       description: 'Learn furniture design and interior skills from industry experts',
-      image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/src/assets/furniture-apprentice.jpg',
       category: 'Academy',
       link: '/academy'
     },
@@ -44,7 +44,7 @@ const Collection = () => {
       id: 5,
       name: 'POP Ceiling Installation',
       description: 'Modern ceiling designs with professional installation and finishing',
-      image: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/src/assets/pop-ceiling.jpg',
       category: 'Interiors',
       link: '/interiors'
     },
@@ -52,7 +52,7 @@ const Collection = () => {
       id: 6,
       name: 'Tiling & Flooring Services',
       description: 'Expert tiling and modern flooring solutions for all spaces',
-      image: 'https://images.unsplash.com/photo-1631545806609-73a2ca64d4e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/src/assets/stampede.jpg',
       category: 'Interiors',
       link: '/interiors'
     }

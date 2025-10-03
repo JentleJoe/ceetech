@@ -6,7 +6,7 @@ const StayClose = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2340&q=80')`
+          backgroundImage: `url('/src/assets/background.jpg')`
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>

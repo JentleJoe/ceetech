@@ -94,7 +94,7 @@ const Contact = () => {
       <section 
         className="pt-32 pb-16 relative min-h-[55vh] flex items-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/src/assets/background.jpg')"
         }}
       >
         <div className="container mx-auto px-4 text-center relative z-10">

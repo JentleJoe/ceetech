@@ -80,7 +80,7 @@ const Interiors = () => {
       description: "Professional plaster of paris work and premium painting services to transform your walls and ceilings",
       icon: "🎨",
       mainIcon: Paintbrush,
-      image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/src/assets/painting2.jpg",
       services: [
         {
           name: "POP (Plaster of Paris) Work",
@@ -119,7 +119,7 @@ const Interiors = () => {
       description: "Expert tiling and modern stampede flooring solutions for durable and beautiful surfaces",
       icon: "🏗️",
       mainIcon: Grid,
-      image: "https://images.unsplash.com/photo-1631545806609-73a2ca64d4e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/src/assets/stampede.jpg",
       services: [
         {
           name: "Professional Tiling Services",
@@ -158,7 +158,7 @@ const Interiors = () => {
       description: "Complete window treatment and lighting solutions to enhance comfort and ambiance in your space",
       icon: "💡",
       mainIcon: Blinds,
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/src/assets/window-blind.jpg",
       services: [
         {
           name: "Window Treatments",
@@ -333,7 +333,7 @@ const Interiors = () => {
       <section 
         className="pt-32 pb-16 relative min-h-[65vh] flex items-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/interiror.jpg')"
         }}
       >
         <div className="container mx-auto px-4 relative z-10">

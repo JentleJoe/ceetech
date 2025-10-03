@@ -62,7 +62,7 @@ const About = () => {
           <div className="animate-slide-in-right">
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="/src/assets/workman.jpg"
                 alt="Ceetech craftsman at work"
                 className="w-full rounded-2xl shadow-2xl"
               />

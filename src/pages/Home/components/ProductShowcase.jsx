@@ -9,7 +9,7 @@ const ProductShowcase = () => {
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
               style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')`
+                backgroundImage: `url('/src/assets/residential-furniture.jpg')`
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent"></div>
@@ -29,7 +29,7 @@ const ProductShowcase = () => {
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
               style={{
-                backgroundImage: `url('https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')`
+                backgroundImage: `url('/src/assets/interiror.jpg')`
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent"></div>

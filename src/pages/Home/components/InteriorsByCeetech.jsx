@@ -12,35 +12,35 @@ const InteriorsByCeetech = () => {
       name: 'POP Ceiling Installation',
       description: 'Modern ceiling designs with expert installation',
       icon: Palette,
-      image: 'https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      image: '/src/assets/pop-ceiling.jpg'
     },
     {
       id: 2,
       name: 'Tiling & Flooring',
       description: 'Expert tiling and modern flooring solutions',
       icon: Grid,
-      image: 'https://images.unsplash.com/photo-1631545806609-73a2ca64d4e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      image: '/src/assets/stampede.jpg'
     },
     {
       id: 3,
       name: 'Painting Services',
       description: 'Professional interior and exterior painting with premium finishes',
       icon: Paintbrush,
-      image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      image: '/src/assets/painting.jpg'
     },
     {
       id: 4,
       name: 'Window Blinds',
       description: 'Custom window treatments and blinds for privacy and style',
       icon: Eye,
-      image: 'https://images.unsplash.com/photo-1586227740560-8cf2732c1531?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      image: '/src/assets/window-blind.jpg'
     },
     {
       id: 5,
       name: 'Lightning Solutions',
       description: 'Modern lighting design and electrical installations',
       icon: Zap,
-      image: 'https://images.unsplash.com/photo-1524484485831-a92ffc0de03f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      image: '/src/assets/window-blind.jpg'
     }
   ]
 

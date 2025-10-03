@@ -11,31 +11,31 @@ const FurnituresByCeetech = () => {
       id: 1,
       name: 'Custom Living Room Sets',
       description: 'Elegant and comfortable living room furniture tailored to your space',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      image: '/src/assets/residential-furniture.jpg'
     },
     {
       id: 2,
       name: 'Kitchen Cabinet Solutions',
       description: 'Modern kitchen cabinets with superior storage and functionality',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      image: '/src/assets/healthcare-cabinets.png'
     },
     {
       id: 3,
       name: 'Office Workstations',
       description: 'Professional office furniture designed for productivity',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      image: '/src/assets/office-furniture.jpg'
     },
     {
       id: 4,
       name: 'Bedroom Wardrobes',
       description: 'Spacious wardrobes with custom organization solutions',
-      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      image: '/src/assets/workman.jpg'
     },
     {
       id: 5,
       name: 'TV Console Units',
       description: 'Stylish TV stands with integrated storage and modern cable management',
-      image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+      image: '/src/assets/tv_console.jpg'
     }
   ]
 

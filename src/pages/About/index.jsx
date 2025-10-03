@@ -10,7 +10,7 @@ const About = () => {
       <div 
         className="pt-24 pb-16 relative min-h-[60vh] flex items-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')"
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/src/assets/workshop.jpg')"
         }}
       >
         <div className="container mx-auto px-4 relative z-10">
@@ -54,7 +54,7 @@ const About = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  src="/src/assets/workman.jpg" 
                   alt="Ceetech Crafts Workshop" 
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />
