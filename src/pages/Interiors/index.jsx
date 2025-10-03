@@ -530,7 +530,7 @@ const Interiors = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-light-tan">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
@@ -543,7 +543,7 @@ const Interiors = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {whyChooseUs.map((feature, index) => (
-              <div key={index} className="text-center bg-soft-beige p-6 rounded-lg">
+              <div key={index} className="text-center bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-lg font-playfair text-dark-brown mb-3">{feature.title}</h3>
                 <p className="text-base text-dark-brown/70">{feature.description}</p>
