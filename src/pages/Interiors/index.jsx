@@ -258,32 +258,7 @@ const Interiors = () => {
     }
   ]
 
-  const portfolioProjects = [
-    {
-      title: "Luxury Living Room Makeover",
-      category: "POP & Painting",
-      description: "Complete ceiling design with decorative POP work and premium paint finish",
-      image: "/placeholder.svg"
-    },
-    {
-      title: "Modern Kitchen Tiling",
-      category: "Tiling & Flooring",
-      description: "Beautiful ceramic tile installation with waterproof grouting",
-      image: "/placeholder.svg"
-    },
-    {
-      title: "Office Lighting & Blinds",
-      category: "Lighting & Blinds",
-      description: "Professional LED lighting with motorized window blinds installation",
-      image: "/placeholder.svg"
-    },
-    {
-      title: "Residential Stampede Flooring",
-      category: "Tiling & Flooring",
-      description: "Durable and decorative stampede flooring for modern home",
-      image: "/placeholder.svg"
-    }
-  ]
+
 
   return (
     <div className="min-h-screen bg-white interiors-page">
@@ -578,48 +553,7 @@ const Interiors = () => {
         </div>
       </section>
 
-      {/* Portfolio Preview Section */}
-      <section className="py-16 bg-light-tan">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
-              Recent Interior Projects
-            </h2>
-            <p className="text-lg text-dark-brown/70 max-w-2xl mx-auto">
-              Take a look at some of our recent interior projects showcasing our expertise across all service categories.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {portfolioProjects.map((project, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-warm-brown text-cream px-3 py-1 rounded-full text-sm font-medium">
-                      {project.category}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-dark-brown mb-2">{project.title}</h3>
-                  <p className="text-dark-brown/80 text-base">{project.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <button className="bg-warm-brown text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-dark-brown transition-colors duration-200">
-              View Complete Portfolio
-            </button>
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA Section */}
       <section className="py-16 bg-warm-brown">
