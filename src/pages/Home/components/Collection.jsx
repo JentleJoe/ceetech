@@ -20,7 +20,7 @@ const Collection = () => {
     {
       id: 1,
       name: 'Commercial Furniture Solutions',
-      description: 'Professional office, school & healthcare furniture designed for durability and productivity',
+      description: 'Professional office, school & healthcare furniture in Benin City. Serving businesses across Edo State',
       image: officeFurnitureImg,
       category: 'Furniture',
       link: '/furniture'
