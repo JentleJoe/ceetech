@@ -21,9 +21,9 @@ const BrandStory = () => {
               </p>
             </div>
 
-            <button className="mt-8 text-dark-brown hover:text-warm-brown font-medium tracking-wide transition-colors duration-300 border-b border-dark-brown hover:border-warm-brown pb-1">
+            <a href="/about" className="mt-8 inline-block text-dark-brown hover:text-warm-brown font-medium tracking-wide transition-colors duration-300 border-b border-dark-brown hover:border-warm-brown pb-1">
               Learn More
-            </button>
+            </a>
           </div>
 
           {/* Image */}

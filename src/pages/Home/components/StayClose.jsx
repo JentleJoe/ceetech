@@ -27,9 +27,9 @@ const StayClose = () => {
             we pour our passion into creating furniture that stands the test of time.
           </p>
 
-          <button className="bg-white text-dark-brown px-8 py-4 rounded-lg font-medium tracking-wide hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <a href="/about" className="bg-white text-dark-brown px-8 py-4 rounded-lg font-medium tracking-wide hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 animate-fade-in-up inline-block" style={{ animationDelay: '0.4s' }}>
             View Our Work
-          </button>
+          </a>
         </div>
       </div>
 

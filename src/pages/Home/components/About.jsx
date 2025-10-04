@@ -51,12 +51,12 @@ const About = () => {
             </div>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <button className="bg-warm-brown text-white px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-dark-brown transition-all duration-300 transform hover:scale-105">
+              <a href="/about" className="bg-warm-brown text-white px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-dark-brown transition-all duration-300 transform hover:scale-105 text-center">
                 Our Story
-              </button>
-              <button className="border-2 border-warm-brown text-warm-brown px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-warm-brown hover:text-white transition-all duration-300">
+              </a>
+              <a href="/contact#locations" className="border-2 border-warm-brown text-warm-brown px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-warm-brown hover:text-white transition-all duration-300 text-center">
                 Visit Showroom
-              </button>
+              </a>
             </div>
           </div>
 

@@ -21,9 +21,9 @@ const ProductShowcase = () => {
             <div className="absolute bottom-8 left-8 text-white">
               <h3 className="text-3xl font-playfair mb-2">Custom Furniture Solutions</h3>
               <p className="text-white/90 mb-4 max-w-sm">Tailored furniture designed to perfectly fit your space and lifestyle needs.</p>
-              <button className="text-white hover:text-light-tan transition-colors duration-300 border-b border-white hover:border-light-tan pb-1 font-medium">
+              <a href="/furniture" className="text-white hover:text-light-tan transition-colors duration-300 border-b border-white hover:border-light-tan pb-1 font-medium">
                 View Furniture
-              </button>
+              </a>
             </div>
           </div>
 
@@ -41,9 +41,9 @@ const ProductShowcase = () => {
             <div className="absolute bottom-8 left-8 text-white">
               <h3 className="text-3xl font-playfair mb-2">Professional Interior Services</h3>
               <p className="text-white/90 mb-4 max-w-sm">Complete interior design, POP ceilings, tiling, and renovation services.</p>
-              <button className="text-white hover:text-light-tan transition-colors duration-300 border-b border-white hover:border-light-tan pb-1 font-medium">
+              <a href="/interiors" className="text-white hover:text-light-tan transition-colors duration-300 border-b border-white hover:border-light-tan pb-1 font-medium">
                 View Interiors
-              </button>
+              </a>
             </div>
           </div>
         </div>

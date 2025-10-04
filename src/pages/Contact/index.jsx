@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Clock, Facebook, Instagram, MessageCircle, Copy, CheckCircle2, ExternalLink, Send, PhoneCall } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
 
@@ -8,6 +8,26 @@ import backgroundImg from '../../assets/background.jpg'
 
 const Contact = () => {
   const [copiedText, setCopiedText] = useState('')
+
+  // Handle anchor scrolling when component mounts
+  useEffect(() => {
+    const hash = window.location.hash
+    if (hash) {
+      // Remove the # from the hash
+      const elementId = hash.substring(1)
+      // Wait for the page to fully load before scrolling
+      const timer = setTimeout(() => {
+        const element = document.getElementById(elementId)
+        if (element) {
+          element.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          })
+        }
+      }, 100)
+      return () => clearTimeout(timer)
+    }
+  }, [])
 
   const copyToClipboard = async (text, label) => {
     try {
@@ -236,7 +256,7 @@ const Contact = () => {
           </div>
 
           {/* All Locations Section */}
-          <div className="mb-16">
+          <div id="locations" className="mb-16">
             <h3 className="text-2xl font-playfair text-dark-brown mb-4 text-center">Our Locations in Benin City</h3>
             <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
               Visit us at any of our locations. Our factory showroom is our primary location with the full collection and manufacturing facility.
