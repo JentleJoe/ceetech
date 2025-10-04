@@ -11,6 +11,7 @@ import tvConsoleImg from '../../assets/tv_console.jpg'
 import residentialFurnitureImg from '../../assets/residential-furniture.jpg'
 import workshopImg from '../../assets/workshop.jpg'
 import diningImg from '../../assets/dining.jpg'
+import kitchenCabinetImg from '../../assets/kitchen-cabinet.jpg'
 import backgroundImg from '../../assets/livingroom.jpeg'
 
 const Furniture = () => {
@@ -78,7 +79,7 @@ const Furniture = () => {
       title: "Kitchen Cabinets",
       description: "Custom kitchen solutions with modern designs and premium finishes",
       icon: "🍽️",
-      image: healthcareCabinetsImg,
+      image: kitchenCabinetImg,
       services: [
         "Upper & Base Cabinets",
         "Kitchen Islands",

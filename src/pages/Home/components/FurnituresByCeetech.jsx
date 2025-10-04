@@ -9,6 +9,7 @@ import healthcareCabinetsImg from '../../../assets/healthcare-cabinets.png'
 import officeFurnitureImg from '../../../assets/office-furniture.jpg'
 import workmanImg from '../../../assets/workman.jpg'
 import tvConsoleImg from '../../../assets/tv_console.jpg'
+import kitchenCabinetImg from '../../../assets/kitchen-cabinet.jpg'
 
 const FurnituresByCeetech = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null)
@@ -24,7 +25,7 @@ const FurnituresByCeetech = () => {
       id: 2,
       name: 'Kitchen Cabinet Solutions',
       description: 'Modern kitchen cabinets with superior storage and functionality',
-      image: healthcareCabinetsImg
+      image: kitchenCabinetImg
     },
     {
       id: 3,

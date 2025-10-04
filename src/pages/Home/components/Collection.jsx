@@ -11,6 +11,7 @@ import interiorImg from '../../../assets/interiror.jpg'
 import furnitureApprenticeImg from '../../../assets/furniture-apprentice.jpg'
 import popCeilingImg from '../../../assets/pop-ceiling.jpg'
 import stampedeImg from '../../../assets/stampede.jpg'
+import kitchenCabinetImg from '../../../assets/kitchen-cabinet.jpg'
 
 const Collection = () => {
   const [hoveredService, setHoveredService] = useState(null)
@@ -28,7 +29,7 @@ const Collection = () => {
       id: 2,
       name: 'Residential Furniture & Kitchens',
       description: 'Custom home furniture and kitchen solutions tailored to your lifestyle',
-      image: residentialFurnitureImg,
+      image: kitchenCabinetImg,
       category: 'Furniture',
       link: '/furniture'
     },

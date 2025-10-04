@@ -38,15 +38,15 @@ const About = () => {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Ceetech Crafts has been synonymous with <span className="text-warm-brown font-medium">exceptional furniture craftsmanship</span>. What started as a small family workshop has grown into a trusted name in premium furniture design.
+                Ceetech Crafts has established itself as a leader in <span className="text-warm-brown font-medium">exceptional furniture craftsmanship</span> and interior design. From our modern factory in Benin City, we've built a reputation for delivering premium furniture solutions that exceed expectations.
               </p>
               
               <p>
-                We believe that furniture should do more than fill a space—it should tell your story, reflect your values, and create lasting memories. Every piece we create combines <span className="text-warm-brown font-medium">traditional techniques</span> with <span className="text-warm-brown font-medium">contemporary design</span>, resulting in furniture that's both timeless and thoroughly modern.
+                We believe that furniture should do more than fill a space—it should tell your story, reflect your values, and create lasting memories. Every piece we create combines <span className="text-warm-brown font-medium">innovative techniques</span> with <span className="text-warm-brown font-medium">contemporary design</span>, resulting in furniture that's both functional and beautifully crafted.
               </p>
               
               <p>
-                Our commitment extends beyond beautiful furniture. We're dedicated to <span className="text-warm-brown font-medium">sustainable practices</span>, supporting local artisans, and building pieces that will be cherished for generations.
+                Our commitment extends beyond beautiful furniture. We're dedicated to <span className="text-warm-brown font-medium">quality materials</span>, skilled craftsmanship, and creating custom solutions that transform spaces and enhance lives for years to come.
               </p>
             </div>
 
