@@ -13,6 +13,7 @@ import workshopImg from '../../assets/workshop.jpg'
 import diningImg from '../../assets/dining.jpg'
 import kitchenCabinetImg from '../../assets/kitchen-cabinet.jpg'
 import backgroundImg from '../../assets/livingroom.jpeg'
+import schoolFurnitureImg from '../../assets/school-furniture.jpg'
 
 const Furniture = () => {
   const commercialFurniture = [
@@ -34,7 +35,7 @@ const Furniture = () => {
       title: "School Furniture",
       description: "Durable and safe furniture designed for educational environments",
       icon: "🎓",
-      image: furnitureApprenticeImg,
+      image: schoolFurnitureImg,
       services: [
         "Student Desks & Chairs",
         "Teacher's Furniture",
