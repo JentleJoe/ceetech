@@ -10,6 +10,7 @@ import healthcareCabinetsImg from '../../assets/healthcare-cabinets.png'
 import tvConsoleImg from '../../assets/tv_console.jpg'
 import residentialFurnitureImg from '../../assets/residential-furniture.jpg'
 import workshopImg from '../../assets/workshop.jpg'
+import diningImg from '../../assets/dining.jpg'
 import backgroundImg from '../../assets/livingroom.jpeg'
 
 const Furniture = () => {
@@ -133,7 +134,7 @@ const Furniture = () => {
       title: "Dining Furniture",
       description: "Beautiful dining sets for family gatherings and entertaining",
       icon: "🍴",
-      image: officeFurnitureImg,
+      image: diningImg,
       services: [
         "Dining Tables (4-12 Seaters)",
         "Dining Chairs & Benches",

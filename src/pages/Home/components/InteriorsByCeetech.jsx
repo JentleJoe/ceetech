@@ -8,6 +8,7 @@ import popCeilingImg from '../../../assets/pop-ceiling.jpg'
 import stampedeImg from '../../../assets/stampede.jpg'
 import paintingImg from '../../../assets/painting.jpg'
 import windowBlindImg from '../../../assets/window-blind.jpg'
+import lightningImg from '../../../assets/lightning.jpg'
 
 const InteriorsByCeetech = () => {
   const [hoveredService, setHoveredService] = useState(null)
@@ -46,7 +47,7 @@ const InteriorsByCeetech = () => {
       name: 'Lightning Solutions',
       description: 'Modern lighting design and electrical installations',
       icon: Zap,
-      image: windowBlindImg
+      image: lightningImg
     }
   ]
 
