@@ -2,6 +2,9 @@ import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
 import { BookOpen, Users, Award, Clock } from 'lucide-react'
 
+// Import images
+import furnitureApprenticeImg from '../../assets/furniture-apprentice.jpg'
+
 const Academy = () => {
   const courses = [
     {

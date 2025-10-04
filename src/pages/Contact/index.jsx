@@ -3,6 +3,9 @@ import { useState } from 'react'
 import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
 
+// Import images
+import backgroundImg from '../../assets/background.jpg'
+
 const Contact = () => {
   const [copiedText, setCopiedText] = useState('')
 
