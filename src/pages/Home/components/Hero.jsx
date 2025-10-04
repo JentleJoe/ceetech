@@ -1,6 +1,6 @@
 
 import { ArrowRight } from 'lucide-react'
-import backgroundImg from '../../../assets/background.jpg'
+import backgroundImg from '../../../assets/furniture-bg.jpg'
 
 const Hero = () => {
   return (

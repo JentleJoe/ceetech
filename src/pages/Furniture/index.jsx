@@ -10,7 +10,7 @@ import healthcareCabinetsImg from '../../assets/healthcare-cabinets.png'
 import tvConsoleImg from '../../assets/tv_console.jpg'
 import residentialFurnitureImg from '../../assets/residential-furniture.jpg'
 import workshopImg from '../../assets/workshop.jpg'
-import backgroundImg from '../../assets/background.jpg'
+import backgroundImg from '../../assets/livingroom.jpeg'
 
 const Furniture = () => {
   const commercialFurniture = [
