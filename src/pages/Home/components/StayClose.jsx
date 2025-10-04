@@ -1,4 +1,6 @@
 
+import backgroundImg from '../../../assets/background.jpg'
+
 const StayClose = () => {
   return (
     <section id="contact" className="relative py-32 overflow-hidden">
@@ -6,7 +8,7 @@ const StayClose = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/src/assets/background.jpg')`
+          backgroundImage: `url(${backgroundImg})`
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>

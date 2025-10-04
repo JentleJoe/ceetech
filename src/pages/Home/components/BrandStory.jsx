@@ -1,4 +1,6 @@
 
+import workshopImg from '../../../assets/workshop.jpg'
+
 const BrandStory = () => {
   return (
     <section className="py-20 bg-white">
@@ -28,7 +30,7 @@ const BrandStory = () => {
           <div className="animate-slide-in-right">
             <div className="relative">
               <img
-                src="/src/assets/workshop.jpg"
+                src={workshopImg}
                 alt="Crafted wooden furniture detail"
                 className="w-full rounded-2xl shadow-2xl"
               />

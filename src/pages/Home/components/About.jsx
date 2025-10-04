@@ -1,5 +1,7 @@
 import { Award, Users, Leaf, Clock } from "lucide-react"
 
+import workmanImg from '../../../assets/workman.jpg'
+
 const About = () => {
   const values = [
     {
@@ -62,7 +64,7 @@ const About = () => {
           <div className="animate-slide-in-right">
             <div className="relative">
               <img
-                src="/src/assets/workman.jpg"
+                src={workmanImg}
                 alt="Ceetech craftsman at work"
                 className="w-full rounded-2xl shadow-2xl"
               />

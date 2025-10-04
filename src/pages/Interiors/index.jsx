@@ -6,6 +6,12 @@ import {
   Blinds, Sun, Lightbulb, Wind, Sparkles, Home
 } from 'lucide-react'
 
+// Import images
+import paintingImg from '../../assets/painting2.jpg'
+import stampedeImg from '../../assets/stampede.jpg'
+import windowBlindImg from '../../assets/window-blind.jpg'
+import interiorBgImg from '../../assets/interiror.jpg'
+
 // Add custom animations
 const customStyles = `
   @keyframes fadeInUp {
@@ -80,7 +86,7 @@ const Interiors = () => {
       description: "Professional plaster of paris work and premium painting services to transform your walls and ceilings",
       icon: "🎨",
       mainIcon: Paintbrush,
-      image: "/src/assets/painting2.jpg",
+      image: paintingImg,
       services: [
         {
           name: "POP (Plaster of Paris) Work",
@@ -119,7 +125,7 @@ const Interiors = () => {
       description: "Expert tiling and modern stampede flooring solutions for durable and beautiful surfaces",
       icon: "🏗️",
       mainIcon: Grid,
-      image: "/src/assets/stampede.jpg",
+      image: stampedeImg,
       services: [
         {
           name: "Professional Tiling Services",
@@ -158,7 +164,7 @@ const Interiors = () => {
       description: "Complete window treatment and lighting solutions to enhance comfort and ambiance in your space",
       icon: "💡",
       mainIcon: Blinds,
-      image: "/src/assets/window-blind.jpg",
+      image: windowBlindImg,
       services: [
         {
           name: "Window Treatments",
@@ -333,7 +339,7 @@ const Interiors = () => {
       <section 
         className="pt-32 pb-16 relative min-h-[65vh] flex items-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/interiror.jpg')"
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${interiorBgImg})`
         }}
       >
         <div className="container mx-auto px-4 relative z-10">

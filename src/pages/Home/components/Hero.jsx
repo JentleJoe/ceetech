@@ -1,4 +1,7 @@
 
+import { ArrowRight } from 'lucide-react'
+import backgroundImg from '../../../assets/background.jpg'
+
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-start overflow-hidden">
@@ -6,7 +9,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/src/assets/background.jpg')`
+          backgroundImage: `url(${backgroundImg})`
         }}
       >
         <div className="absolute inset-0 bg-black/20"></div>

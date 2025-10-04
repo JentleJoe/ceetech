@@ -2,13 +2,23 @@ import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
 import { ArrowRight, CheckCircle, Users, Building, Home, Eye, Wrench, Truck } from 'lucide-react'
 
+// Import images
+import officeFurnitureImg from '../../assets/office-furniture.jpg'
+import furnitureApprenticeImg from '../../assets/furniture-apprentice.jpg'
+import hotelFurnitureImg from '../../assets/hotel-furniture.jpg'
+import healthcareCabinetsImg from '../../assets/healthcare-cabinets.png'
+import tvConsoleImg from '../../assets/tv_console.jpg'
+import residentialFurnitureImg from '../../assets/residential-furniture.jpg'
+import workshopImg from '../../assets/workshop.jpg'
+import backgroundImg from '../../assets/background.jpg'
+
 const Furniture = () => {
   const commercialFurniture = [
     {
       title: "Office Furniture",
       description: "Complete office solutions designed for productivity and comfort",
       icon: "🏢",
-      image: "/src/assets/office-furniture.jpg",
+      image: officeFurnitureImg,
       services: [
         "Executive Desks & Workstations",
         "Ergonomic Office Chairs",
@@ -22,7 +32,7 @@ const Furniture = () => {
       title: "School Furniture",
       description: "Durable and safe furniture designed for educational environments",
       icon: "🎓",
-      image: "/src/assets/furniture-apprentice.jpg",
+      image: furnitureApprenticeImg,
       services: [
         "Student Desks & Chairs",
         "Teacher's Furniture",
@@ -36,7 +46,7 @@ const Furniture = () => {
       title: "Hospitality Furniture",
       description: "Elegant furniture for hotels, restaurants, and hospitality venues",
       icon: "🏨",
-      image: "/src/assets/hotel-furniture.jpg",
+      image: hotelFurnitureImg,
       services: [
         "Restaurant Tables & Chairs",
         "Bar Furniture & Counter Stools",
@@ -50,7 +60,7 @@ const Furniture = () => {
       title: "Healthcare Furniture",
       description: "Specialized furniture for hospitals, clinics, and medical facilities",
       icon: "🏥",
-      image: "/src/assets/healthcare-cabinets.png",
+      image: healthcareCabinetsImg,
       services: [
         "Patient Room Furniture",
         "Waiting Area Seating",
@@ -67,7 +77,7 @@ const Furniture = () => {
       title: "Kitchen Cabinets",
       description: "Custom kitchen solutions with modern designs and premium finishes",
       icon: "🍽️",
-      image: "/src/assets/healthcare-cabinets.png",
+      image: healthcareCabinetsImg,
       services: [
         "Upper & Base Cabinets",
         "Kitchen Islands",
@@ -81,7 +91,7 @@ const Furniture = () => {
       title: "Wardrobes",
       description: "Spacious and organized storage solutions for your bedroom",
       icon: "👔",
-      image: "/src/assets/residential-furniture.jpg",
+      image: residentialFurnitureImg,
       services: [
         "Built-in Wardrobes",
         "Walk-in Closets",
@@ -95,7 +105,7 @@ const Furniture = () => {
       title: "TV Consoles",
       description: "Modern entertainment centers with smart cable management",
       icon: "📺",
-      image: "/src/assets/tv_console.jpg",
+      image: tvConsoleImg,
       services: [
         "Wall-mounted Units",
         "Floor-standing Consoles",
@@ -109,7 +119,7 @@ const Furniture = () => {
       title: "Sofas & Seating",
       description: "Comfortable and stylish seating for every living space",
       icon: "🛋️",
-      image: "/src/assets/residential-furniture.jpg",
+      image: residentialFurnitureImg,
       services: [
         "L-shaped Sectionals",
         "3-Seater & 2-Seater Sofas",
@@ -123,7 +133,7 @@ const Furniture = () => {
       title: "Dining Furniture",
       description: "Beautiful dining sets for family gatherings and entertaining",
       icon: "🍴",
-      image: "/src/assets/office-furniture.jpg",
+      image: officeFurnitureImg,
       services: [
         "Dining Tables (4-12 Seaters)",
         "Dining Chairs & Benches",
@@ -137,7 +147,7 @@ const Furniture = () => {
       title: "Custom Furniture",
       description: "Bespoke furniture pieces designed specifically for your needs",
       icon: "⚒️",
-      image: "/src/assets/workshop.jpg",
+      image: workshopImg,
       services: [
         "Made-to-measure Solutions",
         "Unique Design Concepts",
@@ -218,7 +228,7 @@ const Furniture = () => {
       <section 
         className="pt-32 pb-16 relative min-h-[65vh] flex items-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/assets/background.jpg')"
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImg})`
         }}
       >
         <div className="container mx-auto px-4 relative z-10">

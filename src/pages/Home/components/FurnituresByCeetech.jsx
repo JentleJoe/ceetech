@@ -3,6 +3,13 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
+// Import images
+import residentialFurnitureImg from '../../../assets/residential-furniture.jpg'
+import healthcareCabinetsImg from '../../../assets/healthcare-cabinets.png'
+import officeFurnitureImg from '../../../assets/office-furniture.jpg'
+import workmanImg from '../../../assets/workman.jpg'
+import tvConsoleImg from '../../../assets/tv_console.jpg'
+
 const FurnituresByCeetech = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null)
 
@@ -11,31 +18,31 @@ const FurnituresByCeetech = () => {
       id: 1,
       name: 'Custom Living Room Sets',
       description: 'Elegant and comfortable living room furniture tailored to your space',
-      image: '/src/assets/residential-furniture.jpg'
+      image: residentialFurnitureImg
     },
     {
       id: 2,
       name: 'Kitchen Cabinet Solutions',
       description: 'Modern kitchen cabinets with superior storage and functionality',
-      image: '/src/assets/healthcare-cabinets.png'
+      image: healthcareCabinetsImg
     },
     {
       id: 3,
       name: 'Office Workstations',
       description: 'Professional office furniture designed for productivity',
-      image: '/src/assets/office-furniture.jpg'
+      image: officeFurnitureImg
     },
     {
       id: 4,
       name: 'Bedroom Wardrobes',
       description: 'Spacious wardrobes with custom organization solutions',
-      image: '/src/assets/workman.jpg'
+      image: workmanImg
     },
     {
       id: 5,
       name: 'TV Console Units',
       description: 'Stylish TV stands with integrated storage and modern cable management',
-      image: '/src/assets/tv_console.jpg'
+      image: tvConsoleImg
     }
   ]
 

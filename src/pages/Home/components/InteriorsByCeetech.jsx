@@ -3,6 +3,12 @@ import { ChevronLeft, ChevronRight, ArrowRight, Palette, Grid, Paintbrush, Eye, 
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
+// Import images
+import popCeilingImg from '../../../assets/pop-ceiling.jpg'
+import stampedeImg from '../../../assets/stampede.jpg'
+import paintingImg from '../../../assets/painting.jpg'
+import windowBlindImg from '../../../assets/window-blind.jpg'
+
 const InteriorsByCeetech = () => {
   const [hoveredService, setHoveredService] = useState(null)
 
@@ -12,35 +18,35 @@ const InteriorsByCeetech = () => {
       name: 'POP Ceiling Installation',
       description: 'Modern ceiling designs with expert installation',
       icon: Palette,
-      image: '/src/assets/pop-ceiling.jpg'
+      image: popCeilingImg
     },
     {
       id: 2,
       name: 'Tiling & Flooring',
       description: 'Expert tiling and modern flooring solutions',
       icon: Grid,
-      image: '/src/assets/stampede.jpg'
+      image: stampedeImg
     },
     {
       id: 3,
       name: 'Painting Services',
       description: 'Professional interior and exterior painting with premium finishes',
       icon: Paintbrush,
-      image: '/src/assets/painting.jpg'
+      image: paintingImg
     },
     {
       id: 4,
       name: 'Window Blinds',
       description: 'Custom window treatments and blinds for privacy and style',
       icon: Eye,
-      image: '/src/assets/window-blind.jpg'
+      image: windowBlindImg
     },
     {
       id: 5,
       name: 'Lightning Solutions',
       description: 'Modern lighting design and electrical installations',
       icon: Zap,
-      image: '/src/assets/window-blind.jpg'
+      image: windowBlindImg
     }
   ]
 

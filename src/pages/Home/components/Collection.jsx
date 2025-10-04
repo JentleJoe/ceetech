@@ -4,6 +4,14 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
+// Import images
+import officeFurnitureImg from '../../../assets/office-furniture.jpg'
+import residentialFurnitureImg from '../../../assets/residential-furniture.jpg'
+import interiorImg from '../../../assets/interiror.jpg'
+import furnitureApprenticeImg from '../../../assets/furniture-apprentice.jpg'
+import popCeilingImg from '../../../assets/pop-ceiling.jpg'
+import stampedeImg from '../../../assets/stampede.jpg'
+
 const Collection = () => {
   const [hoveredService, setHoveredService] = useState(null)
 
@@ -12,7 +20,7 @@ const Collection = () => {
       id: 1,
       name: 'Commercial Furniture Solutions',
       description: 'Professional office, school & healthcare furniture designed for durability and productivity',
-      image: '/src/assets/office-furniture.jpg',
+      image: officeFurnitureImg,
       category: 'Furniture',
       link: '/furniture'
     },
@@ -20,7 +28,7 @@ const Collection = () => {
       id: 2,
       name: 'Residential Furniture & Kitchens',
       description: 'Custom home furniture and kitchen solutions tailored to your lifestyle',
-      image: '/src/assets/residential-furniture.jpg',
+      image: residentialFurnitureImg,
       category: 'Furniture',
       link: '/furniture'
     },
@@ -28,7 +36,7 @@ const Collection = () => {
       id: 3,
       name: 'Interior Design & Renovation',
       description: 'Complete interior transformation with modern design and expert craftsmanship',
-      image: '/src/assets/interiror.jpg',
+      image: interiorImg,
       category: 'Interiors',
       link: '/interiors'
     },
@@ -36,7 +44,7 @@ const Collection = () => {
       id: 4,
       name: 'Professional Training Academy',
       description: 'Learn furniture design and interior skills from industry experts',
-      image: '/src/assets/furniture-apprentice.jpg',
+      image: furnitureApprenticeImg,
       category: 'Academy',
       link: '/academy'
     },
@@ -44,7 +52,7 @@ const Collection = () => {
       id: 5,
       name: 'POP Ceiling Installation',
       description: 'Modern ceiling designs with professional installation and finishing',
-      image: '/src/assets/pop-ceiling.jpg',
+      image: popCeilingImg,
       category: 'Interiors',
       link: '/interiors'
     },
@@ -52,7 +60,7 @@ const Collection = () => {
       id: 6,
       name: 'Tiling & Flooring Services',
       description: 'Expert tiling and modern flooring solutions for all spaces',
-      image: '/src/assets/stampede.jpg',
+      image: stampedeImg,
       category: 'Interiors',
       link: '/interiors'
     }

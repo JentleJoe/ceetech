@@ -1,6 +1,10 @@
 import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
 
+// Import images
+import workshopImg from '../../assets/workshop.jpg'
+import workmanImg from '../../assets/workman.jpg'
+
 const About = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -10,7 +14,7 @@ const About = () => {
       <div 
         className="pt-24 pb-16 relative min-h-[60vh] flex items-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/src/assets/workshop.jpg')"
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${workshopImg})`
         }}
       >
         <div className="container mx-auto px-4 relative z-10">
@@ -54,7 +58,7 @@ const About = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="/src/assets/workman.jpg" 
+                  src={workmanImg} 
                   alt="Ceetech Crafts Workshop" 
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />

@@ -1,4 +1,7 @@
 
+import residentialFurnitureImg from '../../../assets/residential-furniture.jpg'
+import interiorImg from '../../../assets/interiror.jpg'
+
 const ProductShowcase = () => {
   return (
     <section id="products" className="py-20 bg-soft-beige">
@@ -9,7 +12,7 @@ const ProductShowcase = () => {
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
               style={{
-                backgroundImage: `url('/src/assets/residential-furniture.jpg')`
+                backgroundImage: `url(${residentialFurnitureImg})`
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent"></div>
@@ -29,7 +32,7 @@ const ProductShowcase = () => {
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
               style={{
-                backgroundImage: `url('/src/assets/interiror.jpg')`
+                backgroundImage: `url(${interiorImg})`
               }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent"></div>

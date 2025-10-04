@@ -65,7 +65,7 @@ const Academy = () => {
       <div 
         className="pt-24 pb-16 relative min-h-[60vh] flex items-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/src/assets/furniture-apprentice.jpg')"
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${furnitureApprenticeImg})`
         }}
       >
         <div className="container mx-auto px-4 relative z-10">
