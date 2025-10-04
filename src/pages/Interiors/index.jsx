@@ -13,74 +13,17 @@ import stampedeImg from '../../assets/stampede.jpg'
 import windowBlindImg from '../../assets/window-blind.jpg'
 import interiorBgImg from '../../assets/interiror.jpg'
 
-// Add custom animations
-const customStyles = `
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes bounce-gentle {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-5px);
-    }
-    60% {
-      transform: translateY(-3px);
-    }
-  }
-  
-  @keyframes pulse-gentle {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-  }
-  
-  .animate-fade-in {
-    animation: fade-in 0.8s ease-out;
-  }
-  
-  .animate-bounce-gentle {
-    animation: bounce-gentle 2s infinite;
-  }
-  
-  .animate-pulse-gentle {
-    animation: pulse-gentle 2s infinite;
-  }
-`
+
 
 const Interiors = () => {
+  // Debug: Log image imports
+  console.log('Image imports:', {
+    paintingImg,
+    stampedeImg,
+    windowBlindImg,
+    interiorBgImg
+  });
+
   const interiorCategories = [
     {
       title: "POP & Painting",
@@ -270,7 +213,7 @@ const Interiors = () => {
   return (
     <div className="min-h-screen bg-white interiors-page">
       <style>{`
-        .interiors-page @keyframes fadeInUp {
+        @keyframes fadeInUp {
           from {
             opacity: 0;
             transform: translateY(30px);
@@ -424,9 +367,18 @@ const Interiors = () => {
                   <img 
                     src={category.image} 
                     alt={`${category.title} services`}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 animate-fade-in"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    onError={(e) => {
+                      console.error(`Failed to load image for ${category.title}:`, category.image);
+                      e.target.style.backgroundColor = '#f3f4f6';
+                      e.target.style.display = 'flex';
+                      e.target.style.alignItems = 'center';
+                      e.target.style.justifyContent = 'center';
+                      e.target.innerHTML = `<span style="color: #6b7280;">Image not available</span>`;
+                    }}
+                    onLoad={() => console.log(`Successfully loaded image for ${category.title}`)}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent group-hover:from-black/70 group-hover:via-black/30 transition-all duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent group-hover:from-black/50 group-hover:via-black/20 transition-all duration-500"></div>
                   <div className="absolute bottom-6 left-6 text-white transform transition-all duration-500 group-hover:translate-y-[-8px]">
                     <div className="text-4xl mb-2 animate-bounce-gentle">{category.icon}</div>
                     <h2 className="text-2xl md:text-3xl font-playfair font-bold mb-2 group-hover:text-light-tan transition-colors duration-300">
