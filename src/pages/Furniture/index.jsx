@@ -14,6 +14,7 @@ import diningImg from '../../assets/dining.jpg'
 import kitchenCabinetImg from '../../assets/kitchen-cabinet.jpg'
 import backgroundImg from '../../assets/livingroom.jpeg'
 import schoolFurnitureImg from '../../assets/school-furniture.jpg'
+import wardrobeImg from '../../assets/wardrobe.jpeg'
 
 const Furniture = () => {
   const commercialFurniture = [
@@ -94,7 +95,7 @@ const Furniture = () => {
       title: "Wardrobes",
       description: "Spacious and organized storage solutions for your bedroom",
       icon: "👔",
-      image: residentialFurnitureImg,
+      image: wardrobeImg,
       services: [
         "Built-in Wardrobes",
         "Walk-in Closets",

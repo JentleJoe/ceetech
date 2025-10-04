@@ -10,6 +10,7 @@ import officeFurnitureImg from '../../../assets/office-furniture.jpg'
 import workmanImg from '../../../assets/workman.jpg'
 import tvConsoleImg from '../../../assets/tv_console.jpg'
 import kitchenCabinetImg from '../../../assets/kitchen-cabinet.jpg'
+import wardrobeImg from '../../../assets/wardrobe.jpeg'
 
 const FurnituresByCeetech = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null)
@@ -37,7 +38,7 @@ const FurnituresByCeetech = () => {
       id: 4,
       name: 'Bedroom Wardrobes',
       description: 'Spacious wardrobes with custom organization solutions',
-      image: workmanImg
+      image: wardrobeImg
     },
     {
       id: 5,
