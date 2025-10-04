@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://ceetechcrafts.com/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ceetechcrafts.com/furniture-bg.jpg</image:loc>
+      <image:caption>Best Furniture in Benin City - Ceetech Crafts</image:caption>
+      <image:title>Ceetech Crafts - Premium Furniture Benin</image:title>
+    </image:image>
+  </url>
+
+  <!-- Furniture Page - High Priority for Local SEO -->
+  <url>
+    <loc>https://ceetechcrafts.com/furniture</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ceetechcrafts.com/custom-furniture-benin.jpg</image:loc>
+      <image:caption>Custom Furniture in Benin City</image:caption>
+      <image:title>Best Custom Furniture Maker in Benin</image:title>
+    </image:image>
+  </url>
+
+  <!-- Interiors Page - High Priority for Local SEO -->
+  <url>
+    <loc>https://ceetechcrafts.com/interiors</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ceetechcrafts.com/interior-design-benin.jpg</image:loc>
+      <image:caption>Interior Design Services in Benin City</image:caption>
+      <image:title>Best Interior Designer in Benin City</image:title>
+    </image:image>
+  </url>
+
+  <!-- Academy Page - High Priority for Local Training Searches -->
+  <url>
+    <loc>https://ceetechcrafts.com/academy</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://ceetechcrafts.com/furniture-academy-benin.jpg</image:loc>
+      <image:caption>Furniture Academy Training in Benin City</image:caption>
+      <image:title>Furniture Making Academy in Benin</image:title>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://ceetechcrafts.com/about</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://ceetechcrafts.com/contact</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
