@@ -15,8 +15,8 @@ export const BrandProvider = ({ children, brandConfig }) => {
   const defaultConfig = {
     brandName: 'Ceetech Crafts',
     brandNameShort: 'Ceetech',
-    tagline: 'Where Craft Meets Class',
-    description: 'Experience the perfect harmony of traditional craftsmanship and contemporary elegance in every piece.',
+    tagline: 'Crafted to Inspire',
+    description: 'We don\'t just design interiors — we craft experiences that inspire and transform spaces.',
     
     navigation: [
       'Lighting',

@@ -40,10 +40,10 @@ const About = () => {
                   Our Story
                 </h2>
                 <p className="text-lg text-dark-brown/80 mb-6">
-                  Located in the heart of Benin City, Ceetech Crafts has grown from a passion project into 
-                  Benin's premier destination for custom furniture and interior design solutions. 
-                  Our factory on Sapele Road serves as both our manufacturing hub and main showroom, 
-                  where visitors can witness the entire creation process firsthand.
+                  At Ceetech Crafts, every detail tells a story. Located in the heart of Benin City, 
+                  we've grown from a passion project into Benin's premier destination for custom furniture 
+                  and interior design solutions. Our factory on Sapele Road serves as both our manufacturing 
+                  hub and main showroom, where visitors can witness the entire creation process firsthand.
                 </p>
                 <p className="text-lg text-dark-brown/80 mb-6">
                   What sets us apart is our comprehensive approach - we're not just furniture makers, 
@@ -81,10 +81,10 @@ const About = () => {
               Our Mission
             </h2>
             <p className="text-xl text-dark-brown/80 leading-relaxed mb-8">
-              To be Benin's leading furniture manufacturer and interior design company, 
-              providing custom solutions that transform ordinary spaces into extraordinary environments. 
-              We combine traditional craftsmanship with modern technology to deliver furniture and interiors 
-              that reflect our clients' unique personalities and functional needs.
+              We don't just design interiors — we craft experiences. Our mission is to be Benin's leading 
+              furniture manufacturer and interior design company, transforming ordinary spaces into 
+              extraordinary environments. We combine traditional craftsmanship with modern innovation to 
+              deliver solutions that reflect our clients' unique personalities and inspire their daily lives.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               <div className="text-center bg-white p-6 rounded-xl shadow-lg">

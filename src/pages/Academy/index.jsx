@@ -85,7 +85,7 @@ const Academy = () => {
               Ceetech Crafts <span className="text-light-tan">Academy</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 drop-shadow-md">
-              Master the craft of furniture making - from basic woodworking skills to advanced construction techniques. Transform your passion into profession.
+              We train visionaries, not just designers. Master the craft of furniture making and transform your creative passion into professional expertise.
             </p>
             <a 
               href="https://wa.me/2349069616141?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20to%20enroll%20in%20your%20academy%20courses"
