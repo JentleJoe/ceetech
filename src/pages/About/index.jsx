@@ -232,7 +232,7 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/2348165410110?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20services"
+                href="https://wa.me/2349069616141?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-700 transition-colors duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
@@ -243,10 +243,10 @@ const About = () => {
                 <span>Chat on WhatsApp</span>
               </a>
               <a
-                href="tel:+2348165410110"
+                href="tel:+2349069616141"
                 className="border-2 border-cream text-cream px-8 py-4 rounded-xl font-semibold hover:bg-cream hover:text-warm-brown transition-colors duration-300 shadow-lg"
               >
-                Call: +234 816 541 0110
+                Call: +234 906 961 6141
               </a>
             </div>
           </div>

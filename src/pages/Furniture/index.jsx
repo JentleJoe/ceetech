@@ -245,7 +245,7 @@ const Furniture = () => {
             </p>
             <div className="flex justify-center">
               <a 
-                href="https://wa.me/2348165410110?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20a%20free%20consultation%20for%20custom%20furniture"
+                href="https://wa.me/2349069616141?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20a%20free%20consultation%20for%20custom%20furniture"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-dark-brown transition-colors duration-200 shadow-lg flex items-center space-x-2"
@@ -497,7 +497,7 @@ const Furniture = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="https://wa.me/2348165410110?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20to%20get%20a%20free%20consultation%20for%20custom%20furniture"
+                href="https://wa.me/2349069616141?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20to%20get%20a%20free%20consultation%20for%20custom%20furniture"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors duration-200 flex items-center justify-center space-x-2"
@@ -508,7 +508,7 @@ const Furniture = () => {
                 <span>Get Free Consultation</span>
               </a>
               <a 
-                href="tel:+2348165410110"
+                href="tel:+2349069616141"
                 className="border-2 border-cream text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-cream hover:text-warm-brown transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />

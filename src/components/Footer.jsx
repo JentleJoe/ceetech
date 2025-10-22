@@ -70,7 +70,7 @@ const Footer = () => {
                   <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.144-1.666-1.144-2.338C16.597 1.432 16.597.615 16.597 0h-3.278c0 .615 0 1.432 0 2c0 .672-.295 1.489-1.144 2.338a6.228 6.228 0 0 1-1.137.966c-.146.086-.295.172-.443.258-.738.43-1.48.86-1.48 1.635v1.29c.774 0 1.48-.258 2.095-.688.369-.258.664-.574.885-.966.148-.258.221-.516.221-.774h3.278c0 .258.073.516.221.774.221.392.516.708.885.966.615.43 1.321.688 2.095.688v-1.29c0-.775-.742-1.205-1.48-1.635z"/>
                 </svg>
               </a>
-              <a href="https://wa.me/2348165410110" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/2349069616141" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 text-gray-300 hover:text-light-tan cursor-pointer transition-colors duration-300" />
               </a>
               <a href="https://twitter.com/ceetech" target="_blank" rel="noopener noreferrer">

@@ -34,13 +34,13 @@ export const BrandProvider = ({ children, brandConfig }) => {
       twitter: 'https://twitter.com/ceetech',
       youtube: 'https://youtube.com/ceetech',
       tiktok: 'https://tiktok.com/@ctechfurniture.interior',
-      whatsapp: 'https://wa.me/2348165410110'
+      whatsapp: 'https://wa.me/2349069616141'
     },
     
     contact: {
       email: 'ceetechfurnitureandinteriors9@gmail.com',
-      phone: '08165410110',
-      address: '2nd Entrance Ebvuabugun Sawmill Off Sapele Road Benin City',
+      phone: '09069616141',
+      address: '2nd Entrance Evbuabogun sawmill opposite ekae market, Sapele Rd, Benin City',
       hours: '7:00am - 6:00pm'
     },
     
