@@ -54,6 +54,22 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Brand-aligned custom colors
+				'ivory-gold': 'hsl(var(--ivory-gold))',
+				'jet-black': 'hsl(var(--jet-black))',
+				'rich-gold': 'hsl(var(--rich-gold))',
+				'warm-gold': 'hsl(var(--warm-gold))',
+				'charcoal': 'hsl(var(--charcoal))',
+				'light-cream': 'hsl(var(--light-cream))',
+				'medium-gray': 'hsl(var(--medium-gray))',
+				'soft-gold': 'hsl(var(--soft-gold))',
+				// Legacy colors for backward compatibility during transition
+				'warm-brown': 'hsl(var(--rich-gold))',   // Darker gold for buttons with good contrast
+				'light-tan': 'hsl(var(--ivory-gold))',   // Maps to ivory-gold
+				'cream': 'hsl(var(--light-cream))',      // Maps to light-cream
+				'sage': 'hsl(var(--medium-gray))',       // Maps to medium-gray
+				'dark-brown': 'hsl(var(--charcoal))',    // Maps to charcoal
+				'soft-beige': 'hsl(var(--soft-gold))',   // Maps to soft-gold
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

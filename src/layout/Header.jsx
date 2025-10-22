@@ -53,11 +53,11 @@ const Header = () => {
   }
 
   return (
-    <header className={`absolute top-0 left-0 right-0 z-[100] ${needsSolidBackground ? 'bg-white shadow-lg' : 'bg-transparent'} transition-all duration-300`}>
+    <header className="absolute top-0 left-0 right-0 z-[100] bg-transparent transition-all duration-300">
       <div className="container mx-auto px-4 py-6">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className={`font-playfair text-2xl font-semibold tracking-wide transition-colors duration-300 ${needsSolidBackground ? 'text-dark-brown hover:text-warm-brown' : 'text-white hover:text-light-tan'}`}>
+          <Link to="/" className="font-playfair text-2xl font-semibold tracking-wide transition-colors duration-300 text-white hover:text-ivory-gold">
             Ceetech Crafts
           </Link>
 
@@ -67,7 +67,7 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => handleNavigation(item)}
-                className={`transition-colors duration-300 text-sm font-medium tracking-wide cursor-pointer ${needsSolidBackground ? 'text-dark-brown hover:text-warm-brown' : 'text-white hover:text-light-tan'}`}
+                className="transition-colors duration-300 text-sm font-medium tracking-wide cursor-pointer text-white hover:text-ivory-gold"
               >
                 {item.name}
               </button>
@@ -79,20 +79,14 @@ const Header = () => {
             {/* Contact Us button - Desktop only */}
             <Link
               to="/contact"
-              className={`hidden lg:block px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                needsSolidBackground 
-                  ? 'bg-warm-brown text-cream hover:bg-dark-brown' 
-                  : 'bg-warm-brown text-cream hover:bg-light-tan hover:text-dark-brown'
-              }`}
+              className="hidden lg:block px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 bg-ivory-gold text-charcoal hover:bg-opacity-90 hover:shadow-lg"
             >
               Contact Us
             </Link>
             
             {/* Mobile menu button */}
             <button
-              className={`lg:hidden ml-4 ${
-                needsSolidBackground ? 'text-dark-brown' : 'text-white'
-              }`}
+              className="lg:hidden ml-4 text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -102,7 +96,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className={`lg:hidden mt-6 py-4 backdrop-blur-sm rounded-lg relative z-[110] ${needsSolidBackground ? 'bg-white shadow-xl border border-gray-200' : 'bg-black/90 shadow-2xl'}`}>
+          <div className="lg:hidden mt-6 py-4 backdrop-blur-sm rounded-lg relative z-[110] bg-black/90 shadow-2xl">
             <div className="flex flex-col space-y-4 px-6">
               {mobileNavigation.map((item) => {
                 // Render Contact as a button, others as regular nav items
@@ -111,11 +105,7 @@ const Header = () => {
                     <button
                       key={item.name}
                       onClick={() => handleNavigation(item)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 text-center ${
-                        needsSolidBackground 
-                          ? 'bg-warm-brown text-cream hover:bg-dark-brown' 
-                          : 'bg-warm-brown text-cream hover:bg-light-tan hover:text-dark-brown'
-                      }`}
+                      className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 text-center bg-ivory-gold text-charcoal hover:bg-opacity-90 hover:shadow-lg"
                     >
                       {item.name} Us
                     </button>
@@ -126,7 +116,7 @@ const Header = () => {
                   <button
                     key={item.name}
                     onClick={() => handleNavigation(item)}
-                    className={`transition-colors duration-300 text-sm font-medium tracking-wide text-left ${needsSolidBackground ? 'text-dark-brown hover:text-warm-brown' : 'text-white hover:text-light-tan'}`}
+                    className="transition-colors duration-300 text-sm font-medium tracking-wide text-left text-white hover:text-ivory-gold"
                   >
                     {item.name}
                   </button>

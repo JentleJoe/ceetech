@@ -21,7 +21,7 @@ const About = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 drop-shadow-lg">
-              About <span className="text-light-tan">Ceetech Crafts</span>
+              About <span className="text-ivory-gold">Ceetech Crafts</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed drop-shadow-md">
               Crafted to Inspire - Your trusted partner for custom furniture, interior design, and professional training in Benin City
@@ -161,7 +161,7 @@ const About = () => {
               Why Choose Ceetech Crafts?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
                 <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🏭</span>
                 </div>
@@ -170,7 +170,7 @@ const About = () => {
                   We manufacture right here in Benin City, ensuring quality control and supporting the local economy.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
                 <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">✂️</span>
                 </div>
@@ -179,7 +179,7 @@ const About = () => {
                   Every project is tailored to your specific requirements, space, and budget constraints.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
                 <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🤝</span>
                 </div>
@@ -188,7 +188,7 @@ const About = () => {
                   From initial consultation to final installation, we handle every aspect of your project.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
                 <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">⭐</span>
                 </div>
@@ -197,7 +197,7 @@ const About = () => {
                   Over 5 years of excellence with 200+ satisfied customers across Edo State.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
                 <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">💰</span>
                 </div>
@@ -206,7 +206,7 @@ const About = () => {
                   Competitive prices without compromising on quality or service delivery.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
                 <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📍</span>
                 </div>
@@ -221,13 +221,13 @@ const About = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 bg-warm-brown">
+      <section className="py-16 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-playfair text-cream mb-6">
+            <h2 className="text-3xl md:text-4xl font-playfair text-ivory-gold mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="text-xl text-cream/90 mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Visit our factory showroom to see our craftsmanship firsthand, or contact us for a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -244,7 +244,7 @@ const About = () => {
               </a>
               <a
                 href="tel:+2349069616141"
-                className="border-2 border-cream text-cream px-8 py-4 rounded-xl font-semibold hover:bg-cream hover:text-warm-brown transition-colors duration-300 shadow-lg"
+                className="border-2 border-ivory-gold text-ivory-gold px-8 py-4 rounded-xl font-semibold hover:bg-ivory-gold hover:text-charcoal transition-colors duration-300 shadow-lg"
               >
                 Call: +234 906 961 6141
               </a>

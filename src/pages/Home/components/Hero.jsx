@@ -29,7 +29,7 @@ const Hero = () => {
             Experience the perfect harmony of traditional craftsmanship and contemporary elegance in every piece.
           </p>
 
-          <a href="/contact" className="bg-white text-dark-brown px-8 py-4 rounded-lg font-medium tracking-wide hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 animate-fade-in-up inline-block" style={{ animationDelay: '0.4s' }}>
+          <a href="/contact" className="bg-ivory-gold text-jet-black px-8 py-4 rounded-lg font-medium tracking-wide hover:bg-rich-gold transition-all duration-300 transform hover:scale-105 animate-fade-in-up inline-block" style={{ animationDelay: '0.4s' }}>
             Get Started
           </a>
         </div>

@@ -20,7 +20,7 @@ const Collection = () => {
     {
       id: 1,
       name: 'Commercial Furniture Solutions',
-      description: 'Professional office, school & healthcare furniture in Benin City. Serving businesses across Edo State',
+      description: 'Professional office, school & healthcare furniture designed for durability and productivity',
       image: officeFurnitureImg,
       category: 'Furniture',
       link: '/furniture'
@@ -91,7 +91,7 @@ const Collection = () => {
   }
 
   return (
-    <section id="collection" className="py-20 bg-cream">
+    <section id="collection" className="py-20 bg-soft-gold">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-playfair text-dark-brown mb-4">Our</h2>

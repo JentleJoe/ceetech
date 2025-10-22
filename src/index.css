@@ -90,13 +90,15 @@ div[role="region"][aria-label*="Notifications"] ol {
 
     --radius: 0.75rem;
 
-    /* Custom furniture colors */
-    --warm-brown: 25 45% 35%;
-    --light-tan: 32 35% 75%;
-    --cream: 28 25% 92%;
-    --sage: 95 25% 45%;
-    --dark-brown: 20 35% 25%;
-    --soft-beige: 35 20% 88%;
+    /* Brand-aligned color palette */
+    --ivory-gold: 54 100% 80%;        /* Primary brand color: #FFF39A */
+    --jet-black: 0 0% 3%;             /* Primary brand color: #070707 */
+    --rich-gold: 42 85% 45%;          /* Darker gold for buttons with good contrast */
+    --warm-gold: 50 85% 85%;          /* Lighter gold for backgrounds */
+    --charcoal: 0 0% 15%;             /* Softer black for text */
+    --light-cream: 48 30% 96%;        /* Very light neutral background */
+    --medium-gray: 0 0% 45%;          /* Balanced gray for secondary text */
+    --soft-gold: 52 40% 92%;          /* Subtle gold tint for sections */
   }
 
   * {

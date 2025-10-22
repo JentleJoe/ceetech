@@ -238,7 +238,7 @@ const Furniture = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 leading-tight drop-shadow-lg">
-              Ceetech Crafts <span className="text-light-tan italic">Furniture</span> Solutions
+              Ceetech Crafts <span className="text-ivory-gold italic">Furniture Solutions</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8 max-w-3xl mx-auto drop-shadow-md">
               Custom furniture solutions that combine functionality, style, and durability to transform your spaces.
@@ -486,13 +486,13 @@ const Furniture = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-warm-brown">
+      <section className="py-16 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-playfair text-cream mb-6">
+            <h2 className="text-3xl md:text-4xl font-playfair text-ivory-gold mb-6">
               Ready to Transform Your Space?
             </h2>
-            <p className="text-xl text-cream/90 mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Let our experts help you create beautiful, functional furniture that perfectly fits your needs and space. Get started with a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -509,7 +509,7 @@ const Furniture = () => {
               </a>
               <a 
                 href="tel:+2349069616141"
-                className="border-2 border-cream text-cream px-8 py-3 rounded-lg text-lg font-semibold hover:bg-cream hover:text-warm-brown transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="border-2 border-ivory-gold text-ivory-gold px-8 py-3 rounded-lg text-lg font-semibold hover:bg-ivory-gold hover:text-charcoal transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Call Now</span>
