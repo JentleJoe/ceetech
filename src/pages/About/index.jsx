@@ -24,7 +24,7 @@ const About = () => {
               About <span className="text-light-tan">Ceetech Crafts</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed drop-shadow-md">
-              Where Craft Meets Class - Your trusted partner for custom furniture, interior design, and professional training in Benin City
+              Crafted to Inspire - Your trusted partner for custom furniture, interior design, and professional training in Benin City
             </p>
           </div>
         </div>

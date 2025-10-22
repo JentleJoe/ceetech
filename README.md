@@ -1,3 +1,3 @@
 # Ceetech Crafts
 
-Furniture Website for Ceetech Crafts - Where Craft Meets Class
+Furniture Website for Ceetech Crafts - Crafted to Inspire

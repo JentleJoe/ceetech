@@ -19,10 +19,10 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-2xl">
           <h1 className="text-white font-playfair text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 animate-fade-in-up">
-            <span>Where</span>
+            <span>Crafted</span>
             <br />
-            <span>Craft Meets</span>
-            <span> Class</span>
+            <span>to</span>
+            <span> Inspire</span>
           </h1>
           
           <p className="text-white/90 text-lg md:text-xl font-light leading-relaxed mb-8 max-w-lg animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
