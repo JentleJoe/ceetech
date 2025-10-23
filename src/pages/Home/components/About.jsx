@@ -50,12 +50,9 @@ const About = () => {
               </p>
             </div>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a href="/about" className="bg-warm-brown text-white px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-dark-brown transition-all duration-300 transform hover:scale-105 text-center">
+            <div className="mt-8">
+              <a href="/about" className="border-2 border-charcoal text-charcoal px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-charcoal hover:text-white transition-all duration-300 transform hover:scale-105 inline-block text-center">
                 Our Story
-              </a>
-              <a href="/contact#locations" className="border-2 border-warm-brown text-warm-brown px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-warm-brown hover:text-white transition-all duration-300 text-center">
-                Visit Showroom
               </a>
             </div>
           </div>
@@ -87,13 +84,13 @@ const About = () => {
               className="text-center group animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-cream rounded-2xl p-6 mb-6 group-hover:bg-warm-brown transition-colors duration-300">
-                <value.icon className="w-8 h-8 text-warm-brown group-hover:text-white mx-auto transition-colors duration-300" />
+              <div className="bg-soft-gold rounded-2xl p-6 mb-6 group-hover:bg-ivory-gold transition-colors duration-300">
+                <value.icon className="w-8 h-8 text-charcoal group-hover:text-charcoal mx-auto transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-playfair text-dark-brown mb-4 font-semibold">
+              <h3 className="text-xl font-playfair text-charcoal mb-4 font-semibold">
                 {value.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-charcoal/70 leading-relaxed">
                 {value.description}
               </p>
             </div>
