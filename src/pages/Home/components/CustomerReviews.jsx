@@ -112,14 +112,14 @@ const CustomerReviews = () => {
 
         {/* Call to Action */}
         <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl font-playfair text-dark-brown mb-4">
+          <div className="bg-charcoal/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-2xl mx-auto border border-ivory-gold/20">
+            <h3 className="text-2xl font-playfair text-ivory-gold mb-4">
               Join Our Community of Satisfied Customers
             </h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-white/80 mb-6 leading-relaxed">
               Experience the Ceetech Crafts difference with furniture that tells your story
             </p>
-            <button className="bg-warm-brown text-white px-8 py-3 rounded-lg font-medium tracking-wide hover:bg-dark-brown transition-all duration-300 transform hover:scale-105">
+            <button className="bg-ivory-gold text-charcoal px-8 py-3 rounded-lg font-medium tracking-wide transition-all duration-300 transform hover:scale-105">
               Get Started Today
             </button>
           </div>

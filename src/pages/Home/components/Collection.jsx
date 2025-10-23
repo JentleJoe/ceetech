@@ -165,12 +165,12 @@ const Collection = () => {
 
         {/* Enhanced CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg max-w-md mx-auto">
-            <h3 className="text-xl font-playfair text-dark-brown mb-3">Ready to Get Started?</h3>
-            <p className="text-gray-600 mb-6 text-sm">Explore our complete service portfolio</p>
+          <div className="bg-charcoal/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl max-w-md mx-auto border border-ivory-gold/20">
+            <h3 className="text-xl font-playfair text-ivory-gold mb-3">Ready to Get Started?</h3>
+            <p className="text-white/80 mb-6 text-sm">Explore our complete service portfolio</p>
             <a
               href="/about"
-              className="inline-flex items-center bg-warm-brown text-white px-6 py-3 rounded-lg font-medium tracking-wide hover:bg-dark-brown transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center bg-ivory-gold text-charcoal px-6 py-3 rounded-lg font-medium tracking-wide transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               View All Services
               <ArrowRight className="w-4 h-4 ml-2" />
