@@ -36,22 +36,22 @@ const About = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-6">
+                <h2 className="text-3xl md:text-4xl font-playfair text-charcoal mb-6">
                   Our Story
                 </h2>
-                <p className="text-lg text-dark-brown/80 mb-6">
+                <p className="text-lg text-charcoal/80 mb-6">
                   At Ceetech Crafts, every detail tells a story. Located in the heart of Benin City, 
                   we've grown from a passion project into Benin's premier destination for custom furniture 
                   and interior design solutions. Our factory on Sapele Road serves as both our manufacturing 
                   hub and main showroom, where visitors can witness the entire creation process firsthand.
                 </p>
-                <p className="text-lg text-dark-brown/80 mb-6">
+                <p className="text-lg text-charcoal/80 mb-6">
                   What sets us apart is our comprehensive approach - we're not just furniture makers, 
                   we're space transformers. From residential kitchens to commercial offices, 
                   from POP ceiling installations to complete interior renovations, 
                   we handle every aspect of your space transformation journey.
                 </p>
-                <p className="text-lg text-dark-brown/80 mb-6">
+                <p className="text-lg text-charcoal/80 mb-6">
                   Through our Ceetech Academy, we're also committed to training the next generation 
                   of furniture craftsmen and interior designers, ensuring that quality craftsmanship 
                   continues to thrive in our community.
@@ -64,7 +64,7 @@ const About = () => {
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                  <p className="text-sm font-semibold text-dark-brown">Our Factory Workshop</p>
+                  <p className="text-sm font-semibold text-charcoal">Our Factory Workshop</p>
                   <p className="text-xs text-gray-600">Sapele Road, Benin City</p>
                 </div>
               </div>
@@ -74,13 +74,13 @@ const About = () => {
       </section>
 
       {/* Our Mission Section */}
-      <section className="py-16 bg-soft-beige">
+      <section className="py-16 bg-soft-gold">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-8">
+            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal mb-8">
               Our Mission
             </h2>
-            <p className="text-xl text-dark-brown/80 leading-relaxed mb-8">
+            <p className="text-xl text-charcoal/80 leading-relaxed mb-8">
               We don't just design interiors — we craft experiences. Our mission is to be Benin's leading 
               furniture manufacturer and interior design company, transforming ordinary spaces into 
               extraordinary environments. We combine traditional craftsmanship with modern innovation to 
@@ -88,15 +88,15 @@ const About = () => {
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               <div className="text-center bg-white p-6 rounded-xl shadow-lg">
-                <h4 className="font-semibold text-dark-brown mb-2">5+ Years</h4>
+                <h4 className="font-semibold text-charcoal mb-2">5+ Years</h4>
                 <p className="text-sm text-gray-600">Of Excellence in Benin City</p>
               </div>
               <div className="text-center bg-white p-6 rounded-xl shadow-lg">
-                <h4 className="font-semibold text-dark-brown mb-2">3 Locations</h4>
+                <h4 className="font-semibold text-charcoal mb-2">3 Locations</h4>
                 <p className="text-sm text-gray-600">Factory + 2 Showrooms</p>
               </div>
               <div className="text-center bg-white p-6 rounded-xl shadow-lg">
-                <h4 className="font-semibold text-dark-brown mb-2">200+</h4>
+                <h4 className="font-semibold text-charcoal mb-2">200+</h4>
                 <p className="text-sm text-gray-600">Happy Customers Served</p>
               </div>
             </div>
@@ -108,43 +108,43 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal text-center mb-12">
               What We Do
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               <div className="text-center group">
-                <div className="bg-warm-brown p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-dark-brown transition-colors duration-300">
-                  <span className="text-3xl text-white">🪑</span>
+                <div className="bg-ivory-gold p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-soft-gold transition-colors duration-300">
+                  <span className="text-3xl text-charcoal">🪑</span>
                 </div>
-                <h3 className="text-lg font-semibold text-dark-brown mb-3">Custom Furniture</h3>
-                <p className="text-dark-brown/80 text-sm leading-relaxed">
+                <h3 className="text-lg font-semibold text-charcoal mb-3">Custom Furniture</h3>
+                <p className="text-charcoal/70 text-sm leading-relaxed">
                   Residential and commercial furniture tailored to your specific needs and space requirements.
                 </p>
               </div>
               <div className="text-center group">
-                <div className="bg-warm-brown p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-dark-brown transition-colors duration-300">
-                  <span className="text-3xl text-white">🏠</span>
+                <div className="bg-ivory-gold p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-soft-gold transition-colors duration-300">
+                  <span className="text-3xl text-charcoal">🏠</span>
                 </div>
-                <h3 className="text-lg font-semibold text-dark-brown mb-3">Interior Design</h3>
-                <p className="text-dark-brown/80 text-sm leading-relaxed">
+                <h3 className="text-lg font-semibold text-charcoal mb-3">Interior Design</h3>
+                <p className="text-charcoal/70 text-sm leading-relaxed">
                   Complete interior transformations including space planning, design consultation, and execution.
                 </p>
               </div>
               <div className="text-center group">
-                <div className="bg-warm-brown p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-dark-brown transition-colors duration-300">
-                  <span className="text-3xl text-white">🔧</span>
+                <div className="bg-ivory-gold p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-soft-gold transition-colors duration-300">
+                  <span className="text-3xl text-charcoal">🔧</span>
                 </div>
-                <h3 className="text-lg font-semibold text-dark-brown mb-3">Installation Services</h3>
-                <p className="text-dark-brown/80 text-sm leading-relaxed">
+                <h3 className="text-lg font-semibold text-charcoal mb-3">Installation Services</h3>
+                <p className="text-charcoal/70 text-sm leading-relaxed">
                   POP ceiling installation, tiling, flooring, and complete renovation services.
                 </p>
               </div>
               <div className="text-center group">
-                <div className="bg-warm-brown p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-dark-brown transition-colors duration-300">
-                  <span className="text-3xl text-white">🎓</span>
+                <div className="bg-ivory-gold p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-soft-gold transition-colors duration-300">
+                  <span className="text-3xl text-charcoal">🎓</span>
                 </div>
-                <h3 className="text-lg font-semibold text-dark-brown mb-3">Training Academy</h3>
-                <p className="text-dark-brown/80 text-sm leading-relaxed">
+                <h3 className="text-lg font-semibold text-charcoal mb-3">Training Academy</h3>
+                <p className="text-charcoal/70 text-sm leading-relaxed">
                   Professional training in furniture design, interior decoration, and business skills.
                 </p>
               </div>
@@ -154,64 +154,64 @@ const About = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-soft-beige">
+      <section className="py-16 bg-soft-gold">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal text-center mb-12">
               Why Choose Ceetech Crafts?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🏭</span>
                 </div>
-                <h3 className="text-xl font-semibold text-dark-brown mb-3">Local Manufacturing</h3>
-                <p className="text-dark-brown/80">
+                <h3 className="text-xl font-semibold text-charcoal mb-3">Local Manufacturing</h3>
+                <p className="text-charcoal/70">
                   We manufacture right here in Benin City, ensuring quality control and supporting the local economy.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">✂️</span>
                 </div>
-                <h3 className="text-xl font-semibold text-dark-brown mb-3">Custom Solutions</h3>
-                <p className="text-dark-brown/80">
+                <h3 className="text-xl font-semibold text-charcoal mb-3">Custom Solutions</h3>
+                <p className="text-charcoal/70">
                   Every project is tailored to your specific requirements, space, and budget constraints.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🤝</span>
                 </div>
-                <h3 className="text-xl font-semibold text-dark-brown mb-3">End-to-End Service</h3>
-                <p className="text-dark-brown/80">
+                <h3 className="text-xl font-semibold text-charcoal mb-3">End-to-End Service</h3>
+                <p className="text-charcoal/70">
                   From initial consultation to final installation, we handle every aspect of your project.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">⭐</span>
                 </div>
-                <h3 className="text-xl font-semibold text-dark-brown mb-3">Proven Quality</h3>
-                <p className="text-dark-brown/80">
+                <h3 className="text-xl font-semibold text-charcoal mb-3">Proven Quality</h3>
+                <p className="text-charcoal/70">
                   Over 5 years of excellence with 200+ satisfied customers across Edo State.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">💰</span>
                 </div>
-                <h3 className="text-xl font-semibold text-dark-brown mb-3">Fair Pricing</h3>
-                <p className="text-dark-brown/80">
+                <h3 className="text-xl font-semibold text-charcoal mb-3">Fair Pricing</h3>
+                <p className="text-charcoal/70">
                   Competitive prices without compromising on quality or service delivery.
                 </p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-light-tan w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📍</span>
                 </div>
-                <h3 className="text-xl font-semibold text-dark-brown mb-3">Convenient Locations</h3>
-                <p className="text-dark-brown/80">
+                <h3 className="text-xl font-semibold text-charcoal mb-3">Convenient Locations</h3>
+                <p className="text-charcoal/70">
                   Three locations in Benin City for your convenience - factory and two showrooms.
                 </p>
               </div>
