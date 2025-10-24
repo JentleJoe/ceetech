@@ -119,9 +119,12 @@ const CustomerReviews = () => {
             <p className="text-white/80 mb-6 leading-relaxed">
               Experience the Ceetech Crafts difference with furniture that tells your story
             </p>
-            <button className="bg-ivory-gold text-charcoal px-8 py-3 rounded-lg font-medium tracking-wide transition-all duration-300 transform hover:scale-105">
+            <a 
+              href="/contact" 
+              className="inline-block bg-ivory-gold text-charcoal px-8 py-3 rounded-lg font-medium tracking-wide transition-all duration-300 transform hover:scale-105"
+            >
               Get Started Today
-            </button>
+            </a>
           </div>
         </div>
       </div>

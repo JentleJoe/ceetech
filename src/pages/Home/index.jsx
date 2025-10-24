@@ -8,7 +8,6 @@ import ProductShowcase from './components/ProductShowcase'
 import FurnituresByCeetech from './components/FurnituresByCeetech'
 import InteriorsByCeetech from './components/InteriorsByCeetech'
 import CustomerReviews from './components/CustomerReviews'
-import StayClose from './components/StayClose'
 import Footer from '../../layout/Footer'
 
 const Index = () => {
@@ -23,7 +22,6 @@ const Index = () => {
       <FurnituresByCeetech />
       <InteriorsByCeetech />
       <CustomerReviews />
-      <StayClose />
       <Footer />
     </div>
   );

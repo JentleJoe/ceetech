@@ -1,5 +1,6 @@
 
 import { Facebook, Instagram, MessageCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import logoHorizontal from '../assets/logoHorizontal.png'
 
 const Footer = () => {
