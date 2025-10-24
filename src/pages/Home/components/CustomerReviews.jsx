@@ -44,18 +44,18 @@ const CustomerReviews = () => {
   }
 
   return (
-    <section id="reviews" className="py-20 relative" style={{ background: 'linear-gradient(to bottom, #f5f1eb, #f8f4ee)' }}>
+    <section id="reviews" className="py-20 relative bg-gradient-to-br from-soft-gold via-ivory-gold/30 to-soft-gold/80">
       {/* Subtle pattern overlay for texture */}
-      <div className="absolute inset-0 opacity-20" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D2691E' fill-opacity='0.1'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10 10-4.5 10-10 10-10-4.5-10-10 4.5-10 10-10 10 4.5 10 10z'/%3E%3C/g%3E%3C/svg%3E")`
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.15'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10 10-4.5 10-10 10-10-4.5-10-10 4.5-10 10-10 10 4.5 10 10z'/%3E%3C/g%3E%3C/svg%3E")`
       }}></div>
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown mb-6 leading-tight">
-            What Our <span className="italic text-warm-brown">Customers</span> Say
+          <h2 className="text-4xl md:text-5xl font-playfair text-charcoal mb-6 leading-tight">
+            What Our <span className="italic text-charcoal/80">Customers</span> Say
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-charcoal/70 max-w-2xl mx-auto leading-relaxed">
             Discover why thousands of families trust Ceetech Crafts to bring warmth and beauty to their homes
           </p>
         </div>
@@ -64,10 +64,10 @@ const CustomerReviews = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-playfair text-warm-brown font-semibold mb-2">
+              <div className="text-3xl md:text-4xl font-playfair text-charcoal font-semibold mb-2">
                 {stat.number}
               </div>
-              <div className="text-muted-foreground font-medium">
+              <div className="text-charcoal/70 font-medium">
                 {stat.label}
               </div>
             </div>
@@ -84,11 +84,11 @@ const CustomerReviews = () => {
             >
               {/* Quote Icon */}
               <div className="mb-6">
-                <Quote className="w-8 h-8 text-warm-brown opacity-60" />
+                <Quote className="w-8 h-8 text-charcoal opacity-60" />
               </div>
 
               {/* Review Text */}
-              <p className="text-muted-foreground leading-relaxed mb-6 italic">
+              <p className="text-charcoal/70 leading-relaxed mb-6 italic">
                 "{review.text}"
               </p>
 
@@ -99,10 +99,10 @@ const CustomerReviews = () => {
 
               {/* Customer Info */}
               <div>
-                <h4 className="font-semibold text-dark-brown">
+                <h4 className="font-semibold text-charcoal">
                   {review.name}
                 </h4>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-charcoal/60">
                   {review.location}
                 </p>
               </div>
