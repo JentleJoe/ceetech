@@ -10,6 +10,11 @@ const Header = () => {
   
   // Determine if we're on a page that needs a solid header background
   const needsSolidBackground = location.pathname !== '/'
+  
+  // Function to check if a navigation item is active
+  const isActiveRoute = (href) => {
+    return location.pathname === href
+  }
 
   const navigation = [
     { name: 'Home', href: '/', type: 'route' },
@@ -63,15 +68,25 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => handleNavigation(item)}
-                className="transition-colors duration-300 text-sm font-medium tracking-wide cursor-pointer text-white hover:text-ivory-gold"
-              >
-                {item.name}
-              </button>
-            ))}
+            {navigation.map((item) => {
+              const isActive = isActiveRoute(item.href)
+              return (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavigation(item)}
+                  className={`transition-all duration-300 text-sm font-medium tracking-wide cursor-pointer relative ${
+                    isActive 
+                      ? 'text-ivory-gold font-semibold' 
+                      : 'text-white hover:text-ivory-gold'
+                  }`}
+                >
+                  {item.name}
+                  {isActive && (
+                    <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-ivory-gold rounded-full"></div>
+                  )}
+                </button>
+              )
+            })}
           </div>
 
           {/* Right side - Contact Us button for desktop, hamburger for mobile */}
@@ -112,11 +127,16 @@ const Header = () => {
                   )
                 }
                 
+                const isActive = isActiveRoute(item.href)
                 return (
                   <button
                     key={item.name}
                     onClick={() => handleNavigation(item)}
-                    className="transition-colors duration-300 text-sm font-medium tracking-wide text-left text-white hover:text-ivory-gold"
+                    className={`transition-all duration-300 text-sm font-medium tracking-wide text-left px-3 py-2 rounded-lg ${
+                      isActive 
+                        ? 'text-ivory-gold bg-ivory-gold/10 border-l-4 border-ivory-gold font-semibold' 
+                        : 'text-white hover:text-ivory-gold hover:bg-white/5'
+                    }`}
                   >
                     {item.name}
                   </button>
