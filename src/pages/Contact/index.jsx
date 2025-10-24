@@ -12,7 +12,7 @@ const Contact = () => {
       setCopiedText(label)
       setTimeout(() => setCopiedText(''), 2000)
     } catch (err) {
-      // Silently handle clipboard error
+      console.error('Failed to copy text: ', err)
     }
   }
 
@@ -111,15 +111,15 @@ const Contact = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-soft-gold">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-playfair text-dark-brown mb-4">
+              <h2 className="text-3xl md:text-4xl font-playfair text-charcoal mb-4">
                 Let's Connect
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
                 Multiple ways to reach us for all your furniture and interior needs
               </p>
             </div>
@@ -129,13 +129,13 @@ const Contact = () => {
               {contactInfo.map((item, index) => (
                 <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-warm-brown p-3 rounded-lg flex-shrink-0">
-                      <item.icon className="w-6 h-6 text-white" />
+                    <div className="bg-charcoal p-3 rounded-lg flex-shrink-0">
+                      <item.icon className="w-6 h-6 text-ivory-gold" />
                     </div>
                     
                     <div className="flex-1 min-w-0">
-                      <h3 className="font-semibold text-dark-brown mb-2 text-lg">{item.label}</h3>
-                      <p className="text-gray-600 mb-4 whitespace-pre-line break-words">
+                      <h3 className="font-semibold text-charcoal mb-2 text-lg">{item.label}</h3>
+                      <p className="text-charcoal/70 mb-4 whitespace-pre-line break-words">
                         {item.displayValue}
                       </p>
                       
@@ -144,7 +144,7 @@ const Contact = () => {
                         {item.copyValue && (
                           <button
                             onClick={() => copyToClipboard(item.copyValue, item.label)}
-                            className="flex items-center space-x-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg transition-colors duration-200 text-sm"
+                            className="flex items-center space-x-2 px-4 py-2 bg-soft-gold hover:bg-ivory-gold text-charcoal rounded-lg transition-colors duration-200 text-sm"
                           >
                             {copiedText === item.label ? (
                               <>
@@ -182,13 +182,13 @@ const Contact = () => {
 
             {/* Quick Actions Section */}
             <div className="bg-white rounded-2xl p-8 shadow-lg mb-16">
-              <h3 className="text-2xl font-playfair text-dark-brown mb-6 text-center">
+              <h3 className="text-2xl font-playfair text-charcoal mb-6 text-center">
                 Quick Actions
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <a
                   href="tel:+2348165410110"
-                  className="flex items-center justify-center space-x-3 bg-green-500 hover:bg-green-600 text-white p-4 rounded-xl transition-colors duration-200 font-medium"
+                  className="flex items-center justify-center space-x-3 bg-green-500 hover:scale-105 text-white p-4 rounded-xl transition-transform duration-200 font-medium"
                 >
                   <PhoneCall className="w-5 h-5" />
                   <span>Call Now</span>
@@ -197,14 +197,14 @@ const Contact = () => {
                   href="https://wa.me/2348165410110?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20services"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-3 bg-green-600 hover:bg-green-700 text-white p-4 rounded-xl transition-colors duration-200 font-medium"
+                  className="flex items-center justify-center space-x-3 bg-green-600 hover:scale-105 text-white p-4 rounded-xl transition-transform duration-200 font-medium"
                 >
                   <MessageCircle className="w-5 h-5" />
                   <span>WhatsApp</span>
                 </a>
                 <a
                   href="mailto:ceetechfurnitureandinteriors9@gmail.com?subject=Inquiry%20about%20Ceetech%20Crafts%20Services"
-                  className="flex items-center justify-center space-x-3 bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-xl transition-colors duration-200 font-medium"
+                  className="flex items-center justify-center space-x-3 bg-blue-500 hover:scale-105 text-white p-4 rounded-xl transition-transform duration-200 font-medium"
                 >
                   <Send className="w-5 h-5" />
                   <span>Send Email</span>
@@ -214,8 +214,8 @@ const Contact = () => {
 
             {/* Social Media */}
             <div className="text-center mb-16">
-              <h3 className="text-2xl font-playfair text-dark-brown mb-6">Follow Our Journey</h3>
-              <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-playfair text-charcoal mb-6">Follow Our Journey</h3>
+              <p className="text-charcoal/70 mb-8 max-w-2xl mx-auto">
                 Stay updated with our latest projects, design inspirations, and furniture collections
               </p>
               <div className="flex justify-center space-x-4">
@@ -237,28 +237,28 @@ const Contact = () => {
 
           {/* All Locations Section */}
           <div className="mb-16">
-            <h3 className="text-2xl font-playfair text-dark-brown mb-4 text-center">Our Locations in Benin City</h3>
-            <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-playfair text-charcoal mb-4 text-center">Our Locations in Benin City</h3>
+            <p className="text-charcoal/70 text-center mb-8 max-w-2xl mx-auto">
               Visit us at any of our locations. Our factory showroom is our primary location with the full collection and manufacturing facility.
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {/* Primary Factory Location */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-warm-brown relative">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-charcoal relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-warm-brown text-white px-4 py-1 rounded-full text-sm font-semibold">PRIMARY LOCATION</span>
+                  <span className="bg-charcoal text-ivory-gold px-4 py-1 rounded-full text-sm font-semibold">PRIMARY LOCATION</span>
                 </div>
                 <div className="text-center pt-4">
-                  <div className="bg-warm-brown p-3 rounded-lg w-fit mx-auto mb-4">
-                    <MapPin className="w-6 h-6 text-white" />
+                  <div className="bg-charcoal p-3 rounded-lg w-fit mx-auto mb-4">
+                    <MapPin className="w-6 h-6 text-ivory-gold" />
                   </div>
-                  <h4 className="font-semibold text-dark-brown mb-2">Factory & Main Showroom</h4>
-                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">2nd Entrance Ebvuabugun Sawmill Off Sapele Road, Benin City</p>
+                  <h4 className="font-semibold text-charcoal mb-2">Factory & Main Showroom</h4>
+                  <p className="text-sm text-charcoal/70 mb-6 leading-relaxed">2nd Entrance Ebvuabugun Sawmill Off Sapele Road, Benin City</p>
                   <a
                     href="https://maps.google.com/?q=2nd+Entrance+Ebvuabugun+Sawmill+Off+Sapele+Road+Benin+City"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-1 bg-warm-brown text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-dark-brown transition-colors duration-200"
+                    className="inline-flex items-center space-x-1 bg-charcoal text-ivory-gold px-4 py-2 rounded-lg text-sm font-medium hover:scale-105 transition-transform duration-200"
                   >
                     <ExternalLink className="w-4 h-4" />
                     <span>Get Directions</span>
@@ -269,16 +269,16 @@ const Contact = () => {
               {/* Showroom 1 */}
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
                 <div className="text-center">
-                  <div className="bg-light-tan p-3 rounded-lg w-fit mx-auto mb-4">
-                    <MapPin className="w-6 h-6 text-warm-brown" />
+                  <div className="bg-ivory-gold p-3 rounded-lg w-fit mx-auto mb-4">
+                    <MapPin className="w-6 h-6 text-charcoal" />
                   </div>
-                  <h4 className="font-semibold text-dark-brown mb-2">Showroom 1 - Oka</h4>
-                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">40 Country Home Rd, Oka, Benin City 300102, Edo</p>
+                  <h4 className="font-semibold text-charcoal mb-2">Showroom 1 - Oka</h4>
+                  <p className="text-sm text-charcoal/70 mb-6 leading-relaxed">40 Country Home Rd, Oka, Benin City 300102, Edo</p>
                   <a
                     href="https://maps.google.com/?q=40+Country+Home+Rd+Oka+Benin+City+300102+Edo"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-1 bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors duration-200"
+                    className="inline-flex items-center space-x-1 bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:scale-105 transition-transform duration-200"
                   >
                     <ExternalLink className="w-4 h-4" />
                     <span>Get Directions</span>
@@ -289,16 +289,16 @@ const Contact = () => {
               {/* Showroom 2 */}
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
                 <div className="text-center">
-                  <div className="bg-light-tan p-3 rounded-lg w-fit mx-auto mb-4">
-                    <MapPin className="w-6 h-6 text-warm-brown" />
+                  <div className="bg-ivory-gold p-3 rounded-lg w-fit mx-auto mb-4">
+                    <MapPin className="w-6 h-6 text-charcoal" />
                   </div>
-                  <h4 className="font-semibold text-dark-brown mb-2">Showroom 2</h4>
-                  <p className="text-sm text-gray-600 mb-6 leading-relaxed">456 Mission Road, Benin City, Edo State</p>
+                  <h4 className="font-semibold text-charcoal mb-2">Showroom 2</h4>
+                  <p className="text-sm text-charcoal/70 mb-6 leading-relaxed">456 Mission Road, Benin City, Edo State</p>
                   <a
                     href="https://maps.google.com/?q=456+Mission+Road+Benin+City"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-1 bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors duration-200"
+                    className="inline-flex items-center space-x-1 bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:scale-105 transition-transform duration-200"
                   >
                     <ExternalLink className="w-4 h-4" />
                     <span>Get Directions</span>
@@ -308,13 +308,13 @@ const Contact = () => {
             </div>
 
             {/* Recommendation Banner */}
-            <div className="bg-warm-brown/10 border border-warm-brown/20 rounded-xl p-6 text-center">
-              <h4 className="font-semibold text-dark-brown mb-2">📍 Recommended Visit</h4>
-              <p className="text-gray-700 mb-4">For the best experience and full collection access, we recommend visiting our <strong>Factory & Main Showroom</strong> location.</p>
+            <div className="bg-soft-gold/50 border border-charcoal/20 rounded-xl p-6 text-center">
+              <h4 className="font-semibold text-charcoal mb-2">📍 Recommended Visit</h4>
+              <p className="text-charcoal/80 mb-4">For the best experience and full collection access, we recommend visiting our <strong>Factory & Main Showroom</strong> location.</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a
                   href="tel:+2348165410110"
-                  className="flex items-center justify-center space-x-2 bg-warm-brown text-white px-6 py-3 rounded-lg font-medium hover:bg-dark-brown transition-colors duration-200"
+                  className="flex items-center justify-center space-x-2 bg-charcoal text-ivory-gold px-6 py-3 rounded-lg font-medium hover:scale-105 transition-transform duration-200"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call Before Visit</span>
@@ -335,27 +335,27 @@ const Contact = () => {
           {/* Factory Location Map */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <div className="p-8 pb-0">
-              <h3 className="text-2xl font-playfair text-dark-brown mb-4 text-center">Factory & Main Showroom Location</h3>
-              <p className="text-gray-600 text-center mb-6 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-playfair text-charcoal mb-4 text-center">Factory & Main Showroom Location</h3>
+              <p className="text-charcoal/70 text-center mb-6 max-w-2xl mx-auto">
                 Experience our furniture collections in person at our main factory location. See the quality, craftsmanship, and manufacturing process up close.
               </p>
               
               {/* Location Details */}
               <div className="grid md:grid-cols-3 gap-4 mb-6">
-                <div className="text-center bg-gray-50 p-4 rounded-lg">
-                  <Clock className="w-6 h-6 text-warm-brown mx-auto mb-2" />
-                  <h4 className="font-semibold text-dark-brown text-sm mb-1">Opening Hours</h4>
-                  <p className="text-xs text-gray-600">Mon - Sat: 7AM - 6PM</p>
+                <div className="text-center bg-soft-gold p-4 rounded-lg">
+                  <Clock className="w-6 h-6 text-charcoal mx-auto mb-2" />
+                  <h4 className="font-semibold text-charcoal text-sm mb-1">Opening Hours</h4>
+                  <p className="text-xs text-charcoal/70">Mon - Sat: 7AM - 6PM</p>
                 </div>
-                <div className="text-center bg-gray-50 p-4 rounded-lg">
-                  <MapPin className="w-6 h-6 text-warm-brown mx-auto mb-2" />
-                  <h4 className="font-semibold text-dark-brown text-sm mb-1">Factory Location</h4>
-                  <p className="text-xs text-gray-600">Off Sapele Road, Benin City</p>
+                <div className="text-center bg-soft-gold p-4 rounded-lg">
+                  <MapPin className="w-6 h-6 text-charcoal mx-auto mb-2" />
+                  <h4 className="font-semibold text-charcoal text-sm mb-1">Factory Location</h4>
+                  <p className="text-xs text-charcoal/70">Off Sapele Road, Benin City</p>
                 </div>
-                <div className="text-center bg-gray-50 p-4 rounded-lg">
-                  <Phone className="w-6 h-6 text-warm-brown mx-auto mb-2" />
-                  <h4 className="font-semibold text-dark-brown text-sm mb-1">Call Ahead</h4>
-                  <p className="text-xs text-gray-600">+234 816 541 0110</p>
+                <div className="text-center bg-soft-gold p-4 rounded-lg">
+                  <Phone className="w-6 h-6 text-charcoal mx-auto mb-2" />
+                  <h4 className="font-semibold text-charcoal text-sm mb-1">Call Ahead</h4>
+                  <p className="text-xs text-charcoal/70">+234 816 541 0110</p>
                 </div>
               </div>
             </div>
@@ -377,26 +377,26 @@ const Contact = () => {
               {/* Map Overlay Info */}
               <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg max-w-xs">
                 <div className="flex items-start space-x-3">
-                  <div className="bg-warm-brown p-2 rounded-lg flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-white" />
+                  <div className="bg-charcoal p-2 rounded-lg flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-ivory-gold" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-dark-brown text-sm mb-1">Ceetech Crafts Factory</h4>
-                    <p className="text-xs text-warm-brown font-medium mb-1">PRIMARY LOCATION</p>
-                    <p className="text-xs text-gray-600 leading-relaxed mb-2">2nd Entrance Ebvuabugun Sawmill, Off Sapele Road, Benin City</p>
+                    <h4 className="font-semibold text-charcoal text-sm mb-1">Ceetech Crafts Factory</h4>
+                    <p className="text-xs text-charcoal font-medium mb-1">PRIMARY LOCATION</p>
+                    <p className="text-xs text-charcoal/70 leading-relaxed mb-2">2nd Entrance Ebvuabugun Sawmill, Off Sapele Road, Benin City</p>
                     <div className="flex items-center space-x-3 mt-3">
                       <a
                         href="https://maps.google.com/?q=2nd+Entrance+Ebvuabugun+Sawmill+Off+Sapele+Road+Benin+City"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-1 bg-warm-brown text-white px-3 py-1.5 rounded-md text-xs font-medium hover:bg-dark-brown transition-colors duration-200"
+                        className="inline-flex items-center space-x-1 bg-charcoal text-ivory-gold px-3 py-1.5 rounded-md text-xs font-medium hover:scale-105 transition-transform duration-200"
                       >
                         <ExternalLink className="w-3 h-3" />
                         <span>Directions</span>
                       </a>
                       <a
                         href="tel:+2348165410110"
-                        className="inline-flex items-center space-x-1 bg-green-600 text-white px-3 py-1.5 rounded-md text-xs font-medium hover:bg-green-700 transition-colors duration-200"
+                        className="inline-flex items-center space-x-1 bg-green-600 text-white px-3 py-1.5 rounded-md text-xs font-medium hover:scale-105 transition-transform duration-200"
                       >
                         <Phone className="w-3 h-3" />
                         <span>Call</span>
