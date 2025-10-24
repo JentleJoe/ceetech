@@ -566,7 +566,7 @@ const Interiors = () => {
               </div>
               <div className="text-center">
                 <div className="bg-cream bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-2xl">�</span>
+                  <span className="text-2xl">📊</span>
                 </div>
                 <h3 className="text-lg font-semibold text-cream mb-2">Detailed Quote</h3>
                 <p className="text-cream/80 text-base">Transparent pricing with no hidden costs</p>

@@ -154,10 +154,10 @@ const About = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-charcoal">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-playfair text-white text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal text-center mb-12">
               Why Choose Ceetech Crafts?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
