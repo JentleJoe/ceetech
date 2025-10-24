@@ -1,5 +1,6 @@
 
 import { Facebook, Instagram, MessageCircle } from 'lucide-react'
+import logoHorizontal from '../assets/logoHorizontal.png'
 
 const Footer = () => {
   return (
@@ -8,7 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="md:col-span-2 lg:col-span-1">
-            <h3 className="text-2xl font-playfair mb-4 text-ivory-gold">Ceetech Crafts</h3>
+            <div className="mb-4">
+              <img 
+                src={logoHorizontal} 
+                alt="Ceetech Crafts Logo" 
+                className="h-10 w-auto"
+              />
+            </div>
             <p className="text-gray-300 mb-6 leading-relaxed text-sm">
               Professional furniture manufacturing and interior design services in Benin City. Creating quality furniture and beautiful spaces since 2019.
             </p>

@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { Menu, X, Search, ShoppingBag, User } from 'lucide-react'
+import logoVertical from '../assets/logoVertical.png'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -48,8 +49,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-6">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className={`font-playfair text-2xl font-semibold tracking-wide transition-colors duration-300 ${needsSolidBackground ? 'text-dark-brown hover:text-warm-brown' : 'text-white hover:text-light-tan'}`}>
-            Ceetech Crafts
+          <Link to="/" className="transition-opacity duration-300 hover:opacity-80">
+            <img 
+              src={logoVertical} 
+              alt="Ceetech Crafts Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

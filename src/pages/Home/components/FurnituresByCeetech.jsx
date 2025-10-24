@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+import logoIconBlack from '../../../assets/logoIconBlack.png'
 
 // Import images
 import residentialFurnitureImg from '../../../assets/residential-furniture.jpg'
@@ -75,9 +76,16 @@ const FurnituresByCeetech = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown mb-4">
-            Ceetech Crafts Furnitures
-          </h2>
+          <div className="flex items-center justify-center mb-4">
+            <img 
+              src={logoIconBlack} 
+              alt="Ceetech Logo" 
+              className="h-8 w-auto mr-3"
+            />
+            <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown">
+              Ceetech Crafts Furnitures
+            </h2>
+          </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover our handcrafted furniture collection designed to enhance your living spaces
           </p>
