@@ -303,13 +303,13 @@ const Furniture = () => {
       </section>
 
       {/* Commercial Furniture Section */}
-      <section className="py-20 bg-soft-gold">
+      <section className="py-20 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-playfair text-charcoal mb-6">
+            <h2 className="text-3xl md:text-5xl font-playfair text-white mb-6">
               Commercial Furniture Solutions
             </h2>
-            <p className="text-lg md:text-xl text-charcoal/70 max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto">
               Professional furniture solutions designed to enhance productivity, comfort, and aesthetics in commercial environments.
             </p>
           </div>
@@ -394,7 +394,7 @@ const Furniture = () => {
                 </div>
                 
                 {/* Content */}
-                <div className="bg-soft-gold rounded-xl p-6 hover:bg-ivory-gold transition-colors duration-300 group-hover:shadow-lg">
+                <div className="bg-ivory-gold rounded-xl p-6 hover:bg-soft-gold transition-colors duration-300 group-hover:shadow-lg border border-ivory-gold/20">
                   <p className="text-charcoal/70 mb-4">{category.description}</p>
                   
                   <div className="space-y-2 mb-6">
@@ -419,13 +419,13 @@ const Furniture = () => {
       </section>
 
       {/* Delivery Process Section */}
-      <section className="py-16 bg-soft-gold">
+      <section className="py-16 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal mb-6">
+            <h2 className="text-3xl md:text-4xl font-playfair text-white mb-6">
               Our Delivery Process
             </h2>
-            <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               From initial consultation to final installation, we ensure a seamless experience with our proven 5-step process.
             </p>
           </div>
@@ -445,11 +445,11 @@ const Furniture = () => {
                       <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-charcoal/30 transform -translate-y-1/2"></div>
                     )}
                   </div>
-                  <h3 className="text-lg font-playfair text-charcoal mb-3">{process.title}</h3>
-                  <p className="text-sm text-charcoal/70 mb-4">{process.description}</p>
+                  <h3 className="text-lg font-playfair text-white mb-3">{process.title}</h3>
+                  <p className="text-sm text-gray-300 mb-4">{process.description}</p>
                   <div className="space-y-1">
                     {process.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} className="text-xs text-charcoal/60">
+                      <div key={detailIndex} className="text-xs text-gray-400">
                         • {detail}
                       </div>
                     ))}

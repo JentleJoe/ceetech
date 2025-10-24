@@ -74,30 +74,30 @@ const About = () => {
       </section>
 
       {/* Our Mission Section */}
-      <section className="py-16 bg-soft-gold">
+      <section className="py-16 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal mb-8">
+            <h2 className="text-3xl md:text-4xl font-playfair text-white mb-8">
               Our Mission
             </h2>
-            <p className="text-xl text-charcoal/80 leading-relaxed mb-8">
+            <p className="text-xl text-gray-300 leading-relaxed mb-8">
               We don't just design interiors — we craft experiences. Our mission is to be Benin's leading 
               furniture manufacturer and interior design company, transforming ordinary spaces into 
               extraordinary environments. We combine traditional craftsmanship with modern innovation to 
               deliver solutions that reflect our clients' unique personalities and inspire their daily lives.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-12">
-              <div className="text-center bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-center bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20">
                 <h4 className="font-semibold text-charcoal mb-2">5+ Years</h4>
-                <p className="text-sm text-gray-600">Of Excellence in Benin City</p>
+                <p className="text-sm text-charcoal/70">Of Excellence in Benin City</p>
               </div>
-              <div className="text-center bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-center bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20">
                 <h4 className="font-semibold text-charcoal mb-2">3 Locations</h4>
-                <p className="text-sm text-gray-600">Factory + 2 Showrooms</p>
+                <p className="text-sm text-charcoal/70">Factory + 2 Showrooms</p>
               </div>
-              <div className="text-center bg-white p-6 rounded-xl shadow-lg">
+              <div className="text-center bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20">
                 <h4 className="font-semibold text-charcoal mb-2">200+</h4>
-                <p className="text-sm text-gray-600">Happy Customers Served</p>
+                <p className="text-sm text-charcoal/70">Happy Customers Served</p>
               </div>
             </div>
           </div>
@@ -113,8 +113,8 @@ const About = () => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               <div className="text-center group">
-                <div className="bg-ivory-gold p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-soft-gold transition-colors duration-300">
-                  <span className="text-3xl text-charcoal">🪑</span>
+                <div className="bg-charcoal p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-jet-black transition-colors duration-300 border border-ivory-gold/20">
+                  <span className="text-3xl text-ivory-gold">🪑</span>
                 </div>
                 <h3 className="text-lg font-semibold text-charcoal mb-3">Custom Furniture</h3>
                 <p className="text-charcoal/70 text-sm leading-relaxed">
@@ -122,8 +122,8 @@ const About = () => {
                 </p>
               </div>
               <div className="text-center group">
-                <div className="bg-ivory-gold p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-soft-gold transition-colors duration-300">
-                  <span className="text-3xl text-charcoal">🏠</span>
+                <div className="bg-charcoal p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-jet-black transition-colors duration-300 border border-ivory-gold/20">
+                  <span className="text-3xl text-ivory-gold">🏠</span>
                 </div>
                 <h3 className="text-lg font-semibold text-charcoal mb-3">Interior Design</h3>
                 <p className="text-charcoal/70 text-sm leading-relaxed">
@@ -131,8 +131,8 @@ const About = () => {
                 </p>
               </div>
               <div className="text-center group">
-                <div className="bg-ivory-gold p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-soft-gold transition-colors duration-300">
-                  <span className="text-3xl text-charcoal">🔧</span>
+                <div className="bg-charcoal p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-jet-black transition-colors duration-300 border border-ivory-gold/20">
+                  <span className="text-3xl text-ivory-gold">🔧</span>
                 </div>
                 <h3 className="text-lg font-semibold text-charcoal mb-3">Installation Services</h3>
                 <p className="text-charcoal/70 text-sm leading-relaxed">
@@ -140,8 +140,8 @@ const About = () => {
                 </p>
               </div>
               <div className="text-center group">
-                <div className="bg-ivory-gold p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-soft-gold transition-colors duration-300">
-                  <span className="text-3xl text-charcoal">🎓</span>
+                <div className="bg-charcoal p-4 rounded-xl w-fit mx-auto mb-4 group-hover:bg-jet-black transition-colors duration-300 border border-ivory-gold/20">
+                  <span className="text-3xl text-ivory-gold">🎓</span>
                 </div>
                 <h3 className="text-lg font-semibold text-charcoal mb-3">Training Academy</h3>
                 <p className="text-charcoal/70 text-sm leading-relaxed">
@@ -154,61 +154,61 @@ const About = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-soft-gold">
+      <section className="py-16 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-playfair text-white text-center mb-12">
               Why Choose Ceetech Crafts?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🏭</span>
+              <div className="bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20 text-center">
+                <div className="bg-charcoal w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-ivory-gold">🏭</span>
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal mb-3">Local Manufacturing</h3>
                 <p className="text-charcoal/70">
                   We manufacture right here in Benin City, ensuring quality control and supporting the local economy.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">✂️</span>
+              <div className="bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20 text-center">
+                <div className="bg-charcoal w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-ivory-gold">✂️</span>
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal mb-3">Custom Solutions</h3>
                 <p className="text-charcoal/70">
                   Every project is tailored to your specific requirements, space, and budget constraints.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🤝</span>
+              <div className="bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20 text-center">
+                <div className="bg-charcoal w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-ivory-gold">🤝</span>
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal mb-3">End-to-End Service</h3>
                 <p className="text-charcoal/70">
                   From initial consultation to final installation, we handle every aspect of your project.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⭐</span>
+              <div className="bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20 text-center">
+                <div className="bg-charcoal w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-ivory-gold">⭐</span>
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal mb-3">Proven Quality</h3>
                 <p className="text-charcoal/70">
                   Over 5 years of excellence with 200+ satisfied customers across Edo State.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💰</span>
+              <div className="bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20 text-center">
+                <div className="bg-charcoal w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-ivory-gold">💰</span>
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal mb-3">Fair Pricing</h3>
                 <p className="text-charcoal/70">
                   Competitive prices without compromising on quality or service delivery.
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center">
-                <div className="bg-soft-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📍</span>
+              <div className="bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20 text-center">
+                <div className="bg-charcoal w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl text-ivory-gold">📍</span>
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal mb-3">Convenient Locations</h3>
                 <p className="text-charcoal/70">

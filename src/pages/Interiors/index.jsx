@@ -319,7 +319,7 @@ const Interiors = () => {
             {interiorCategories.map((category, index) => (
               <div 
                 key={index} 
-                className="text-center group hover:transform hover:scale-105 transition-all duration-300 cursor-pointer p-6 rounded-xl hover:bg-soft-gold/20"
+                className="text-center group hover:transform hover:scale-105 transition-all duration-300 cursor-pointer p-6 rounded-xl hover:bg-ivory-gold/20"
               >
                 <div className="bg-ivory-gold w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-charcoal group-hover:scale-110 transition-all duration-300">
                   <category.mainIcon className="w-10 h-10 text-charcoal group-hover:text-ivory-gold transition-colors duration-300" />
@@ -345,13 +345,45 @@ const Interiors = () => {
       </section>
 
       {/* Detailed Service Sections */}
-      {interiorCategories.map((category, categoryIndex) => (
+      {interiorCategories.map((category, categoryIndex) => {
+        // Creative background progression
+        const getBackgroundClass = (index) => {
+          const backgrounds = [
+            'bg-charcoal', // 0: Dramatic dark start
+            'bg-gradient-to-br from-soft-gold to-ivory-gold', // 1: Warm gradient
+            'bg-white', // 2: Clean minimal
+            'bg-gradient-to-r from-charcoal via-charcoal/95 to-charcoal', // 3: Subtle dark gradient
+            'bg-soft-gold', // 4: Luxurious gold
+            'bg-gradient-to-bl from-white to-soft-gold/30', // 5: Light to gold gradient
+          ];
+          return backgrounds[index % backgrounds.length];
+        };
+
+        const bgClass = getBackgroundClass(categoryIndex);
+        
+        return (
         <section 
           key={categoryIndex} 
           id={category.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/--+/g, '-').replace(/^-|-$/g, '')}
-          className={`py-16 ${categoryIndex % 2 === 0 ? 'bg-soft-gold' : 'bg-white'}`}
+          className={`py-16 ${bgClass} relative overflow-hidden`}
         >
-          <div className="container mx-auto px-4">
+          {/* Creative Background Patterns */}
+          {bgClass.includes('bg-charcoal') && (
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-ivory-gold/5 via-transparent to-transparent"></div>
+              <div className="absolute top-20 right-20 w-32 h-32 border border-ivory-gold/20 rounded-full"></div>
+              <div className="absolute bottom-20 left-20 w-24 h-24 border border-ivory-gold/10 rounded-full"></div>
+            </div>
+          )}
+          {bgClass.includes('bg-soft-gold') && (
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-charcoal/5 via-transparent to-transparent"></div>
+              <div className="absolute top-10 left-10 w-16 h-16 bg-charcoal/10 rounded-full blur-sm"></div>
+              <div className="absolute bottom-10 right-10 w-20 h-20 bg-charcoal/5 rounded-full blur-sm"></div>
+            </div>
+          )}
+          
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-7xl mx-auto">
               {/* Hero Image Section */}
               <div className="mb-12">
@@ -375,7 +407,13 @@ const Interiors = () => {
                   </div>
                 </div>
                 <div className="text-center">
-                  <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
+                  <p className={`text-lg max-w-3xl mx-auto ${
+                    bgClass.includes('bg-charcoal') || bgClass.includes('from-charcoal') 
+                      ? 'text-gray-300' 
+                      : bgClass.includes('bg-gradient-to-br') || bgClass.includes('bg-soft-gold')
+                      ? 'text-charcoal/80'
+                      : 'text-charcoal/70'
+                  }`}>
                     {category.description}
                   </p>
                 </div>
@@ -399,7 +437,7 @@ const Interiors = () => {
                           {service.items.map((item, itemIndex) => (
                             <div 
                               key={itemIndex} 
-                              className="flex items-start hover:bg-soft-gold/30 rounded p-2 transition-all duration-200 hover:transform hover:translate-x-2"
+                              className="flex items-start hover:bg-ivory-gold/30 rounded p-2 transition-all duration-200 hover:transform hover:translate-x-2"
                             >
                               <CheckCircle className="w-4 h-4 text-charcoal mr-2 mt-1 flex-shrink-0 hover:scale-110 transition-transform duration-200" />
                               <span className="text-charcoal/80 text-base hover:text-charcoal transition-colors duration-200">{item}</span>
@@ -413,7 +451,7 @@ const Interiors = () => {
                 
                 {/* Benefits */}
                 <div>
-                  <div className="bg-soft-gold rounded-lg p-6">
+                  <div className="bg-ivory-gold rounded-lg p-6 border border-ivory-gold/20">
                     <h3 className="text-xl font-playfair text-charcoal mb-6">Why Choose Our Services?</h3>
                     <div className="space-y-4">
                       {category.benefits.map((benefit, benefitIndex) => (
@@ -429,16 +467,17 @@ const Interiors = () => {
             </div>
           </div>
         </section>
-      ))}
+        );
+      })}
 
       {/* Work Process Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal mb-6">
+            <h2 className="text-3xl md:text-4xl font-playfair text-white mb-6">
               Our Work Process
             </h2>
-            <p className="text-lg text-charcoal/70 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               From initial consultation to final inspection, we ensure a seamless experience with our proven 4-step process.
             </p>
           </div>
@@ -455,21 +494,21 @@ const Interiors = () => {
                   }}
                 >
                   <div className="relative mb-6">
-                    <div className="bg-charcoal text-ivory-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold group-hover:bg-charcoal group-hover:scale-110 transition-all duration-300 animate-pulse-gentle">
+                    <div className="bg-ivory-gold text-charcoal w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold group-hover:bg-white group-hover:scale-110 transition-all duration-300 animate-pulse-gentle">
                       {process.step}
                     </div>
-                    <div className="bg-white p-4 rounded-lg shadow-md mb-4 group-hover:shadow-xl group-hover:bg-soft-gold/20 transition-all duration-300">
+                    <div className="bg-ivory-gold p-4 rounded-lg shadow-md mb-4 group-hover:shadow-xl group-hover:bg-white transition-all duration-300 border border-ivory-gold/20">
                       <process.icon className="w-8 h-8 text-charcoal mx-auto group-hover:text-charcoal group-hover:scale-110 transition-all duration-300" />
                     </div>
                     {index < workProcess.length - 1 && (
-                      <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-charcoal/30 transform -translate-y-1/2"></div>
+                      <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-ivory-gold/30 transform -translate-y-1/2"></div>
                     )}
                   </div>
-                  <h3 className="text-lg font-playfair text-charcoal mb-3 group-hover:text-charcoal transition-colors duration-300">{process.title}</h3>
-                  <p className="text-base text-charcoal/70 mb-4 group-hover:text-charcoal transition-colors duration-300">{process.description}</p>
+                  <h3 className="text-lg font-playfair text-white mb-3 group-hover:text-ivory-gold transition-colors duration-300">{process.title}</h3>
+                  <p className="text-base text-gray-300 mb-4 group-hover:text-white transition-colors duration-300">{process.description}</p>
                   <div className="space-y-1">
                     {process.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} className="text-sm text-charcoal/60">
+                      <div key={detailIndex} className="text-sm text-gray-400">
                         • {detail}
                       </div>
                     ))}
@@ -482,13 +521,13 @@ const Interiors = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-soft-gold">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-playfair text-charcoal mb-6">
               Why Choose Ceetech Interiors?
             </h2>
-            <p className="text-lg text-charcoal/80 max-w-2xl mx-auto">
+            <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
               We combine expertise, quality materials, and professional service to deliver exceptional interior solutions.
             </p>
           </div>
