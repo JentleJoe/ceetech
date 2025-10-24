@@ -6,6 +6,7 @@ import {
   Blinds, Sun, Lightbulb, Wind, Sparkles, Home,
   MessageCircle, Phone
 } from 'lucide-react'
+import logoIconGold from '../../assets/logoIconGold.png'
 
 // Import images
 import paintingImg from '../../assets/painting2.jpg'
@@ -280,6 +281,13 @@ const Interiors = () => {
       >
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="flex justify-center mb-4">
+              <img 
+                src={logoIconGold} 
+                alt="Ceetech Crafts Logo" 
+                className="h-12 w-auto"
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 leading-tight drop-shadow-lg">
               Professional <span className="text-ivory-gold italic">Interior Solutions</span>
             </h1>

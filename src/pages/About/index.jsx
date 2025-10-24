@@ -1,6 +1,7 @@
 import { MessageCircle } from 'lucide-react'
 import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
+import logoIconGold from '../../assets/logoIconGold.png'
 
 // Import images
 import workshopImg from '../../assets/workshop.jpg'
@@ -20,6 +21,13 @@ const About = () => {
       >
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="flex justify-center mb-4">
+              <img 
+                src={logoIconGold} 
+                alt="Ceetech Crafts Logo" 
+                className="h-12 w-auto"
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-playfair text-white mb-6 drop-shadow-lg">
               About <span className="text-ivory-gold">Ceetech Crafts</span>
             </h1>

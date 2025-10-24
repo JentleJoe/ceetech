@@ -2,6 +2,7 @@ import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Twitter, Youtube, Mess
 import { useState } from 'react'
 import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
+import logoIconGold from '../../assets/logoIconGold.png'
 
 const Contact = () => {
   const [copiedText, setCopiedText] = useState('')
@@ -101,6 +102,13 @@ const Contact = () => {
         }}
       >
         <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="flex justify-center mb-4">
+            <img 
+              src={logoIconGold} 
+              alt="Ceetech Crafts Logo" 
+              className="h-12 w-auto"
+            />
+          </div>
           <h1 className="text-4xl md:text-6xl font-playfair mb-6 leading-tight text-white drop-shadow-lg">
             Get in <span className="italic text-light-tan">Touch</span>
           </h1>
