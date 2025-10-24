@@ -11,11 +11,21 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2 lg:col-span-1">
             <div className="mb-4">
-              <img 
-                src={logoHorizontal} 
-                alt="Ceetech Crafts Logo" 
-                className="h-10 w-auto"
-              />
+              <Link 
+                to="/" 
+                className="inline-block transition-opacity duration-300 hover:opacity-80"
+                onClick={() => {
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }, 100);
+                }}
+              >
+                <img 
+                  src={logoHorizontal} 
+                  alt="Ceetech Crafts Logo" 
+                  className="h-10 w-auto"
+                />
+              </Link>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed text-sm">
               Professional furniture manufacturing and interior design services in Benin City. Creating quality furniture and beautiful spaces since 2019.
