@@ -146,14 +146,14 @@ const Collection = () => {
                   
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs text-ivory-gold font-semibold tracking-wide uppercase">
+                      <span className="text-xs text-charcoal/80 font-semibold tracking-wide uppercase bg-ivory-gold/20 px-2 py-1 rounded">
                         {service.category}
                       </span>
                       {hoveredService === service.id && (
-                        <div className="w-2 h-2 bg-ivory-gold rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-charcoal rounded-full animate-pulse"></div>
                       )}
                     </div>
-                    <h4 className="text-base font-semibold text-charcoal group-hover:text-ivory-gold transition-colors duration-300 line-clamp-2">
+                    <h4 className="text-base font-semibold text-charcoal group-hover:text-charcoal/90 transition-colors duration-300 line-clamp-2">
                       {service.name}
                     </h4>
                   </div>
