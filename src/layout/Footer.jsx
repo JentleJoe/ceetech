@@ -8,57 +8,57 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="md:col-span-2 lg:col-span-1">
-            <h3 className="text-2xl font-playfair mb-4 text-light-tan">Ceetech Crafts</h3>
+            <h3 className="text-2xl font-playfair mb-4 text-ivory-gold">Ceetech Crafts</h3>
             <p className="text-gray-300 mb-6 leading-relaxed text-sm">
               Professional furniture manufacturing and interior design services in Benin City. Creating quality furniture and beautiful spaces since 2019.
             </p>
             <div className="space-y-2 text-gray-300 text-sm">
               <div className="flex items-start space-x-2">
-                <span className="text-light-tan mt-1">📍</span>
+                <span className="text-ivory-gold mt-1">📍</span>
                 <span>Factory: 2nd Entrance Evbuabogun sawmill opposite ekae market, Sapele Rd, Benin City</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-light-tan">📞</span>
-                <a href="tel:+2349069616141" className="hover:text-light-tan transition-colors">+234 906 961 6141</a>
+                <span className="text-ivory-gold">📞</span>
+                <a href="tel:+2349069616141" className="hover:text-ivory-gold transition-colors">+234 906 961 6141</a>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-light-tan">✉️</span>
-                <a href="mailto:ceetechfurnitureandinteriors9@gmail.com" className="hover:text-light-tan transition-colors break-all">ceetechfurnitureandinteriors9@gmail.com</a>
+                <span className="text-ivory-gold">✉️</span>
+                <a href="mailto:ceetechfurnitureandinteriors9@gmail.com" className="hover:text-ivory-gold transition-colors break-all">ceetechfurnitureandinteriors9@gmail.com</a>
               </div>
             </div>
           </div>
 
           {/* Our Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-light-tan">Our Services</h4>
+            <h4 className="text-lg font-semibold mb-6 text-ivory-gold">Our Services</h4>
             <ul className="space-y-3">
               <li>
-                <a href="/furniture" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/furniture" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   Custom Furniture
                 </a>
               </li>
               <li>
-                <a href="/furniture" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/furniture" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   Kitchen Cabinets
                 </a>
               </li>
               <li>
-                <a href="/furniture" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/furniture" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   Office Workstations
                 </a>
               </li>
               <li>
-                <a href="/interiors" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/interiors" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   Interior Design
                 </a>
               </li>
               <li>
-                <a href="/interiors" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/interiors" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   POP Ceiling
                 </a>
               </li>
               <li>
-                <a href="/interiors" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/interiors" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   Tiling & Flooring
                 </a>
               </li>
@@ -67,30 +67,30 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-light-tan">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-6 text-ivory-gold">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="/about" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/about" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/furniture" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/furniture" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   Our Furniture
                 </a>
               </li>
               <li>
-                <a href="/interiors" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/interiors" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   Interior Services
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/contact" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   Contact Us
                 </a>
               </li>
               <li>
-                <a href="/academy" className="text-gray-300 hover:text-light-tan transition-colors duration-300 text-sm">
+                <a href="/academy" className="text-gray-300 hover:text-ivory-gold transition-colors duration-300 text-sm">
                   Academy
                 </a>
               </li>
@@ -99,11 +99,11 @@ const Footer = () => {
 
           {/* Business Hours & Social */}
           <div>
-            <h4 className="text-lg font-semibold mb-6 text-light-tan">Connect With Us</h4>
+            <h4 className="text-lg font-semibold mb-6 text-ivory-gold">Connect With Us</h4>
             
             {/* Business Hours */}
             <div className="mb-6">
-              <h5 className="text-sm font-medium mb-3 text-gray-200">Business Hours</h5>
+              <h5 className="text-sm font-medium mb-3 text-ivory-gold/80">Business Hours</h5>
               <div className="space-y-1 text-xs text-gray-300">
                 <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
                 <p>Saturday: 9:00 AM - 5:00 PM</p>
@@ -113,7 +113,7 @@ const Footer = () => {
 
             {/* Social Media */}
             <div>
-              <h5 className="text-sm font-medium mb-3 text-gray-200">Follow Us</h5>
+              <h5 className="text-sm font-medium mb-3 text-ivory-gold/80">Follow Us</h5>
               <div className="flex space-x-3">
                 <a href="https://www.facebook.com/share/15y5a4wA4b/" target="_blank" rel="noopener noreferrer" className="bg-white/10 p-2 rounded-lg hover:bg-ivory-gold hover:text-charcoal transition-all duration-300">
                   <Facebook className="w-4 h-4" />
@@ -149,15 +149,15 @@ const Footer = () => {
                 href="https://peakbrand.agency" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex items-center space-x-2 bg-light-tan/10 hover:bg-light-tan px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="group flex items-center space-x-2 bg-ivory-gold/10 hover:bg-ivory-gold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
-                <span className="text-light-tan group-hover:text-dark-brown font-medium text-sm">
+                <span className="text-ivory-gold group-hover:text-charcoal font-medium text-sm">
                   Built by
                 </span>
-                <span className="text-white group-hover:text-dark-brown font-bold text-sm tracking-wide">
+                <span className="text-white group-hover:text-charcoal font-bold text-sm tracking-wide">
                   peakbrand.agency
                 </span>
-                <svg className="w-3 h-3 text-light-tan group-hover:text-dark-brown transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 text-ivory-gold group-hover:text-charcoal transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
