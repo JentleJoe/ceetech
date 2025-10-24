@@ -7,6 +7,7 @@ import {
   MessageCircle, Phone
 } from 'lucide-react'
 import logoIconGold from '../../assets/logoIconGold.png'
+import logoIconWhite from '../../assets/logoIconWhite.png'
 
 // Import images
 import paintingImg from '../../assets/painting2.jpg'
@@ -482,6 +483,13 @@ const Interiors = () => {
       <section className="py-16 bg-charcoal">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <div className="flex justify-center mb-4">
+              <img 
+                src={logoIconWhite} 
+                alt="Ceetech Crafts Logo" 
+                className="h-10 w-auto"
+              />
+            </div>
             <h2 className="text-3xl md:text-4xl font-playfair text-white mb-6">
               Our Work Process
             </h2>
