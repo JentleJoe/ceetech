@@ -84,8 +84,8 @@ const About = () => {
               className="text-center group animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-soft-gold rounded-2xl p-6 mb-6 group-hover:bg-ivory-gold transition-colors duration-300">
-                <value.icon className="w-8 h-8 text-charcoal group-hover:text-charcoal mx-auto transition-colors duration-300" />
+              <div className="bg-charcoal rounded-2xl p-6 mb-6 group-hover:bg-jet-black transition-colors duration-300 border border-ivory-gold/20">
+                <value.icon className="w-8 h-8 text-ivory-gold group-hover:text-white mx-auto transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-playfair text-charcoal mb-4 font-semibold">
                 {value.title}

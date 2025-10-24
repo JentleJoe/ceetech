@@ -140,7 +140,7 @@ const InteriorsByCeetech = () => {
                         Interior Service
                       </span>
                       {hoveredService === service.id && (
-                        <div className="w-2 h-2 bg-warm-brown rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-ivory-gold rounded-full animate-pulse"></div>
                       )}
                     </div>
                     <h4 className="text-base font-semibold text-dark-brown group-hover:text-warm-brown transition-colors duration-300 line-clamp-2">

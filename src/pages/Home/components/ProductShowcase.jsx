@@ -8,7 +8,7 @@ const ProductShowcase = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Card - Custom Furniture Solutions */}
-          <div className="relative overflow-hidden rounded-3xl bg-light-tan h-96 group cursor-pointer">
+          <div className="relative overflow-hidden rounded-3xl bg-soft-gold h-96 group cursor-pointer">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
               style={{
@@ -28,7 +28,7 @@ const ProductShowcase = () => {
           </div>
 
           {/* Right Card - Professional Interior Services */}
-          <div className="relative overflow-hidden rounded-3xl bg-warm-brown h-96 group cursor-pointer">
+          <div className="relative overflow-hidden rounded-3xl bg-charcoal h-96 group cursor-pointer">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
               style={{
