@@ -67,7 +67,7 @@ const Header = () => {
             <img 
               src={logoVertical} 
               alt="Ceetech Crafts Logo" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 
