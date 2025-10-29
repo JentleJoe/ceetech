@@ -254,7 +254,7 @@ const Contact = () => {
               {/* Primary Factory Location */}
               <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-charcoal relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-charcoal text-ivory-gold px-4 py-1 rounded-full text-sm font-semibold">PRIMARY LOCATION</span>
+                  <span className="bg-charcoal text-ivory-gold px-2 sm:px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">PRIMARY LOCATION</span>
                 </div>
                 <div className="text-center pt-4">
                   <div className="bg-charcoal p-3 rounded-lg w-fit mx-auto mb-4">
