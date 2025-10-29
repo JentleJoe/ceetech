@@ -281,7 +281,7 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-charcoal" />
                   </div>
                   <h4 className="font-semibold text-charcoal mb-2">Showroom 1 - Oka</h4>
-                  <p className="text-sm text-charcoal/70 mb-6 leading-relaxed">40 Country Home Rd, Oka, Benin City 300102, Edo</p>
+                  <p className="text-sm text-charcoal/70 mb-6 leading-relaxed">40 Country Home Rd, Sapele Rd, Benin City 300102, Edo</p>
                   <a
                     href="https://maps.google.com/?q=40+Country+Home+Rd+Oka+Benin+City+300102+Edo"
                     target="_blank"
@@ -301,9 +301,9 @@ const Contact = () => {
                     <MapPin className="w-6 h-6 text-charcoal" />
                   </div>
                   <h4 className="font-semibold text-charcoal mb-2">Showroom 2</h4>
-                  <p className="text-sm text-charcoal/70 mb-6 leading-relaxed">456 Mission Road, Benin City, Edo State</p>
+                  <p className="text-sm text-charcoal/70 mb-6 leading-relaxed"> No 2 evbuabogun road sapele Rd Benin city</p>
                   <a
-                    href="https://maps.google.com/?q=456+Mission+Road+Benin+City"
+                    href="https://maps.google.com/?q=No+2+evbuabogun+road+sapele+Rd+Benin+city"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-1 bg-gray-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:scale-105 transition-transform duration-200"
