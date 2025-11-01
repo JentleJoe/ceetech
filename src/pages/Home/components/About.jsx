@@ -33,12 +33,12 @@ const About = () => {
           {/* Content */}
           <div className="animate-slide-in-left">
             <h2 className="text-4xl md:text-5xl font-playfair text-dark-brown mb-8 leading-tight">
-              Benin City's Leading <span className="italic text-warm-brown">Furniture & Interior</span> Experts
+              Leading <span className="italic text-warm-brown">Furniture & Interior</span> Experts
             </h2>
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Ceetech Crafts is <span className="text-warm-brown font-medium">Benin City's premier furniture maker</span> and interior design specialist. From our modern factory in the heart of Benin City, we serve customers across Edo State with <span className="text-warm-brown font-medium">exceptional furniture craftsmanship</span> and complete interior solutions.
+                Ceetech Crafts is <span className="text-warm-brown font-medium">A premier furniture maker</span> and interior design specialist. From our modern factory in the heart of Benin City, we serve customers across Edo State with <span className="text-warm-brown font-medium">exceptional furniture craftsmanship</span> and complete interior solutions.
               </p>
               
               <p>

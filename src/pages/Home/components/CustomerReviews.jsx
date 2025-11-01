@@ -29,7 +29,7 @@ const CustomerReviews = () => {
     { number: "200+", label: "Happy Customers" },
     { number: "4.9/5", label: "Average Rating" },
     { number: "98%", label: "Would Recommend" },
-    { number: "5-Year", label: "Warranty" }
+    { number: "1-Year", label: "Warranty" }
   ]
 
   const renderStars = (rating) => {

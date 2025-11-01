@@ -33,7 +33,7 @@ const About = () => {
               About <span className="text-ivory-gold">Ceetech Crafts</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed drop-shadow-md">
-              Crafted to Inspire - Your trusted partner for custom furniture, interior design, and professional training in Benin City
+              Crafted to Inspire - Your trusted partner for custom furniture, interior design, and professional training
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ const About = () => {
                 </h2>
                 <p className="text-lg text-charcoal/80 mb-6">
                   At Ceetech Crafts, every detail tells a story. Located in the heart of Benin City, 
-                  we've grown from a passion project into Benin's premier destination for custom furniture 
+                  we've grown from a passion project into a premier destination for custom furniture 
                   and interior design solutions. Our factory on Sapele Road serves as both our manufacturing 
                   hub and main showroom, where visitors can witness the entire creation process firsthand.
                 </p>
@@ -97,14 +97,14 @@ const About = () => {
               Our Mission
             </h2>
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              We don't just design interiors — we craft experiences. Our mission is to be Benin's leading 
+              We don't just design interiors — we craft experiences. Our mission is to be Nigeria's leading 
               furniture manufacturer and interior design company, transforming ordinary spaces into 
               extraordinary environments. We combine traditional craftsmanship with modern innovation to 
               deliver solutions that reflect our clients' unique personalities and inspire their daily lives.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               <div className="text-center bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20">
-                <h4 className="font-semibold text-charcoal mb-2">5+ Years</h4>
+                <h4 className="font-semibold text-charcoal mb-2">10+ Years</h4>
                 <p className="text-sm text-charcoal/70">Of Excellence in Benin City</p>
               </div>
               <div className="text-center bg-ivory-gold p-6 rounded-xl shadow-lg border border-ivory-gold/20">
