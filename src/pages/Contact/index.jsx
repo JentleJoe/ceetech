@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
 import logoIconGold from '../../assets/logoIconGold.png'
+import FAQAccordion from '../../components/FAQAccordion'
 
 const Contact = () => {
   const [copiedText, setCopiedText] = useState('')
@@ -87,6 +88,29 @@ const Contact = () => {
       url: 'https://youtube.com/ceetechfurniture', 
       color: 'hover:bg-red-600',
       bgColor: 'bg-red-500'
+    }
+  ]
+
+  const faqItems = [
+    {
+      question: 'What states do you serve?',
+      answer: 'We serve customers across all states in Nigeria.'
+    },
+    {
+      question: 'Where are your showrooms and factory located?',
+      answer: 'Our primary location (Factory) is: 2nd Entrance Ebvuabugun Sawmill, Off Sapele Road, Benin City, Edo State. Our showroom are in 2 locations: Showroom 1 — 40 Country Home Rd, Oka, Benin City; Showroom 2 — 456 Mission Road, Benin City.'
+    },
+    {
+      question: 'Do you upgrade existing furniture?',
+      answer: 'Yes. We offer refurbishment, repair and upgrade services for existing furniture to extend its life and refresh its appearance.'
+    },
+    {
+      question: 'Do you offer any warranty?',
+      answer: 'We provide a one-year warranty covering defects in workmanship for furniture created by Ceetech Crafts. This warranty covers damage resulting from our workmanship; normal wear, misuse or accidental damage are excluded. Please contact us for full terms.'
+    },
+    {
+      question: 'How long does it take to make custom furniture?',
+      answer: "Timing depends on the complexity of the piece. We provide an estimated timeline after an initial consultation. Please get in touch so we can discuss your requirements and provide a schedule."
     }
   ]
 
@@ -422,6 +446,18 @@ const Contact = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      
+      {/* FAQ Section (Accordion) */}
+      <section id="faq" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal mb-4">Frequently Asked Questions</h2>
+            <p className="text-charcoal/70">Answers to common questions about our services, locations and processes. If you need more detail, please contact us.</p>
+          </div>
+
+          <FAQAccordion items={faqItems} defaultIndex={0} />
         </div>
       </section>
 
