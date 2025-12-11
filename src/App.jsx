@@ -8,6 +8,7 @@ import Interiors from "./pages/Interiors";
 import Academy from "./pages/Academy";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import FloatingSocialBar from "./components/FloatingSocialBar";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ const App = () => (
   <div className="m-0 p-0">
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
+        <FloatingSocialBar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
