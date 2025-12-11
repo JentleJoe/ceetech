@@ -1,20 +1,35 @@
 import { Star, Quote } from "lucide-react"
+import { useEffect } from "react"
 
 const CustomerReviews = () => {
+  // Load Elfsight script
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://elfsightcdn.com/platform.js'
+    script.async = true
+    document.body.appendChild(script)
+    
+    return () => {
+      // Cleanup script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script)
+      }
+    }
+  }, [])
   const reviews = [
     {
       id: 1,
       name: "Adebayo Okafor",
       location: "Benin City, Edo",
       rating: 5,
-      text: "Absolutely love my dining set from Ceetech Crafts! The craftsmanship is exceptional and it's become the centerpiece of our home. The wood quality is outstanding."
+      text: "Earlier this year Ceetech furnitures was recommended to me, and to be honest, I got exactly what I want. The services was top notch and I got amazing value for my money. Since after our first transaction I introduced my friends and so far no complaints from anyone. Patronize them and be rest assured you are getting the best."
     },
     {
       id: 2,
-      name: "Chioma Nwankwo",
+      name: "Joshua Oseghale",
       location: "Lagos, Nigeria",
       rating: 5,
-      text: "The attention to detail in every piece is remarkable. Our living room has been completely transformed with Ceetech Crafts' furniture. Highly recommend!"
+      text: "Ceetech Crafts is one of the few furniture brands that puts real intention into their craft. They’ve raised the standard and consistently deliver exceptional results. If you want furniture done so well that you won’t need anyone else, Ceetech Crafts is highly recommended."
     },
     {
       id: 3,
@@ -27,7 +42,7 @@ const CustomerReviews = () => {
 
   const stats = [
     { number: "200+", label: "Happy Customers" },
-    { number: "4.9/5", label: "Average Rating" },
+    { number: "4.7/5", label: "Average Rating" },
     { number: "98%", label: "Would Recommend" },
     { number: "1-Year", label: "Warranty" }
   ]
@@ -108,6 +123,17 @@ const CustomerReviews = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Elfsight Google Reviews Widget */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-playfair text-charcoal mb-2">
+              Verified Google Reviews
+            </h3>
+            <p className="text-charcoal/70">See what our customers are saying on Google</p>
+          </div>
+          <div className="elfsight-app-96fad6cf-47ff-4f0b-acb0-f25bee36f551" data-elfsight-app-lazy></div>
         </div>
 
         {/* Call to Action */}
