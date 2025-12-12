@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Twitter, Youtube, MessageCircle } from 'lucide-react'
+import { Facebook, Instagram, MessageCircle } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -72,12 +72,6 @@ const Footer = () => {
               </a>
               <a href="https://wa.me/2349069616141" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 text-gray-300 hover:text-light-tan cursor-pointer transition-colors duration-300" />
-              </a>
-              <a href="https://twitter.com/ceetech" target="_blank" rel="noopener noreferrer">
-                <Twitter className="w-5 h-5 text-gray-300 hover:text-light-tan cursor-pointer transition-colors duration-300" />
-              </a>
-              <a href="https://youtube.com/ceetech" target="_blank" rel="noopener noreferrer">
-                <Youtube className="w-5 h-5 text-gray-300 hover:text-light-tan cursor-pointer transition-colors duration-300" />
               </a>
             </div>
           </div>

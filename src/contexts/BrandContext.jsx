@@ -31,8 +31,8 @@ export const BrandProvider = ({ children, brandConfig }) => {
     socialMedia: {
       facebook: 'https://www.facebook.com/share/15y5a4wA4b/',
       instagram: 'https://www.instagram.com/ceetech_official?igsh=d3pkdHdxbHNma3pu',
-      twitter: 'https://twitter.com/ceetech',
-      youtube: 'https://youtube.com/ceetech',
+
+
       tiktok: 'https://tiktok.com/@ctechfurniture.interior',
       whatsapp: 'https://wa.me/2349069616141'
     },
