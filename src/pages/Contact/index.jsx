@@ -84,7 +84,7 @@ const Contact = () => {
     },
     { 
       name: 'WhatsApp', 
-      url: 'https://wa.me/2349069616141', 
+      url: 'https://wa.me/2348138461999', 
       color: 'hover:bg-green-600',
       bgColor: 'bg-green-500',
       isWhatsApp: true

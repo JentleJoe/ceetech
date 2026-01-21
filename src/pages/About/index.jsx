@@ -275,7 +275,7 @@ const About = () => {
                 </svg>
               </a>
               <a 
-                href="https://wa.me/2349069616141" 
+                href="https://wa.me/2348138461999" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-green-600 text-white p-4 rounded-xl transition-all duration-300 hover:scale-110 transform shadow-lg hover:shadow-xl hover:bg-green-700"
@@ -309,7 +309,7 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/2349069616141?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20services"
+                href="https://wa.me/2348138461999?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-green-700 transition-colors duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
@@ -320,10 +320,10 @@ const About = () => {
                 <span>Chat on WhatsApp</span>
               </a>
               <a
-                href="tel:+2349069616141"
+                href="tel:+2348138461999"
                 className="border-2 border-ivory-gold text-ivory-gold px-8 py-4 rounded-xl font-semibold hover:bg-ivory-gold hover:text-charcoal transition-colors duration-300 shadow-lg"
               >
-                Call: +234 906 961 6141
+                Call: +234 813 846 1999
               </a>
             </div>
           </div>

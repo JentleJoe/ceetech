@@ -34,12 +34,12 @@ export const BrandProvider = ({ children, brandConfig }) => {
 
 
       tiktok: 'https://tiktok.com/@ctechfurniture.interior',
-      whatsapp: 'https://wa.me/2349069616141'
+      whatsapp: 'https://wa.me/2348138461999'
     },
     
     contact: {
       email: 'ceetechfurnitureandinteriors9@gmail.com',
-      phone: '09069616141',
+      phone: '08138461999',
       address: '2nd Entrance Evbuabogun sawmill opposite ekae market, Sapele Rd, Benin City',
       hours: '7:00am - 6:00pm'
     },

@@ -34,7 +34,7 @@ const FloatingSocialBar = () => {
           </svg>
         </a>
         <a 
-          href="https://wa.me/2349069616141" 
+          href="https://wa.me/2348138461999" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="group bg-white/5 p-3 rounded-xl hover:bg-ivory-gold transition-all duration-300 transform hover:scale-110"

@@ -297,7 +297,7 @@ const Interiors = () => {
             </p>
             <div className="flex justify-center">
               <a 
-                href="https://wa.me/2349069616141?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20a%20free%20consultation%20for%20interior%20design%20services"
+                href="https://wa.me/2348138461999?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20a%20free%20consultation%20for%20interior%20design%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-ivory-gold text-charcoal px-8 py-3 rounded-lg text-lg font-semibold hover:scale-105 transition-transform duration-200 shadow-lg inline-flex items-center space-x-2"
@@ -604,7 +604,7 @@ const Interiors = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="https://wa.me/2349069616141?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20to%20schedule%20a%20free%20consultation%20for%20interior%20design%20services"
+                href="https://wa.me/2348138461999?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20to%20schedule%20a%20free%20consultation%20for%20interior%20design%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:scale-105 transition-transform duration-200 flex items-center justify-center space-x-2"
@@ -615,7 +615,7 @@ const Interiors = () => {
                 <span>Schedule Free Consultation</span>
               </a>
               <a 
-                href="tel:+2309069616141"
+                href="tel:+2348138461999"
                 className="border-2 border-ivory-gold text-ivory-gold px-8 py-3 rounded-lg text-lg font-semibold hover:scale-105 transition-transform duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />

@@ -96,7 +96,7 @@ const Academy = () => {
               We train visionaries, not just designers. Master the craft of furniture making and transform your creative passion into professional expertise.
             </p>
             <a 
-              href="https://wa.me/2349069616141?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20to%20enroll%20in%20your%20academy%20courses"
+              href="https://wa.me/2348138461999?text=Hello%20Ceetech%20Crafts%2C%20I%27d%20like%20to%20enroll%20in%20your%20academy%20courses"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-ivory-gold text-charcoal px-8 py-3 rounded-lg text-lg font-semibold hover:scale-105 transition-transform duration-200 shadow-lg inline-flex items-center space-x-2"
@@ -206,7 +206,7 @@ const Academy = () => {
 
                     {/* CTA Button */}
                     <a
-                      href={`https://wa.me/2349069616141?text=Hello%20Ceetech%20Crafts%2C%20I'm%20interested%20in%20the%20${program.title}%20at%20your%20academy`}
+                      href={`https://wa.me/2348138461999?text=Hello%20Ceetech%20Crafts%2C%20I'm%20interested%20in%20the%20${program.title}%20at%20your%20academy`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-ivory-gold text-charcoal py-3 px-4 rounded-lg hover:scale-105 transition-transform duration-200 font-semibold flex items-center justify-center space-x-2"
@@ -287,7 +287,7 @@ const Academy = () => {
                 <span>Learn More</span>
               </a>
               <a 
-                href="tel:+2349069616141"
+                href="tel:+2348138461999"
                 className="border-2 border-ivory-gold text-ivory-gold px-8 py-3 rounded-lg text-lg font-semibold hover:scale-105 transition-transform duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />

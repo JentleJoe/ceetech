@@ -182,7 +182,7 @@ const Header = () => {
                     </svg>
                   </a>
                   <a 
-                    href="https://wa.me/2349069616141" 
+                    href="https://wa.me/2348138461999" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="bg-white/20 border border-white/10 p-3 rounded-lg hover:bg-ivory-gold hover:text-charcoal transition-all duration-300 active:scale-95 text-white"
