@@ -21,13 +21,24 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Phone,
-      label: 'Phone',
+      label: 'Phone (Primary)',
       value: '08165410110',
       displayValue: '+234 816 541 0110',
       copyValue: '+2348165410110',
       actions: [
         { icon: PhoneCall, label: 'Call', href: 'tel:+2348165410110', color: 'bg-green-500 hover:bg-green-600' },
         { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/2348165410110?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20services', color: 'bg-green-600 hover:bg-green-700' }
+      ]
+    },
+    {
+      icon: Phone,
+      label: 'Phone (Secondary)',
+      value: '08138461999',
+      displayValue: '+234 813 846 1999',
+      copyValue: '+2348138461999',
+      actions: [
+        { icon: PhoneCall, label: 'Call', href: 'tel:+2348138461999', color: 'bg-green-500 hover:bg-green-600' },
+        { icon: MessageCircle, label: 'WhatsApp', href: 'https://wa.me/2348138461999?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20services', color: 'bg-green-600 hover:bg-green-700' }
       ]
     },
     {
@@ -217,26 +228,59 @@ const Contact = () => {
               <h3 className="text-2xl font-playfair text-charcoal mb-6 text-center">
                 Quick Actions
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <a
-                  href="tel:+2348165410110"
-                  className="flex items-center justify-center space-x-3 bg-green-500 hover:scale-105 text-white p-4 rounded-xl transition-transform duration-200 font-medium"
-                >
-                  <PhoneCall className="w-5 h-5" />
-                  <span>Call Now</span>
-                </a>
-                <a
-                  href="https://wa.me/2348165410110?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20services"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-3 bg-green-600 hover:scale-105 text-white p-4 rounded-xl transition-transform duration-200 font-medium"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  <span>WhatsApp</span>
-                </a>
+              
+              {/* Primary Number Actions */}
+              <div className="mb-6">
+                <p className="text-sm text-charcoal/60 text-center mb-3 font-medium">Primary Line</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <a
+                    href="tel:+2348165410110"
+                    className="flex items-center justify-center space-x-3 bg-green-500 hover:scale-105 text-white p-4 rounded-xl transition-transform duration-200 font-medium"
+                  >
+                    <PhoneCall className="w-5 h-5" />
+                    <span>Call +234 816 541 0110</span>
+                  </a>
+                  <a
+                    href="https://wa.me/2348165410110?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20services"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center space-x-3 bg-green-600 hover:scale-105 text-white p-4 rounded-xl transition-transform duration-200 font-medium"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+              
+              {/* Secondary Number Actions */}
+              <div className="mb-6">
+                <p className="text-sm text-charcoal/60 text-center mb-3 font-medium">Secondary Line</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <a
+                    href="tel:+2348138461999"
+                    className="flex items-center justify-center space-x-3 bg-charcoal hover:scale-105 text-ivory-gold p-4 rounded-xl transition-transform duration-200 font-medium"
+                  >
+                    <PhoneCall className="w-5 h-5" />
+                    <span>Call +234 813 846 1999</span>
+                  </a>
+                  <a
+                    href="https://wa.me/2348138461999?text=Hello%20Ceetech%20Crafts%2C%20I%27m%20interested%20in%20your%20services"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center space-x-3 bg-charcoal hover:scale-105 text-ivory-gold p-4 rounded-xl transition-transform duration-200 font-medium"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+              
+              {/* Email Action */}
+              <div>
+                <p className="text-sm text-charcoal/60 text-center mb-3 font-medium">Email</p>
                 <a
                   href="mailto:ceetechfurnitureandinteriors9@gmail.com?subject=Inquiry%20about%20Ceetech%20Crafts%20Services"
-                  className="flex items-center justify-center space-x-3 bg-blue-500 hover:scale-105 text-white p-4 rounded-xl transition-transform duration-200 font-medium"
+                  className="flex items-center justify-center space-x-3 bg-blue-500 hover:scale-105 text-white p-4 rounded-xl transition-transform duration-200 font-medium w-full"
                 >
                   <Send className="w-5 h-5" />
                   <span>Send Email</span>
@@ -400,6 +444,7 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-charcoal mx-auto mb-2" />
                   <h4 className="font-semibold text-charcoal text-sm mb-1">Call Ahead</h4>
                   <p className="text-xs text-charcoal/70">+234 816 541 0110</p>
+                  <p className="text-xs text-charcoal/70">+234 813 846 1999</p>
                 </div>
               </div>
             </div>
@@ -428,7 +473,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-charcoal text-sm mb-1">Ceetech Crafts Factory</h4>
                     <p className="text-xs text-charcoal font-medium mb-1">PRIMARY LOCATION</p>
                     <p className="text-xs text-charcoal/70 leading-relaxed mb-2">2nd Entrance Ebvuabugun Sawmill, Off Sapele Road, Benin City</p>
-                    <div className="flex items-center space-x-3 mt-3">
+                    <div className="flex flex-wrap items-center gap-2 mt-3">
                       <a
                         href="https://maps.google.com/?q=2nd+Entrance+Ebvuabugun+Sawmill+Off+Sapele+Road+Benin+City"
                         target="_blank"
@@ -441,9 +486,18 @@ const Contact = () => {
                       <a
                         href="tel:+2348165410110"
                         className="inline-flex items-center space-x-1 bg-green-600 text-white px-3 py-1.5 rounded-md text-xs font-medium hover:scale-105 transition-transform duration-200"
+                        title="Primary Line"
                       >
                         <Phone className="w-3 h-3" />
-                        <span>Call</span>
+                        <span>Call 1</span>
+                      </a>
+                      <a
+                        href="tel:+2348138461999"
+                        className="inline-flex items-center space-x-1 bg-green-700 text-white px-3 py-1.5 rounded-md text-xs font-medium hover:scale-105 transition-transform duration-200"
+                        title="Secondary Line"
+                      >
+                        <Phone className="w-3 h-3" />
+                        <span>Call 2</span>
                       </a>
                     </div>
                   </div>
