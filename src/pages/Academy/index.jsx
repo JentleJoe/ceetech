@@ -2,11 +2,76 @@ import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
 import { BookOpen, Users, Award, Clock, Phone } from 'lucide-react'
 import logoIconGold from '../../assets/logoIconGold.png'
+import SEO from '../../components/SEO'
 
 // Import images
 import furnitureApprenticeImg from '../../assets/furniture-apprentice.jpg'
 
 const Academy = () => {
+  const academySeoSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'EducationalOrganization',
+      name: 'Ceetech Crafts Furniture Academy',
+      url: 'https://ceetechcrafts.com/academy',
+      description: 'Furniture academy in Benin City offering practical furniture making training for beginners and advanced learners.',
+      telephone: '+234-906-961-6141',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Benin City',
+        addressRegion: 'Edo State',
+        addressCountry: 'NG'
+      },
+      areaServed: ['Benin City', 'Edo State'],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Furniture Training Programs',
+        itemListElement: [
+          {
+            '@type': 'Course',
+            name: 'Foundation Program in Furniture Making',
+            courseMode: 'onsite'
+          },
+          {
+            '@type': 'Course',
+            name: 'Advanced Mastery Program in Furniture Craftsmanship',
+            courseMode: 'onsite'
+          }
+        ]
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Is Ceetech Crafts a furniture academy in Benin City?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Ceetech Crafts runs a furniture academy in Benin City where students receive practical, factory-based training in furniture making.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Who can enroll in the furniture training programs?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Both beginners and experienced craftspeople can enroll. The academy offers a foundation track and an advanced mastery track.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Do students work on practical furniture projects?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Students complete hands-on projects in an active production environment to build job-ready furniture making skills.'
+          }
+        }
+      ]
+    }
+  ]
+
   const programs = [
     {
       title: "Foundation Program",
@@ -71,6 +136,14 @@ const Academy = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Furniture Academy in Benin City | Professional Furniture Training | Ceetech Crafts"
+        description="Join Ceetech Crafts Furniture Academy in Benin City for practical furniture making training. Learn from master craftsmen through beginner and advanced programs."
+        keywords="furniture academy benin, furniture training benin city, furniture making school in benin, furniture apprenticeship benin, furniture craftsmanship training edo state"
+        canonical="https://ceetechcrafts.com/academy"
+        ogType="website"
+        schema={academySeoSchema}
+      />
       <Header />
       
       {/* Hero Section */}
@@ -293,6 +366,39 @@ const Academy = () => {
                 <Phone className="w-5 h-5" />
                 <span>Call Now</span>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal mb-6">
+              Why Learners Choose Our Furniture Academy in Benin
+            </h2>
+            <p className="text-lg text-charcoal/80 max-w-4xl mx-auto mb-8">
+              Our academy combines classroom guidance with real workshop execution, so students gain practical skills that match modern furniture industry standards. Training is delivered in Benin City with close mentorship, production exposure, and structured project work.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 text-left">
+              <div className="bg-soft-gold rounded-xl p-6">
+                <h3 className="font-semibold text-charcoal mb-2">Factory-Based Curriculum</h3>
+                <p className="text-charcoal/75 text-sm">
+                  Learn directly in a live production space where design, fabrication, and finishing are practiced daily.
+                </p>
+              </div>
+              <div className="bg-soft-gold rounded-xl p-6">
+                <h3 className="font-semibold text-charcoal mb-2">Career-Ready Skills</h3>
+                <p className="text-charcoal/75 text-sm">
+                  Build core and advanced competencies in furniture making, client projects, and professional workshop workflow.
+                </p>
+              </div>
+              <div className="bg-soft-gold rounded-xl p-6">
+                <h3 className="font-semibold text-charcoal mb-2">Mentorship by Experts</h3>
+                <p className="text-charcoal/75 text-sm">
+                  Receive guidance from experienced craftsmen focused on precision, quality, and long-term growth in the trade.
+                </p>
+              </div>
             </div>
           </div>
         </div>

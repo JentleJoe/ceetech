@@ -12,10 +12,6 @@ Allow: /contact
 # Sitemap location
 Sitemap: https://ceetechcrafts.com/sitemap.xml
 
-# Crawl delay for better server performance
-Crawl-delay: 1
-
 # Block unnecessary files
 Disallow: /src/
-Disallow: /*.json
 Disallow: /node_modules/

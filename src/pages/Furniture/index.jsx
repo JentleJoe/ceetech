@@ -3,6 +3,7 @@ import Footer from '../../layout/Footer'
 import { ArrowRight, CheckCircle, Users, Building, Home, Eye, Wrench, Truck, Phone } from 'lucide-react'
 import logoIconGold from '../../assets/logoIconGold.png'
 import logoIconWhite from '../../assets/logoIconWhite.png'
+import SEO from '../../components/SEO'
 
 // Import images
 import officeFurnitureImg from '../../assets/office-furniture.jpg'
@@ -19,6 +20,82 @@ import schoolFurnitureImg from '../../assets/school-furniture.jpg'
 import wardrobeImg from '../../assets/wardrobe.jpeg'
 
 const Furniture = () => {
+  const furnitureSeoSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Furniture Maker in Benin City',
+      serviceType: 'Custom Furniture Manufacturing and Ready-Made Furniture Sales',
+      provider: {
+        '@type': 'LocalBusiness',
+        name: 'Ceetech Crafts',
+        url: 'https://ceetechcrafts.com',
+        telephone: '+234-906-961-6141',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '2nd Entrance Evbuabogun sawmill opposite ekae market, Sapele Rd',
+          addressLocality: 'Benin City',
+          addressRegion: 'Edo State',
+          addressCountry: 'NG'
+        }
+      },
+      areaServed: ['Benin City', 'Edo State'],
+      offers: {
+        '@type': 'OfferCatalog',
+        name: 'Furniture Services and Showroom Collection',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            name: 'Custom Furniture Manufacturing'
+          },
+          {
+            '@type': 'Offer',
+            name: 'Ready-Made Furniture in Benin'
+          },
+          {
+            '@type': 'Offer',
+            name: 'Commercial Furniture Solutions'
+          },
+          {
+            '@type': 'Offer',
+            name: 'Residential Furniture Collection'
+          }
+        ]
+      },
+      url: 'https://ceetechcrafts.com/furniture'
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Do you sell ready-made furniture in Benin City?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Ceetech Crafts has a showroom in Benin City where customers can buy ready-made furniture for homes, offices, schools, and hospitality spaces.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you also manufacture custom furniture?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We design and manufacture custom furniture to client specifications, including wardrobes, kitchen cabinets, office furniture, and complete interior furniture packages.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Where do you deliver furniture?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We serve customers across Benin City and surrounding areas in Edo State with consultation, design, production, and delivery support.'
+          }
+        }
+      ]
+    }
+  ]
+
   const commercialFurniture = [
     {
       title: "Office Furniture",
@@ -228,6 +305,14 @@ const Furniture = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Furniture Maker in Benin City | Custom & Ready-Made Furniture | Ceetech Crafts"
+        description="Looking for furniture in Benin? Ceetech Crafts is a trusted furniture maker and furniture company in Benin City, offering custom manufacturing and ready-made showroom furniture."
+        keywords="furniture maker in benin, furniture company in benin, furniture brands in benin, furniture manufacturer in benin, furnitures in benin, ready made furniture benin city, furniture showroom benin, custom furniture benin"
+        canonical="https://ceetechcrafts.com/furniture"
+        ogType="website"
+        schema={furnitureSeoSchema}
+      />
       <Header />
       
       {/* Hero Section */}
@@ -504,6 +589,40 @@ const Furniture = () => {
                 <p className="text-sm text-charcoal/70">{feature.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-soft-gold">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-playfair text-charcoal mb-5 text-center">
+              Furniture Showroom and Manufacturing in Benin City
+            </h2>
+            <p className="text-lg text-charcoal/80 mb-8 text-center max-w-4xl mx-auto">
+              Ceetech Crafts operates as both a furniture manufacturer and a ready-made furniture destination in Benin City. Whether you need bespoke pieces crafted to your measurements or fast access to quality showroom furniture, our team supports homes, offices, schools, and commercial spaces across Edo State.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-ivory-gold/40 shadow-sm">
+                <h3 className="text-xl font-playfair text-charcoal mb-3">Furniture Maker in Benin</h3>
+                <p className="text-charcoal/75 text-sm">
+                  We design and build custom furniture with precision joinery, durable materials, and finishing options for modern and classic spaces.
+                </p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-ivory-gold/40 shadow-sm">
+                <h3 className="text-xl font-playfair text-charcoal mb-3">Ready-Made Showroom Furniture</h3>
+                <p className="text-charcoal/75 text-sm">
+                  Visit our Benin City showroom for ready-made sofas, wardrobes, dining sets, office desks, and other furniture pieces available for immediate selection.
+                </p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-ivory-gold/40 shadow-sm">
+                <h3 className="text-xl font-playfair text-charcoal mb-3">Trusted Furniture Company</h3>
+                <p className="text-charcoal/75 text-sm">
+                  From consultation and design to production and delivery, we provide end-to-end furniture solutions for residential and commercial clients.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
