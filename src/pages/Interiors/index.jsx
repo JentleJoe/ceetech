@@ -14,10 +14,65 @@ import paintingImg from '../../assets/painting2.jpg'
 import stampedeImg from '../../assets/stampede.jpg'
 import windowBlindImg from '../../assets/window-blind.jpg'
 import interiorBgImg from '../../assets/interiror.jpg'
+import SEO from '../../components/SEO'
 
 
 
 const Interiors = () => {
+  const interiorsSeoSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Interior Design Services in Benin City',
+      serviceType: 'Interior Design, POP Work, Tiling, Window Treatments',
+      provider: {
+        '@type': 'LocalBusiness',
+        name: 'Ceetech Crafts',
+        url: 'https://ceetechcrafts.com',
+        telephone: '+234-906-961-6141',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '2nd Entrance Evbuabogun sawmill opposite ekae market, Sapele Rd',
+          addressLocality: 'Benin City',
+          addressRegion: 'Edo State',
+          addressCountry: 'NG'
+        }
+      },
+      areaServed: ['Benin City', 'Edo State'],
+      offers: {
+        '@type': 'OfferCatalog',
+        name: 'Interior Design & Finishing Services',
+        itemListElement: [
+          { '@type': 'Offer', name: 'POP & Painting' },
+          { '@type': 'Offer', name: 'Tiling & Stampede Flooring' },
+          { '@type': 'Offer', name: 'Window Treatments & Lighting' }
+        ]
+      },
+      url: 'https://ceetechcrafts.com/interiors'
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Do you provide interior design services in Benin City?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. We offer complete interior finishing and design services across Benin City and Edo State.' }
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you handle POP, painting and tiling projects?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Our team handles POP work, professional painting, tiling, and other interior finishes.' }
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you work with residential and commercial clients?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. We serve homes, offices, hotels, and public buildings with tailored interior solutions.' }
+        }
+      ]
+    }
+  ]
+
   const interiorCategories = [
     {
       title: "POP & Painting",
@@ -206,6 +261,14 @@ const Interiors = () => {
 
   return (
     <div className="min-h-screen bg-white interiors-page">
+      <SEO
+        title="Interior Designer in Benin City | Interiors & Finishing | Ceetech Crafts"
+        description="Interior design and finishing services in Benin City — POP work, painting, tiling, window treatments, and complete interior projects for homes and businesses."
+        keywords="interiors in benin, interior designer benin, interior company benin, interior decorator benin, interiors benin city, interior brands benin"
+        canonical="https://ceetechcrafts.com/interiors"
+        ogType="website"
+        schema={interiorsSeoSchema}
+      />
       <style>{`
         @keyframes fadeInUp {
           from {
