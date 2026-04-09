@@ -106,8 +106,12 @@ const Header = () => {
             
             {/* Mobile menu button */}
             <button
+              type="button"
               className="lg:hidden ml-4 text-white"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -116,7 +120,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-6 py-4 backdrop-blur-sm rounded-lg relative z-[110] bg-black/90 shadow-2xl">
+          <div id="mobile-navigation" className="lg:hidden mt-6 py-4 backdrop-blur-sm rounded-lg relative z-[110] bg-black/90 shadow-2xl">
             <div className="flex flex-col space-y-4 px-6">
               {mobileNavigation.map((item) => {
                 // Render Contact as a button, others as regular nav items
