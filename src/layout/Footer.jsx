@@ -158,7 +158,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
             <div className="mb-4 md:mb-0">
               <p className="text-gray-400 text-sm">&copy; 2025 Ceetech Crafts. All rights reserved.</p>
-              <p className="text-gray-500 text-xs mt-1">Crafting Quality Furniture & Interiors Since 2019</p>
+              <p className="text-gray-300 text-xs mt-1">Crafting Quality Furniture & Interiors Since 2019</p>
             </div>
             
             <div className="flex items-center">

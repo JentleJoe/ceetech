@@ -117,7 +117,7 @@ const CustomerReviews = () => {
                 <h4 className="font-semibold text-charcoal">
                   {review.name}
                 </h4>
-                <p className="text-sm text-charcoal/60">
+                <p className="text-sm text-charcoal/80">
                   {review.location}
                 </p>
               </div>
