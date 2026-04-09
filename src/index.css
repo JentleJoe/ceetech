@@ -482,7 +482,13 @@ div[role="region"][aria-label*="Notifications"] ol {
   color: #1f2937 !important;
 }
 
+.elfsight-app-96fad6cf-47ff-4f0b-acb0-f25bee36f551 [class*="ButtonBase__ButtonContainer"],
+.elfsight-app-96fad6cf-47ff-4f0b-acb0-f25bee36f551 [class*="ButtonBase__ButtonContainer"] * {
+  color: #ffffff !important;
+}
+
 .elfsight-app-96fad6cf-47ff-4f0b-acb0-f25bee36f551 [class*="ButtonBase__ButtonContainer"] {
-  color: #111827 !important;
-  border-color: rgba(17, 24, 39, 0.4) !important;
+  border: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
 }
