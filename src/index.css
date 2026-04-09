@@ -488,7 +488,12 @@ div[role="region"][aria-label*="Notifications"] ol {
 }
 
 .elfsight-app-96fad6cf-47ff-4f0b-acb0-f25bee36f551 [class*="ButtonBase__ButtonContainer"] {
+  background-color: #1d4ed8 !important; /* Dark blue for reliable contrast */
   border: none !important;
   border-color: transparent !important;
   box-shadow: none !important;
+}
+
+.elfsight-app-96fad6cf-47ff-4f0b-acb0-f25bee36f551 [class*="ButtonBase__ButtonContainer"]:hover {
+  background-color: #1e40af !important; /* Even darker blue on hover */
 }
