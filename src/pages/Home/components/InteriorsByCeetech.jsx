@@ -151,9 +151,9 @@ const InteriorsByCeetech = () => {
                         <div className="w-2 h-2 bg-ivory-gold rounded-full animate-pulse"></div>
                       )}
                     </div>
-                    <h4 className="text-base font-semibold text-dark-brown group-hover:text-warm-brown transition-colors duration-300 line-clamp-2">
+                    <h3 className="text-base font-semibold text-dark-brown group-hover:text-warm-brown transition-colors duration-300 line-clamp-2">
                       {service.name}
-                    </h4>
+                    </h3>
                   </div>
                 </div>
               </div>

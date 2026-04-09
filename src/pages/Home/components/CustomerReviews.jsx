@@ -114,9 +114,9 @@ const CustomerReviews = () => {
 
               {/* Customer Info */}
               <div>
-                <h4 className="font-semibold text-charcoal">
+                <h3 className="font-semibold text-charcoal">
                   {review.name}
-                </h4>
+                </h3>
                 <p className="text-sm text-charcoal/80">
                   {review.location}
                 </p>
