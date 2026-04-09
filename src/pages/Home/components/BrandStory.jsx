@@ -22,7 +22,7 @@ const BrandStory = () => {
             </div>
 
             <a href="/about" className="mt-8 inline-block text-dark-brown hover:text-warm-brown font-medium tracking-wide transition-colors duration-300 border-b border-dark-brown hover:border-warm-brown pb-1">
-              Learn More
+              Learn About Ceetech Crafts
             </a>
           </div>
 
