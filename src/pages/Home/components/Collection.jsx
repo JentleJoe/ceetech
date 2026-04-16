@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import CarouselModule from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
@@ -8,7 +8,6 @@ const Carousel = CarouselModule?.default ?? CarouselModule
 
 // Import images
 import officeFurnitureImg from '../../../assets/office-furniture.jpg'
-import residentialFurnitureImg from '../../../assets/residential-furniture.jpg'
 import interiorImg from '../../../assets/interiror.jpg'
 import furnitureApprenticeImg from '../../../assets/furniture-apprentice.jpg'
 import popCeilingImg from '../../../assets/pop-ceiling.jpg'

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronLeft, ChevronRight, ArrowRight, Palette, Grid, Paintbrush, Eye, Zap } from 'lucide-react'
+import { ArrowRight, Palette, Grid, Paintbrush, Eye, Zap } from 'lucide-react'
 import CarouselModule from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import logoIconBlack from '../../../assets/logoIconBlack.png'
