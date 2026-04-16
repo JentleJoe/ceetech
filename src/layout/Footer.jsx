@@ -163,7 +163,7 @@ const Footer = () => {
             
             <div className="flex items-center">
               <a 
-                href="https://joshuaoseghale.vercel.app" 
+                href="https://joshuaoseghale.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="group flex items-center space-x-2 bg-ivory-gold/10 hover:bg-ivory-gold px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
