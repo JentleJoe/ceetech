@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight, ArrowRight, Palette, Grid, Paintbrush, Eye, Zap } from 'lucide-react'
-import Carousel from 'react-multi-carousel'
+import CarouselModule from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import logoIconBlack from '../../../assets/logoIconBlack.png'
+
+const Carousel = CarouselModule?.default ?? CarouselModule
 
 // Import images
 import popCeilingImg from '../../../assets/pop-ceiling.jpg'

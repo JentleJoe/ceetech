@@ -1,8 +1,10 @@
 
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
-import Carousel from 'react-multi-carousel'
+import CarouselModule from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+
+const Carousel = CarouselModule?.default ?? CarouselModule
 
 // Import images
 import officeFurnitureImg from '../../../assets/office-furniture.jpg'
