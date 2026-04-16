@@ -1,12 +1,19 @@
 import { MessageCircle, Facebook, Instagram } from 'lucide-react'
 import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
+import OptimizedPicture from '../../components/OptimizedPicture'
 import logoIconGold from '../../assets/logoIconGold.png'
 import logoIconWhite from '../../assets/logoIconWhite.png'
 
 // Import images
-import workshopImg from '../../assets/workshop.jpg'
-import workmanImg from '../../assets/workman.jpg'
+import workshopAvif from '../../assets/workshop.jpg?w=640;960;1280;1600;1920;2400&format=avif&as=srcset&withoutEnlargement'
+import workshopWebp from '../../assets/workshop.jpg?w=640;960;1280;1600;1920;2400&format=webp&as=srcset&withoutEnlargement'
+import workshopJpgSrcSet from '../../assets/workshop.jpg?w=640;960;1280;1600;1920;2400&format=jpg&as=srcset&withoutEnlargement'
+import workshopJpg from '../../assets/workshop.jpg?w=1600&format=jpg&withoutEnlargement'
+import workmanAvif from '../../assets/workman.jpg?w=400;640;768;960;1200;1600;2000&format=avif&as=srcset&withoutEnlargement'
+import workmanWebp from '../../assets/workman.jpg?w=400;640;768;960;1200;1600;2000&format=webp&as=srcset&withoutEnlargement'
+import workmanJpgSrcSet from '../../assets/workman.jpg?w=400;640;768;960;1200;1600;2000&format=jpg&as=srcset&withoutEnlargement'
+import workmanJpg from '../../assets/workman.jpg?w=1200&format=jpg&withoutEnlargement'
 
 const About = () => {
   return (
@@ -14,12 +21,20 @@ const About = () => {
       <Header />
       
       {/* Hero Section */}
-      <div 
-        className="pt-24 pb-16 relative min-h-[60vh] flex items-center bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${workshopImg})`
-        }}
-      >
+      <div className="pt-24 pb-16 relative min-h-[60vh] flex items-center overflow-hidden">
+        <OptimizedPicture
+          alt="Ceetech workshop background"
+          avifSrcSet={workshopAvif}
+          webpSrcSet={workshopWebp}
+          fallbackSrcSet={workshopJpgSrcSet}
+          fallbackSrc={workshopJpg}
+          sizes="100vw"
+          pictureClassName="absolute inset-0 block"
+          className="h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <div className="flex justify-center mb-4">
@@ -67,9 +82,13 @@ const About = () => {
                 </p>
               </div>
               <div className="relative">
-                <img 
-                  src={workmanImg} 
+                <OptimizedPicture
                   alt="Ceetech Crafts Workshop" 
+                  avifSrcSet={workmanAvif}
+                  webpSrcSet={workmanWebp}
+                  fallbackSrcSet={workmanJpgSrcSet}
+                  fallbackSrc={workmanJpg}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3">

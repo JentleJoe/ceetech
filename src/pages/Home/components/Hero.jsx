@@ -1,17 +1,28 @@
 
 import { ArrowRight, Facebook, Instagram } from 'lucide-react'
-import backgroundImg from '../../../assets/furniture-bg.jpg'
+import OptimizedPicture from '../../../components/OptimizedPicture'
+import backgroundAvif from '../../../assets/furniture-bg.jpg?w=640;960;1280;1600;1920;2500&format=avif&as=srcset&withoutEnlargement'
+import backgroundWebp from '../../../assets/furniture-bg.jpg?w=640;960;1280;1600;1920;2500&format=webp&as=srcset&withoutEnlargement'
+import backgroundJpgSrcSet from '../../../assets/furniture-bg.jpg?w=640;960;1280;1600;1920;2500&format=jpg&as=srcset&withoutEnlargement'
+import backgroundJpg from '../../../assets/furniture-bg.jpg?w=1600&format=jpg&withoutEnlargement'
 
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-start overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
-        style={{
-          backgroundImage: `url(${backgroundImg})`
-        }}
-      >
+      <div className="absolute inset-0">
+        <OptimizedPicture
+          alt="Elegant Ceetech furniture showroom background"
+          avifSrcSet={backgroundAvif}
+          webpSrcSet={backgroundWebp}
+          fallbackSrcSet={backgroundJpgSrcSet}
+          fallbackSrc={backgroundJpg}
+          sizes="100vw"
+          pictureClassName="absolute inset-0 block"
+          className="h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+        />
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 

@@ -1,5 +1,9 @@
 
-import workshopImg from '../../../assets/workshop.jpg'
+import OptimizedPicture from '../../../components/OptimizedPicture'
+import workshopAvif from '../../../assets/workshop.jpg?w=400;640;768;960;1200;1600;2000&format=avif&as=srcset&withoutEnlargement'
+import workshopWebp from '../../../assets/workshop.jpg?w=400;640;768;960;1200;1600;2000&format=webp&as=srcset&withoutEnlargement'
+import workshopJpgSrcSet from '../../../assets/workshop.jpg?w=400;640;768;960;1200;1600;2000&format=jpg&as=srcset&withoutEnlargement'
+import workshopJpg from '../../../assets/workshop.jpg?w=1200&format=jpg&withoutEnlargement'
 
 const BrandStory = () => {
   return (
@@ -29,9 +33,13 @@ const BrandStory = () => {
           {/* Image */}
           <div className="animate-slide-in-right">
             <div className="relative">
-              <img
-                src={workshopImg}
+              <OptimizedPicture
                 alt="Crafted wooden furniture detail"
+                avifSrcSet={workshopAvif}
+                webpSrcSet={workshopWebp}
+                fallbackSrcSet={workshopJpgSrcSet}
+                fallbackSrc={workshopJpg}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>

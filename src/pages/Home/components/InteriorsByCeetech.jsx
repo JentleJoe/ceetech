@@ -3,15 +3,68 @@ import { ArrowRight, Palette, Grid, Paintbrush, Eye, Zap } from 'lucide-react'
 import CarouselModule from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import logoIconBlack from '../../../assets/logoIconBlack.png'
+import OptimizedPicture from '../../../components/OptimizedPicture'
 
 const Carousel = CarouselModule?.default ?? CarouselModule
 
 // Import images
-import popCeilingImg from '../../../assets/pop-ceiling.jpg'
-import stampedeImg from '../../../assets/stampede.jpg'
-import paintingImg from '../../../assets/painting.jpg'
-import windowBlindImg from '../../../assets/window-blind.jpg'
-import lightningImg from '../../../assets/lightning.jpg'
+import popCeilingAvif from '../../../assets/pop-ceiling.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import popCeilingWebp from '../../../assets/pop-ceiling.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import popCeilingJpgSrcSet from '../../../assets/pop-ceiling.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import popCeilingJpg from '../../../assets/pop-ceiling.jpg?w=560&format=jpg&withoutEnlargement'
+import stampedeAvif from '../../../assets/stampede.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import stampedeWebp from '../../../assets/stampede.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import stampedeJpgSrcSet from '../../../assets/stampede.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import stampedeJpg from '../../../assets/stampede.jpg?w=560&format=jpg&withoutEnlargement'
+import paintingAvif from '../../../assets/painting.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import paintingWebp from '../../../assets/painting.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import paintingJpgSrcSet from '../../../assets/painting.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import paintingJpg from '../../../assets/painting.jpg?w=560&format=jpg&withoutEnlargement'
+import windowBlindAvif from '../../../assets/window-blind.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import windowBlindWebp from '../../../assets/window-blind.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import windowBlindJpgSrcSet from '../../../assets/window-blind.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import windowBlindJpg from '../../../assets/window-blind.jpg?w=560&format=jpg&withoutEnlargement'
+import lightningAvif from '../../../assets/lightning.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import lightningWebp from '../../../assets/lightning.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import lightningJpgSrcSet from '../../../assets/lightning.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import lightningJpg from '../../../assets/lightning.jpg?w=560&format=jpg&withoutEnlargement'
+
+const CAROUSEL_IMAGE_SIZES = '(max-width: 464px) 92vw, (max-width: 1024px) 46vw, (max-width: 1200px) 30vw, 23vw'
+
+const popCeilingImage = {
+  avifSrcSet: popCeilingAvif,
+  webpSrcSet: popCeilingWebp,
+  fallbackSrcSet: popCeilingJpgSrcSet,
+  fallbackSrc: popCeilingJpg,
+}
+
+const stampedeImage = {
+  avifSrcSet: stampedeAvif,
+  webpSrcSet: stampedeWebp,
+  fallbackSrcSet: stampedeJpgSrcSet,
+  fallbackSrc: stampedeJpg,
+}
+
+const paintingImage = {
+  avifSrcSet: paintingAvif,
+  webpSrcSet: paintingWebp,
+  fallbackSrcSet: paintingJpgSrcSet,
+  fallbackSrc: paintingJpg,
+}
+
+const windowBlindImage = {
+  avifSrcSet: windowBlindAvif,
+  webpSrcSet: windowBlindWebp,
+  fallbackSrcSet: windowBlindJpgSrcSet,
+  fallbackSrc: windowBlindJpg,
+}
+
+const lightningImage = {
+  avifSrcSet: lightningAvif,
+  webpSrcSet: lightningWebp,
+  fallbackSrcSet: lightningJpgSrcSet,
+  fallbackSrc: lightningJpg,
+}
 
 const InteriorsByCeetech = () => {
   const [hoveredService, setHoveredService] = useState(null)
@@ -22,35 +75,35 @@ const InteriorsByCeetech = () => {
       name: 'POP Ceiling Installation',
       description: 'Modern ceiling designs with expert installation',
       icon: Palette,
-      image: popCeilingImg
+      image: popCeilingImage
     },
     {
       id: 2,
       name: 'Tiling & Flooring',
       description: 'Expert tiling and modern flooring solutions',
       icon: Grid,
-      image: stampedeImg
+      image: stampedeImage
     },
     {
       id: 3,
       name: 'Painting Services',
       description: 'Professional interior and exterior painting with premium finishes',
       icon: Paintbrush,
-      image: paintingImg
+      image: paintingImage
     },
     {
       id: 4,
       name: 'Window Blinds',
       description: 'Custom window treatments and blinds for privacy and style',
       icon: Eye,
-      image: windowBlindImg
+      image: windowBlindImage
     },
     {
       id: 5,
       name: 'Lightning Solutions',
       description: 'Modern lighting design and electrical installations',
       icon: Zap,
-      image: lightningImg
+      image: lightningImage
     }
   ]
 
@@ -126,9 +179,13 @@ const InteriorsByCeetech = () => {
               >
                 <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform group-hover:scale-105 h-full">
                   <div className="aspect-square overflow-hidden relative">
-                    <img
-                      src={service.image}
+                    <OptimizedPicture
                       alt={service.name}
+                      avifSrcSet={service.image.avifSrcSet}
+                      webpSrcSet={service.image.webpSrcSet}
+                      fallbackSrcSet={service.image.fallbackSrcSet}
+                      fallbackSrc={service.image.fallbackSrc}
+                      sizes={CAROUSEL_IMAGE_SIZES}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

@@ -3,15 +3,68 @@ import { ArrowRight } from 'lucide-react'
 import CarouselModule from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import logoIconBlack from '../../../assets/logoIconBlack.png'
+import OptimizedPicture from '../../../components/OptimizedPicture'
 
 const Carousel = CarouselModule?.default ?? CarouselModule
 
 // Import images
-import residentialFurnitureImg from '../../../assets/residential-furniture.jpg'
-import officeFurnitureImg from '../../../assets/office-furniture.jpg'
-import tvConsoleImg from '../../../assets/tv_console.jpg'
-import kitchenCabinetImg from '../../../assets/kitchen-cabinet.jpg'
-import wardrobeImg from '../../../assets/wardrobe.jpeg'
+import residentialFurnitureAvif from '../../../assets/residential-furniture.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import residentialFurnitureWebp from '../../../assets/residential-furniture.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import residentialFurnitureJpgSrcSet from '../../../assets/residential-furniture.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import residentialFurnitureJpg from '../../../assets/residential-furniture.jpg?w=560&format=jpg&withoutEnlargement'
+import officeFurnitureAvif from '../../../assets/office-furniture.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import officeFurnitureWebp from '../../../assets/office-furniture.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import officeFurnitureJpgSrcSet from '../../../assets/office-furniture.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import officeFurnitureJpg from '../../../assets/office-furniture.jpg?w=560&format=jpg&withoutEnlargement'
+import tvConsoleAvif from '../../../assets/tv_console.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import tvConsoleWebp from '../../../assets/tv_console.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import tvConsoleJpgSrcSet from '../../../assets/tv_console.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import tvConsoleJpg from '../../../assets/tv_console.jpg?w=560&format=jpg&withoutEnlargement'
+import kitchenCabinetAvif from '../../../assets/kitchen-cabinet.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import kitchenCabinetWebp from '../../../assets/kitchen-cabinet.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import kitchenCabinetJpgSrcSet from '../../../assets/kitchen-cabinet.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import kitchenCabinetJpg from '../../../assets/kitchen-cabinet.jpg?w=560&format=jpg&withoutEnlargement'
+import wardrobeAvif from '../../../assets/wardrobe.jpeg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import wardrobeWebp from '../../../assets/wardrobe.jpeg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import wardrobeJpgSrcSet from '../../../assets/wardrobe.jpeg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import wardrobeJpg from '../../../assets/wardrobe.jpeg?w=560&format=jpg&withoutEnlargement'
+
+const CAROUSEL_IMAGE_SIZES = '(max-width: 464px) 92vw, (max-width: 1024px) 46vw, (max-width: 1200px) 30vw, 23vw'
+
+const residentialFurnitureImage = {
+  avifSrcSet: residentialFurnitureAvif,
+  webpSrcSet: residentialFurnitureWebp,
+  fallbackSrcSet: residentialFurnitureJpgSrcSet,
+  fallbackSrc: residentialFurnitureJpg,
+}
+
+const kitchenCabinetImage = {
+  avifSrcSet: kitchenCabinetAvif,
+  webpSrcSet: kitchenCabinetWebp,
+  fallbackSrcSet: kitchenCabinetJpgSrcSet,
+  fallbackSrc: kitchenCabinetJpg,
+}
+
+const officeFurnitureImage = {
+  avifSrcSet: officeFurnitureAvif,
+  webpSrcSet: officeFurnitureWebp,
+  fallbackSrcSet: officeFurnitureJpgSrcSet,
+  fallbackSrc: officeFurnitureJpg,
+}
+
+const wardrobeImage = {
+  avifSrcSet: wardrobeAvif,
+  webpSrcSet: wardrobeWebp,
+  fallbackSrcSet: wardrobeJpgSrcSet,
+  fallbackSrc: wardrobeJpg,
+}
+
+const tvConsoleImage = {
+  avifSrcSet: tvConsoleAvif,
+  webpSrcSet: tvConsoleWebp,
+  fallbackSrcSet: tvConsoleJpgSrcSet,
+  fallbackSrc: tvConsoleJpg,
+}
 
 const FurnituresByCeetech = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null)
@@ -21,31 +74,31 @@ const FurnituresByCeetech = () => {
       id: 1,
       name: 'Custom Living Room Sets',
       description: 'Elegant and comfortable living room furniture tailored to your space',
-      image: residentialFurnitureImg
+      image: residentialFurnitureImage
     },
     {
       id: 2,
       name: 'Kitchen Cabinet Solutions',
       description: 'Modern kitchen cabinets with superior storage and functionality',
-      image: kitchenCabinetImg
+      image: kitchenCabinetImage
     },
     {
       id: 3,
       name: 'Office Workstations',
       description: 'Professional office furniture designed for productivity',
-      image: officeFurnitureImg
+      image: officeFurnitureImage
     },
     {
       id: 4,
       name: 'Bedroom Wardrobes',
       description: 'Spacious wardrobes with custom organization solutions',
-      image: wardrobeImg
+      image: wardrobeImage
     },
     {
       id: 5,
       name: 'TV Console Units',
       description: 'Stylish TV stands with integrated storage and modern cable management',
-      image: tvConsoleImg
+      image: tvConsoleImage
     }
   ]
 
@@ -121,9 +174,13 @@ const FurnituresByCeetech = () => {
               >
                 <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform group-hover:scale-105 h-full">
                   <div className="aspect-square overflow-hidden relative">
-                    <img
-                      src={product.image}
+                    <OptimizedPicture
                       alt={product.name}
+                      avifSrcSet={product.image.avifSrcSet}
+                      webpSrcSet={product.image.webpSrcSet}
+                      fallbackSrcSet={product.image.fallbackSrcSet}
+                      fallbackSrc={product.image.fallbackSrc}
+                      sizes={CAROUSEL_IMAGE_SIZES}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

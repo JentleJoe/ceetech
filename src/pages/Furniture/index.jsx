@@ -3,21 +3,127 @@ import Footer from '../../layout/Footer'
 import { ArrowRight, CheckCircle, Users, Building, Home, Eye, Wrench, Truck, Phone } from 'lucide-react'
 import logoIconGold from '../../assets/logoIconGold.png'
 import logoIconWhite from '../../assets/logoIconWhite.png'
+import OptimizedPicture from '../../components/OptimizedPicture'
 import SEO from '../../components/SEO'
 
 // Import images
-import officeFurnitureImg from '../../assets/office-furniture.jpg'
-import furnitureApprenticeImg from '../../assets/furniture-apprentice.jpg'
-import hotelFurnitureImg from '../../assets/hotel-furniture.jpg'
-import healthcareCabinetsImg from '../../assets/healthcare-cabinets.png'
-import tvConsoleImg from '../../assets/tv_console.jpg'
-import residentialFurnitureImg from '../../assets/residential-furniture.jpg'
-import workshopImg from '../../assets/workshop.jpg'
-import diningImg from '../../assets/dining.jpg'
-import kitchenCabinetImg from '../../assets/kitchen-cabinet.jpg'
-import backgroundImg from '../../assets/livingroom.jpeg'
-import schoolFurnitureImg from '../../assets/school-furniture.jpg'
-import wardrobeImg from '../../assets/wardrobe.jpeg'
+import officeFurnitureAvif from '../../assets/office-furniture.jpg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import officeFurnitureWebp from '../../assets/office-furniture.jpg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import officeFurnitureJpgSrcSet from '../../assets/office-furniture.jpg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import officeFurnitureJpg from '../../assets/office-furniture.jpg?w=768&format=jpg&withoutEnlargement'
+import hotelFurnitureAvif from '../../assets/hotel-furniture.jpg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import hotelFurnitureWebp from '../../assets/hotel-furniture.jpg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import hotelFurnitureJpgSrcSet from '../../assets/hotel-furniture.jpg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import hotelFurnitureJpg from '../../assets/hotel-furniture.jpg?w=768&format=jpg&withoutEnlargement'
+import healthcareCabinetsAvif from '../../assets/healthcare-cabinets.png?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import healthcareCabinetsWebp from '../../assets/healthcare-cabinets.png?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import healthcareCabinetsJpgSrcSet from '../../assets/healthcare-cabinets.png?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import healthcareCabinetsJpg from '../../assets/healthcare-cabinets.png?w=768&format=jpg&withoutEnlargement'
+import tvConsoleAvif from '../../assets/tv_console.jpg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import tvConsoleWebp from '../../assets/tv_console.jpg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import tvConsoleJpgSrcSet from '../../assets/tv_console.jpg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import tvConsoleJpg from '../../assets/tv_console.jpg?w=768&format=jpg&withoutEnlargement'
+import residentialFurnitureAvif from '../../assets/residential-furniture.jpg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import residentialFurnitureWebp from '../../assets/residential-furniture.jpg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import residentialFurnitureJpgSrcSet from '../../assets/residential-furniture.jpg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import residentialFurnitureJpg from '../../assets/residential-furniture.jpg?w=768&format=jpg&withoutEnlargement'
+import workshopAvif from '../../assets/workshop.jpg?w=320;480;640;768;960;1200;1500;2000&format=avif&as=srcset&withoutEnlargement'
+import workshopWebp from '../../assets/workshop.jpg?w=320;480;640;768;960;1200;1500;2000&format=webp&as=srcset&withoutEnlargement'
+import workshopJpgSrcSet from '../../assets/workshop.jpg?w=320;480;640;768;960;1200;1500;2000&format=jpg&as=srcset&withoutEnlargement'
+import workshopJpg from '../../assets/workshop.jpg?w=768&format=jpg&withoutEnlargement'
+import diningAvif from '../../assets/dining.jpg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import diningWebp from '../../assets/dining.jpg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import diningJpgSrcSet from '../../assets/dining.jpg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import diningJpg from '../../assets/dining.jpg?w=768&format=jpg&withoutEnlargement'
+import kitchenCabinetAvif from '../../assets/kitchen-cabinet.jpg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import kitchenCabinetWebp from '../../assets/kitchen-cabinet.jpg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import kitchenCabinetJpgSrcSet from '../../assets/kitchen-cabinet.jpg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import kitchenCabinetJpg from '../../assets/kitchen-cabinet.jpg?w=768&format=jpg&withoutEnlargement'
+import backgroundAvif from '../../assets/livingroom.jpeg?w=640;960;1280;1600;1920;2048&format=avif&as=srcset&withoutEnlargement'
+import backgroundWebp from '../../assets/livingroom.jpeg?w=640;960;1280;1600;1920;2048&format=webp&as=srcset&withoutEnlargement'
+import backgroundJpgSrcSet from '../../assets/livingroom.jpeg?w=640;960;1280;1600;1920;2048&format=jpg&as=srcset&withoutEnlargement'
+import backgroundJpg from '../../assets/livingroom.jpeg?w=1600&format=jpg&withoutEnlargement'
+import schoolFurnitureAvif from '../../assets/school-furniture.jpg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import schoolFurnitureWebp from '../../assets/school-furniture.jpg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import schoolFurnitureJpgSrcSet from '../../assets/school-furniture.jpg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import schoolFurnitureJpg from '../../assets/school-furniture.jpg?w=768&format=jpg&withoutEnlargement'
+import wardrobeAvif from '../../assets/wardrobe.jpeg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import wardrobeWebp from '../../assets/wardrobe.jpeg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import wardrobeJpgSrcSet from '../../assets/wardrobe.jpeg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import wardrobeJpg from '../../assets/wardrobe.jpeg?w=768&format=jpg&withoutEnlargement'
+
+const TWO_COLUMN_IMAGE_SIZES = '(max-width: 1024px) 100vw, 50vw'
+const GRID_IMAGE_SIZES = '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw'
+
+const officeFurnitureImg = {
+  avifSrcSet: officeFurnitureAvif,
+  webpSrcSet: officeFurnitureWebp,
+  fallbackSrcSet: officeFurnitureJpgSrcSet,
+  fallbackSrc: officeFurnitureJpg,
+}
+
+const hotelFurnitureImg = {
+  avifSrcSet: hotelFurnitureAvif,
+  webpSrcSet: hotelFurnitureWebp,
+  fallbackSrcSet: hotelFurnitureJpgSrcSet,
+  fallbackSrc: hotelFurnitureJpg,
+}
+
+const healthcareCabinetsImg = {
+  avifSrcSet: healthcareCabinetsAvif,
+  webpSrcSet: healthcareCabinetsWebp,
+  fallbackSrcSet: healthcareCabinetsJpgSrcSet,
+  fallbackSrc: healthcareCabinetsJpg,
+}
+
+const tvConsoleImg = {
+  avifSrcSet: tvConsoleAvif,
+  webpSrcSet: tvConsoleWebp,
+  fallbackSrcSet: tvConsoleJpgSrcSet,
+  fallbackSrc: tvConsoleJpg,
+}
+
+const residentialFurnitureImg = {
+  avifSrcSet: residentialFurnitureAvif,
+  webpSrcSet: residentialFurnitureWebp,
+  fallbackSrcSet: residentialFurnitureJpgSrcSet,
+  fallbackSrc: residentialFurnitureJpg,
+}
+
+const workshopImg = {
+  avifSrcSet: workshopAvif,
+  webpSrcSet: workshopWebp,
+  fallbackSrcSet: workshopJpgSrcSet,
+  fallbackSrc: workshopJpg,
+}
+
+const diningImg = {
+  avifSrcSet: diningAvif,
+  webpSrcSet: diningWebp,
+  fallbackSrcSet: diningJpgSrcSet,
+  fallbackSrc: diningJpg,
+}
+
+const kitchenCabinetImg = {
+  avifSrcSet: kitchenCabinetAvif,
+  webpSrcSet: kitchenCabinetWebp,
+  fallbackSrcSet: kitchenCabinetJpgSrcSet,
+  fallbackSrc: kitchenCabinetJpg,
+}
+
+const schoolFurnitureImg = {
+  avifSrcSet: schoolFurnitureAvif,
+  webpSrcSet: schoolFurnitureWebp,
+  fallbackSrcSet: schoolFurnitureJpgSrcSet,
+  fallbackSrc: schoolFurnitureJpg,
+}
+
+const wardrobeImg = {
+  avifSrcSet: wardrobeAvif,
+  webpSrcSet: wardrobeWebp,
+  fallbackSrcSet: wardrobeJpgSrcSet,
+  fallbackSrc: wardrobeJpg,
+}
 
 const Furniture = () => {
   const furnitureSeoSchema = [
@@ -317,11 +423,21 @@ const Furniture = () => {
       
       {/* Hero Section */}
       <section 
-        className="pt-32 pb-16 relative min-h-[65vh] flex items-center bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${backgroundImg})`
-        }}
+        className="pt-32 pb-16 relative min-h-[65vh] flex items-center overflow-hidden"
       >
+        <OptimizedPicture
+          alt="Furniture showroom hero background"
+          avifSrcSet={backgroundAvif}
+          webpSrcSet={backgroundWebp}
+          fallbackSrcSet={backgroundJpgSrcSet}
+          fallbackSrc={backgroundJpg}
+          sizes="100vw"
+          pictureClassName="absolute inset-0 block"
+          className="h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <div className="flex justify-center mb-4">
@@ -421,9 +537,13 @@ const Furniture = () => {
                 {/* Image */}
                 <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="relative h-80 md:h-96 rounded-xl overflow-hidden group">
-                    <img 
-                      src={category.image} 
+                    <OptimizedPicture
                       alt={`${category.title} solutions`}
+                      avifSrcSet={category.image.avifSrcSet}
+                      webpSrcSet={category.image.webpSrcSet}
+                      fallbackSrcSet={category.image.fallbackSrcSet}
+                      fallbackSrc={category.image.fallbackSrc}
+                      sizes={TWO_COLUMN_IMAGE_SIZES}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
@@ -480,9 +600,13 @@ const Furniture = () => {
               <div key={index} className="group">
                 {/* Image */}
                 <div className="relative h-64 rounded-xl overflow-hidden mb-6">
-                  <img 
-                    src={category.image} 
+                  <OptimizedPicture
                     alt={`${category.title} collection`}
+                    avifSrcSet={category.image.avifSrcSet}
+                    webpSrcSet={category.image.webpSrcSet}
+                    fallbackSrcSet={category.image.fallbackSrcSet}
+                    fallbackSrc={category.image.fallbackSrc}
+                    sizes={GRID_IMAGE_SIZES}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>

@@ -8,13 +8,49 @@ import {
 } from 'lucide-react'
 import logoIconGold from '../../assets/logoIconGold.png'
 import logoIconWhite from '../../assets/logoIconWhite.png'
+import OptimizedPicture from '../../components/OptimizedPicture'
 
 // Import images
-import paintingImg from '../../assets/painting2.jpg'
-import stampedeImg from '../../assets/stampede.jpg'
-import windowBlindImg from '../../assets/window-blind.jpg'
-import interiorBgImg from '../../assets/interiror.jpg'
+import paintingAvif from '../../assets/painting2.jpg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import paintingWebp from '../../assets/painting2.jpg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import paintingJpgSrcSet from '../../assets/painting2.jpg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import paintingJpg from '../../assets/painting2.jpg?w=768&format=jpg&withoutEnlargement'
+import stampedeAvif from '../../assets/stampede.jpg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import stampedeWebp from '../../assets/stampede.jpg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import stampedeJpgSrcSet from '../../assets/stampede.jpg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import stampedeJpg from '../../assets/stampede.jpg?w=768&format=jpg&withoutEnlargement'
+import windowBlindAvif from '../../assets/window-blind.jpg?w=320;480;640;768;960;1200;1500&format=avif&as=srcset&withoutEnlargement'
+import windowBlindWebp from '../../assets/window-blind.jpg?w=320;480;640;768;960;1200;1500&format=webp&as=srcset&withoutEnlargement'
+import windowBlindJpgSrcSet from '../../assets/window-blind.jpg?w=320;480;640;768;960;1200;1500&format=jpg&as=srcset&withoutEnlargement'
+import windowBlindJpg from '../../assets/window-blind.jpg?w=768&format=jpg&withoutEnlargement'
+import interiorBgAvif from '../../assets/interiror.jpg?w=640;960;1280;1600;1920;2500&format=avif&as=srcset&withoutEnlargement'
+import interiorBgWebp from '../../assets/interiror.jpg?w=640;960;1280;1600;1920;2500&format=webp&as=srcset&withoutEnlargement'
+import interiorBgJpgSrcSet from '../../assets/interiror.jpg?w=640;960;1280;1600;1920;2500&format=jpg&as=srcset&withoutEnlargement'
+import interiorBgJpg from '../../assets/interiror.jpg?w=1600&format=jpg&withoutEnlargement'
 import SEO from '../../components/SEO'
+
+const INTERIOR_CATEGORY_IMAGE_SIZES = '(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1280px'
+
+const paintingImg = {
+  avifSrcSet: paintingAvif,
+  webpSrcSet: paintingWebp,
+  fallbackSrcSet: paintingJpgSrcSet,
+  fallbackSrc: paintingJpg,
+}
+
+const stampedeImg = {
+  avifSrcSet: stampedeAvif,
+  webpSrcSet: stampedeWebp,
+  fallbackSrcSet: stampedeJpgSrcSet,
+  fallbackSrc: stampedeJpg,
+}
+
+const windowBlindImg = {
+  avifSrcSet: windowBlindAvif,
+  webpSrcSet: windowBlindWebp,
+  fallbackSrcSet: windowBlindJpgSrcSet,
+  fallbackSrc: windowBlindJpg,
+}
 
 
 
@@ -338,11 +374,21 @@ const Interiors = () => {
       
       {/* Hero Section */}
       <section 
-        className="pt-32 pb-16 relative min-h-[65vh] flex items-center bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${interiorBgImg})`
-        }}
+        className="pt-32 pb-16 relative min-h-[65vh] flex items-center overflow-hidden"
       >
+        <OptimizedPicture
+          alt="Interior design hero background"
+          avifSrcSet={interiorBgAvif}
+          webpSrcSet={interiorBgWebp}
+          fallbackSrcSet={interiorBgJpgSrcSet}
+          fallbackSrc={interiorBgJpg}
+          sizes="100vw"
+          pictureClassName="absolute inset-0 block"
+          className="h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <div className="flex justify-center mb-4">
@@ -460,9 +506,13 @@ const Interiors = () => {
               {/* Hero Image Section */}
               <div className="mb-12">
                 <div className="relative h-64 md:h-96 lg:h-[28rem] rounded-xl overflow-hidden mb-8 group cursor-pointer">
-                  <img 
-                    src={category.image} 
+                  <OptimizedPicture
                     alt={`${category.title} services`}
+                    avifSrcSet={category.image.avifSrcSet}
+                    webpSrcSet={category.image.webpSrcSet}
+                    fallbackSrcSet={category.image.fallbackSrcSet}
+                    fallbackSrc={category.image.fallbackSrc}
+                    sizes={INTERIOR_CATEGORY_IMAGE_SIZES}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     onError={(e) => {
                       console.error(`Failed to load image for ${category.title}:`, category.image);

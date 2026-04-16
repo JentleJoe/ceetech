@@ -1,6 +1,10 @@
 import { Award, Users, Leaf, Clock } from "lucide-react"
+import OptimizedPicture from '../../../components/OptimizedPicture'
 
-import workmanImg from '../../../assets/workman.jpg'
+import workmanAvif from '../../../assets/workman.jpg?w=400;640;768;960;1200;1600;2000&format=avif&as=srcset&withoutEnlargement'
+import workmanWebp from '../../../assets/workman.jpg?w=400;640;768;960;1200;1600;2000&format=webp&as=srcset&withoutEnlargement'
+import workmanJpgSrcSet from '../../../assets/workman.jpg?w=400;640;768;960;1200;1600;2000&format=jpg&as=srcset&withoutEnlargement'
+import workmanJpg from '../../../assets/workman.jpg?w=1200&format=jpg&withoutEnlargement'
 
 const About = () => {
   const values = [
@@ -60,9 +64,13 @@ const About = () => {
           {/* Image */}
           <div className="animate-slide-in-right">
             <div className="relative">
-              <img
-                src={workmanImg}
+              <OptimizedPicture
                 alt="Ceetech craftsman at work"
+                avifSrcSet={workmanAvif}
+                webpSrcSet={workmanWebp}
+                fallbackSrcSet={workmanJpgSrcSet}
+                fallbackSrc={workmanJpg}
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>

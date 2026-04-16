@@ -3,9 +3,13 @@ import Footer from '../../layout/Footer'
 import { BookOpen, Users, Award, Clock, Phone } from 'lucide-react'
 import logoIconGold from '../../assets/logoIconGold.png'
 import SEO from '../../components/SEO'
+import OptimizedPicture from '../../components/OptimizedPicture'
 
 // Import images
-import furnitureApprenticeImg from '../../assets/furniture-apprentice.jpg'
+import furnitureApprenticeAvif from '../../assets/furniture-apprentice.jpg?w=640;960;1280;1600;1920;2500&format=avif&as=srcset&withoutEnlargement'
+import furnitureApprenticeWebp from '../../assets/furniture-apprentice.jpg?w=640;960;1280;1600;1920;2500&format=webp&as=srcset&withoutEnlargement'
+import furnitureApprenticeJpgSrcSet from '../../assets/furniture-apprentice.jpg?w=640;960;1280;1600;1920;2500&format=jpg&as=srcset&withoutEnlargement'
+import furnitureApprenticeJpg from '../../assets/furniture-apprentice.jpg?w=1600&format=jpg&withoutEnlargement'
 
 const Academy = () => {
   const academySeoSchema = [
@@ -147,12 +151,20 @@ const Academy = () => {
       <Header />
       
       {/* Hero Section */}
-      <div 
-        className="pt-24 pb-16 relative min-h-[60vh] flex items-center bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${furnitureApprenticeImg})`
-        }}
-      >
+      <div className="pt-24 pb-16 relative min-h-[60vh] flex items-center overflow-hidden">
+        <OptimizedPicture
+          alt="Furniture apprenticeship training background"
+          avifSrcSet={furnitureApprenticeAvif}
+          webpSrcSet={furnitureApprenticeWebp}
+          fallbackSrcSet={furnitureApprenticeJpgSrcSet}
+          fallbackSrc={furnitureApprenticeJpg}
+          sizes="100vw"
+          pictureClassName="absolute inset-0 block"
+          className="h-full w-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <div className="flex justify-center mb-4">

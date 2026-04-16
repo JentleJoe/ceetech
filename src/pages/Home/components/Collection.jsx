@@ -3,16 +3,79 @@ import { useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import CarouselModule from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
+import OptimizedPicture from '../../../components/OptimizedPicture'
 
 const Carousel = CarouselModule?.default ?? CarouselModule
 
 // Import images
-import officeFurnitureImg from '../../../assets/office-furniture.jpg'
-import interiorImg from '../../../assets/interiror.jpg'
-import furnitureApprenticeImg from '../../../assets/furniture-apprentice.jpg'
-import popCeilingImg from '../../../assets/pop-ceiling.jpg'
-import stampedeImg from '../../../assets/stampede.jpg'
-import kitchenCabinetImg from '../../../assets/kitchen-cabinet.jpg'
+import officeFurnitureAvif from '../../../assets/office-furniture.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import officeFurnitureWebp from '../../../assets/office-furniture.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import officeFurnitureJpgSrcSet from '../../../assets/office-furniture.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import officeFurnitureJpg from '../../../assets/office-furniture.jpg?w=560&format=jpg&withoutEnlargement'
+import interiorAvif from '../../../assets/interiror.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import interiorWebp from '../../../assets/interiror.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import interiorJpgSrcSet from '../../../assets/interiror.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import interiorJpg from '../../../assets/interiror.jpg?w=560&format=jpg&withoutEnlargement'
+import furnitureApprenticeAvif from '../../../assets/furniture-apprentice.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import furnitureApprenticeWebp from '../../../assets/furniture-apprentice.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import furnitureApprenticeJpgSrcSet from '../../../assets/furniture-apprentice.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import furnitureApprenticeJpg from '../../../assets/furniture-apprentice.jpg?w=560&format=jpg&withoutEnlargement'
+import popCeilingAvif from '../../../assets/pop-ceiling.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import popCeilingWebp from '../../../assets/pop-ceiling.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import popCeilingJpgSrcSet from '../../../assets/pop-ceiling.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import popCeilingJpg from '../../../assets/pop-ceiling.jpg?w=560&format=jpg&withoutEnlargement'
+import stampedeAvif from '../../../assets/stampede.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import stampedeWebp from '../../../assets/stampede.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import stampedeJpgSrcSet from '../../../assets/stampede.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import stampedeJpg from '../../../assets/stampede.jpg?w=560&format=jpg&withoutEnlargement'
+import kitchenCabinetAvif from '../../../assets/kitchen-cabinet.jpg?w=240;320;420;560;736;900;1200&format=avif&as=srcset&withoutEnlargement'
+import kitchenCabinetWebp from '../../../assets/kitchen-cabinet.jpg?w=240;320;420;560;736;900;1200&format=webp&as=srcset&withoutEnlargement'
+import kitchenCabinetJpgSrcSet from '../../../assets/kitchen-cabinet.jpg?w=240;320;420;560;736;900;1200&format=jpg&as=srcset&withoutEnlargement'
+import kitchenCabinetJpg from '../../../assets/kitchen-cabinet.jpg?w=560&format=jpg&withoutEnlargement'
+
+const CAROUSEL_IMAGE_SIZES = '(max-width: 464px) 92vw, (max-width: 1024px) 46vw, (max-width: 1200px) 30vw, 23vw'
+
+const officeFurnitureImage = {
+  avifSrcSet: officeFurnitureAvif,
+  webpSrcSet: officeFurnitureWebp,
+  fallbackSrcSet: officeFurnitureJpgSrcSet,
+  fallbackSrc: officeFurnitureJpg,
+}
+
+const kitchenCabinetImage = {
+  avifSrcSet: kitchenCabinetAvif,
+  webpSrcSet: kitchenCabinetWebp,
+  fallbackSrcSet: kitchenCabinetJpgSrcSet,
+  fallbackSrc: kitchenCabinetJpg,
+}
+
+const interiorImage = {
+  avifSrcSet: interiorAvif,
+  webpSrcSet: interiorWebp,
+  fallbackSrcSet: interiorJpgSrcSet,
+  fallbackSrc: interiorJpg,
+}
+
+const furnitureApprenticeImage = {
+  avifSrcSet: furnitureApprenticeAvif,
+  webpSrcSet: furnitureApprenticeWebp,
+  fallbackSrcSet: furnitureApprenticeJpgSrcSet,
+  fallbackSrc: furnitureApprenticeJpg,
+}
+
+const popCeilingImage = {
+  avifSrcSet: popCeilingAvif,
+  webpSrcSet: popCeilingWebp,
+  fallbackSrcSet: popCeilingJpgSrcSet,
+  fallbackSrc: popCeilingJpg,
+}
+
+const stampedeImage = {
+  avifSrcSet: stampedeAvif,
+  webpSrcSet: stampedeWebp,
+  fallbackSrcSet: stampedeJpgSrcSet,
+  fallbackSrc: stampedeJpg,
+}
 
 const Collection = () => {
   const [hoveredService, setHoveredService] = useState(null)
@@ -22,7 +85,7 @@ const Collection = () => {
       id: 1,
       name: 'Commercial Furniture Solutions',
       description: 'Professional office, school & healthcare furniture designed for durability and productivity',
-      image: officeFurnitureImg,
+      image: officeFurnitureImage,
       category: 'Furniture',
       link: '/furniture'
     },
@@ -30,7 +93,7 @@ const Collection = () => {
       id: 2,
       name: 'Residential Furniture & Kitchens',
       description: 'Custom home furniture and kitchen solutions tailored to your lifestyle',
-      image: kitchenCabinetImg,
+      image: kitchenCabinetImage,
       category: 'Furniture',
       link: '/furniture'
     },
@@ -38,7 +101,7 @@ const Collection = () => {
       id: 3,
       name: 'Interior Design & Renovation',
       description: 'Complete interior transformation with modern design and expert craftsmanship',
-      image: interiorImg,
+      image: interiorImage,
       category: 'Interiors',
       link: '/interiors'
     },
@@ -46,7 +109,7 @@ const Collection = () => {
       id: 4,
       name: 'Professional Training Academy',
       description: 'Learn furniture design and interior skills from industry experts',
-      image: furnitureApprenticeImg,
+      image: furnitureApprenticeImage,
       category: 'Academy',
       link: '/academy'
     },
@@ -54,7 +117,7 @@ const Collection = () => {
       id: 5,
       name: 'POP Ceiling Installation',
       description: 'Modern ceiling designs with professional installation and finishing',
-      image: popCeilingImg,
+      image: popCeilingImage,
       category: 'Interiors',
       link: '/interiors'
     },
@@ -62,7 +125,7 @@ const Collection = () => {
       id: 6,
       name: 'Tiling & Flooring Services',
       description: 'Expert tiling and modern flooring solutions for all spaces',
-      image: stampedeImg,
+      image: stampedeImage,
       category: 'Interiors',
       link: '/interiors'
     }
@@ -132,9 +195,13 @@ const Collection = () => {
               >
                 <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500 transform group-hover:scale-105 h-full">
                   <div className="aspect-square overflow-hidden relative">
-                    <img
-                      src={service.image}
+                    <OptimizedPicture
                       alt={service.name}
+                      avifSrcSet={service.image.avifSrcSet}
+                      webpSrcSet={service.image.webpSrcSet}
+                      fallbackSrcSet={service.image.fallbackSrcSet}
+                      fallbackSrc={service.image.fallbackSrc}
+                      sizes={CAROUSEL_IMAGE_SIZES}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
