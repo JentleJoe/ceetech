@@ -3,6 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Metric-compatible fallback fonts reduce CLS before web fonts are ready. */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 107%;
+}
+
+@font-face {
+  font-family: 'Playfair Display Fallback';
+  src: local('Times New Roman');
+  ascent-override: 88%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+  size-adjust: 104%;
+}
+
 /* CSS Reset */
 * {
   margin: 0;
@@ -155,11 +174,11 @@ div[role="region"][aria-label*="Notifications"] ol {
   }
 
   .font-playfair {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', 'Playfair Display Fallback', serif;
   }
 
   .font-inter {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
   }
 }
 

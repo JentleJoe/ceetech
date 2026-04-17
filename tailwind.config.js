@@ -77,8 +77,8 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				playfair: ['Playfair Display', ...defaultTheme.fontFamily.serif],
-				inter: ['Inter', ...defaultTheme.fontFamily.sans],
+				playfair: ['Playfair Display', 'Playfair Display Fallback', ...defaultTheme.fontFamily.serif],
+				inter: ['Inter', 'Inter Fallback', ...defaultTheme.fontFamily.sans],
 			},
 			keyframes: {
 				'fade-in-up': {
