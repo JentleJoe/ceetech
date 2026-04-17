@@ -24,7 +24,7 @@ const CustomerReviews = () => {
           observer.disconnect()
         }
       },
-      { root: null, rootMargin: '1000px 0px', threshold: 0.01 }
+      { root: null, rootMargin: '2500px 0px', threshold: 0.01 }
     )
 
     observer.observe(section)
