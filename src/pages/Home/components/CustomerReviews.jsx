@@ -1,21 +1,56 @@
 import { Star, Quote } from "lucide-react"
-import { useEffect } from "react"
+import { useEffect, useRef, useState } from "react"
+
+const ELFSIGHT_SCRIPT_SRC = 'https://elfsightcdn.com/platform.js'
 
 const CustomerReviews = () => {
-  // Load Elfsight script
+  const widgetSectionRef = useRef(null)
+  const [shouldLoadWidget, setShouldLoadWidget] = useState(false)
+
+  // Defer widget activation until the user scrolls near this section.
   useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://elfsightcdn.com/platform.js'
-    script.async = true
-    document.body.appendChild(script)
-    
+    const section = widgetSectionRef.current
+    if (!section) return
+
+    if (!('IntersectionObserver' in window)) {
+      setShouldLoadWidget(true)
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setShouldLoadWidget(true)
+          observer.disconnect()
+        }
+      },
+      { root: null, rootMargin: '1000px 0px', threshold: 0.01 }
+    )
+
+    observer.observe(section)
+
     return () => {
-      // Cleanup script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script)
-      }
+      observer.disconnect()
     }
   }, [])
+
+  useEffect(() => {
+    if (!shouldLoadWidget) return
+
+    const existingScript =
+      document.querySelector('script[data-elfsight-platform="true"]') ||
+      document.querySelector(`script[src="${ELFSIGHT_SCRIPT_SRC}"]`)
+
+    if (existingScript) return
+
+    const script = document.createElement('script')
+    script.src = ELFSIGHT_SCRIPT_SRC
+    script.async = true
+    script.defer = true
+    script.dataset.elfsightPlatform = 'true'
+    document.body.appendChild(script)
+  }, [shouldLoadWidget])
+
   const reviews = [
     {
       id: 1,
@@ -126,14 +161,21 @@ const CustomerReviews = () => {
         </div>
 
         {/* Elfsight Google Reviews Widget */}
-        <div className="mb-16">
+        <div className="mb-16" ref={widgetSectionRef}>
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-playfair text-charcoal mb-2">
               Verified Google Reviews
             </h3>
             <p className="text-charcoal/70">See what our customers are saying on Google</p>
           </div>
-          <div className="elfsight-app-96fad6cf-47ff-4f0b-acb0-f25bee36f551" data-elfsight-app-lazy></div>
+          {shouldLoadWidget ? (
+            <div className="elfsight-app-96fad6cf-47ff-4f0b-acb0-f25bee36f551" data-elfsight-app-lazy></div>
+          ) : (
+            <div
+              className="min-h-[220px] rounded-xl border border-charcoal/10 bg-white/50 animate-pulse"
+              aria-hidden="true"
+            ></div>
+          )}
         </div>
 
         {/* Call to Action */}
