@@ -24,7 +24,7 @@ const OptimizedPicture = ({
         className={className}
         loading={loading}
         decoding={decoding}
-        fetchPriority={fetchPriority}
+        fetchpriority={fetchPriority}
         {...imgProps}
       />
     </picture>
