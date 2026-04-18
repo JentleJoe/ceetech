@@ -4,6 +4,7 @@ import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
 import logoIconGold from '../../assets/logoIconGold.png'
 import FAQAccordion from '../../components/FAQAccordion'
+import SEO from '../../components/SEO'
 
 const Contact = () => {
   const [copiedText, setCopiedText] = useState('')
@@ -125,8 +126,100 @@ const Contact = () => {
     }
   ]
 
+  const contactSeoSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: 'Contact Ceetech Crafts',
+      url: 'https://ceetechcrafts.com/contact',
+      description: 'Contact Ceetech Crafts for furniture and interior services in Benin City, Edo State.'
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Ceetech Crafts',
+      url: 'https://ceetechcrafts.com',
+      email: 'ceetechfurnitureandinteriors9@gmail.com',
+      telephone: '+234-816-541-0110',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '2nd Entrance Ebvuabugun Sawmill Off Sapele Road',
+        addressLocality: 'Benin City',
+        addressRegion: 'Edo State',
+        addressCountry: 'NG'
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          opens: '07:00',
+          closes: '18:00'
+        }
+      ],
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+234-816-541-0110',
+          contactType: 'customer service',
+          areaServed: 'NG',
+          availableLanguage: ['en']
+        },
+        {
+          '@type': 'ContactPoint',
+          telephone: '+234-813-846-1999',
+          contactType: 'customer service',
+          areaServed: 'NG',
+          availableLanguage: ['en']
+        }
+      ],
+      sameAs: [
+        'https://www.facebook.com/share/15y5a4wA4b/',
+        'https://www.instagram.com/ceetech_official?igsh=d3pkdHdxbHNma3pu',
+        'https://tiktok.com/@ctechfurniture.interior'
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What states do you serve?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We serve customers across all states in Nigeria.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Where are your showrooms and factory located?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Our primary location is at 2nd Entrance Ebvuabugun Sawmill, Off Sapele Road, Benin City, Edo State, with two additional showrooms in Benin City.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you upgrade existing furniture?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. We offer refurbishment, repair, and upgrade services for existing furniture.'
+          }
+        }
+      ]
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Contact Ceetech Crafts | Furniture & Interior Services in Benin City"
+        description="Contact Ceetech Crafts for custom furniture, interior design, installation, and training inquiries in Benin City, Edo State. Call, WhatsApp, or visit our showroom."
+        keywords="contact ceetech crafts, furniture company contact benin city, interior design consultation benin, ceetech phone number, furniture showroom benin contact"
+        canonical="https://ceetechcrafts.com/contact"
+        ogType="website"
+        schema={contactSeoSchema}
+      />
       <Header />
       
       {/* Hero Section */}

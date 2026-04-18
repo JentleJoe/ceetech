@@ -2,6 +2,7 @@ import { MessageCircle, Facebook, Instagram } from 'lucide-react'
 import Header from '../../layout/Header'
 import Footer from '../../layout/Footer'
 import OptimizedPicture from '../../components/OptimizedPicture'
+import SEO from '../../components/SEO'
 import logoIconGold from '../../assets/logoIconGold.png'
 import logoIconWhite from '../../assets/logoIconWhite.png'
 
@@ -16,8 +17,51 @@ import workmanJpgSrcSet from '../../assets/workman.jpg?w=400;640;768;960;1200;16
 import workmanJpg from '../../assets/workman.jpg?w=1200&format=jpg&withoutEnlargement'
 
 const About = () => {
+  const aboutSeoSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: 'About Ceetech Crafts',
+      url: 'https://ceetechcrafts.com/about',
+      description: 'Learn about Ceetech Crafts, a furniture manufacturer and interior design company in Benin City, Edo State.',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Ceetech Crafts',
+        url: 'https://ceetechcrafts.com'
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Ceetech Crafts',
+      url: 'https://ceetechcrafts.com',
+      telephone: '+234-816-541-0110',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '2nd Entrance Ebvuabugun Sawmill Off Sapele Road',
+        addressLocality: 'Benin City',
+        addressRegion: 'Edo State',
+        addressCountry: 'NG'
+      },
+      areaServed: ['Benin City', 'Edo State', 'Nigeria'],
+      sameAs: [
+        'https://www.facebook.com/share/15y5a4wA4b/',
+        'https://www.instagram.com/ceetech_official?igsh=d3pkdHdxbHNma3pu',
+        'https://tiktok.com/@ctechfurniture.interior'
+      ]
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="About Ceetech Crafts | Furniture & Interior Company in Benin City"
+        description="Learn about Ceetech Crafts, a Benin City furniture manufacturer and interior design company delivering custom furniture, installations, and professional training."
+        keywords="about ceetech crafts, furniture company benin city, furniture manufacturer edo state, interior design company benin, custom furniture benin"
+        canonical="https://ceetechcrafts.com/about"
+        ogType="website"
+        schema={aboutSeoSchema}
+      />
       <Header />
       
       {/* Hero Section */}
