@@ -14,6 +14,17 @@ const routeToFile = (route) => {
 };
 
 const containsRenderedRoot = (html) => /id="root">\s*<[^/]/.test(html);
+const hasTitleTag = (html) => /<title>[^<]+<\/title>/i.test(html);
+const hasDescriptionMeta = (html) => /name="description"/i.test(html);
+
+const expectedCanonicalByRoute = {
+  "/": "https://ceetechcrafts.com",
+  "/about": "https://ceetechcrafts.com/about",
+  "/furniture": "https://ceetechcrafts.com/furniture",
+  "/interiors": "https://ceetechcrafts.com/interiors",
+  "/academy": "https://ceetechcrafts.com/academy",
+  "/contact": "https://ceetechcrafts.com/contact",
+};
 
 const routeChecks = {
   "/about": [
@@ -42,6 +53,21 @@ for (const route of prerenderRoutes) {
 
   if (!containsRenderedRoot(html)) {
     failures.push(`${route}: file exists but prerendered root markup was not detected`);
+  }
+
+  if (!hasTitleTag(html)) {
+    failures.push(`${route}: missing <title> in prerendered output`);
+  }
+
+  if (!hasDescriptionMeta(html)) {
+    failures.push(`${route}: missing meta description in prerendered output`);
+  }
+
+  const expectedCanonical = expectedCanonicalByRoute[route];
+  if (expectedCanonical && !html.includes(`href="${expectedCanonical}" rel="canonical"`)) {
+    failures.push(
+      `${route}: expected canonical URL not found -> ${expectedCanonical}`,
+    );
   }
 
   const checks = routeChecks[route] ?? [];

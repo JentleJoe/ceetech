@@ -11,7 +11,7 @@ Vercel is explicitly configured to use `npm run build:no-prerender` in `vercel.j
 - `npm run build`: normal production build (prerender enabled outside Vercel, skipped on Vercel)
 - `npm run build:prerender`: force prerender in production builds
 - `npm run build:no-prerender`: emergency fallback to force-disable prerender if build environment issues occur
-- `npm run verify:prerender`: validate generated prerendered routes and key SEO tags
+- `npm run verify:prerender`: validate generated prerendered routes, rendered root markup, and critical SEO tags (title, description, canonical)
 
 If you need prerender benefits in production and still want Vercel stability, build/prerender in CI and deploy prebuilt artifacts.
 
@@ -22,6 +22,12 @@ This repository includes `.github/workflows/deploy-prerender-vercel.yml`, which:
 - builds with prerender (`npm run build:prerender`)
 - verifies prerender output (`npm run verify:prerender`)
 - deploys the prerendered `dist` output to Vercel
+
+Deployment behavior:
+
+- pushes to `prerender` deploy a prerendered preview
+- pushes to `main` deploy prerendered production
+- manual `workflow_dispatch` supports both preview and production targets
 
 Required GitHub repository secrets:
 
