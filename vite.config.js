@@ -13,13 +13,11 @@ const isEnabled = (value) => value === "1" || value === "true";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const isProduction = mode === "production";
-  const runningOnVercel = isEnabled(process.env.VERCEL);
   const forcePrerender = isEnabled(process.env.FORCE_PRERENDER);
   const disablePrerender = isEnabled(process.env.DISABLE_PRERENDER);
 
-  // Default behavior: prerender in production unless running on Vercel.
-  const shouldPrerender =
-    isProduction && !disablePrerender && (forcePrerender || !runningOnVercel);
+  // Default behavior: prerender in all production builds, including Vercel.
+  const shouldPrerender = isProduction && (forcePrerender || !disablePrerender);
 
   return {
     server: {
