@@ -1,0 +1,42 @@
+name: Deploy Prerender To Vercel
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with prerender
+        run: npm run build:prerender
+
+      - name: Verify prerender output
+        run: npm run verify:prerender
+
+      - name: Add routing config to dist
+        run: cp vercel.static.json dist/vercel.json
+
+      - name: Pull Vercel project settings
+        run: npx vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy prerendered dist
+        run: npx vercel deploy --prod --yes --token=${{ secrets.VERCEL_TOKEN }} dist
