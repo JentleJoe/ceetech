@@ -3,6 +3,10 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { prerenderRoutes } from "../prerender.routes.js";
 
+if (!process.env.NODE_ENV) {
+  process.env.NODE_ENV = "production";
+}
+
 const DIST_DIR = path.resolve(process.cwd(), "dist");
 const SERVER_DIR = path.join(DIST_DIR, "server");
 const TEMPLATE_PATH = path.join(DIST_DIR, "index.html");

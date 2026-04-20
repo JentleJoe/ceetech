@@ -1,6 +1,6 @@
 import { renderToString } from "react-dom/server";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { MemoryRouter } from "react-router-dom";
+import { StaticRouter } from "react-router-dom/server";
 import AppRoutes from "./AppRoutes";
 
 export const render = (url) => {
@@ -9,9 +9,9 @@ export const render = (url) => {
   const appHtml = renderToString(
     <div className="m-0 p-0">
       <QueryClientProvider client={queryClient}>
-        <MemoryRouter initialEntries={[url]}>
+        <StaticRouter location={url}>
           <AppRoutes />
-        </MemoryRouter>
+        </StaticRouter>
       </QueryClientProvider>
     </div>,
   );
