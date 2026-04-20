@@ -2,37 +2,19 @@
 
 Furniture Website for Ceetech Crafts - Crafted to Inspire
 
-## Build and Prerender Safety
+## Build and Prerender Strategy
 
-Production prerender uses Puppeteer and is automatically skipped in Vercel build environments, where Chromium startup can fail due missing system libraries.
+Production prerender is generated during build using React SSR (no Puppeteer), so Vercel native Git deployments can remain fully automatic.
 
-Vercel is explicitly configured to use `npm run build:no-prerender` in `vercel.json` for deterministic build stability.
+Vercel is configured to use `npm run build` in `vercel.json`, and that command already includes prerender generation.
 
-- `npm run build`: normal production build (prerender enabled outside Vercel, skipped on Vercel)
-- `npm run build:prerender`: force prerender in production builds
-- `npm run build:no-prerender`: emergency fallback to force-disable prerender if build environment issues occur
+- `npm run build`: default production build with SSR prerender output
+- `npm run build:prerender`: explicit alias for prerender build
+- `npm run build:no-prerender`: fallback build without prerender
 - `npm run verify:prerender`: validate generated prerendered routes, rendered root markup, and critical SEO tags (title, description, canonical)
 
-If you need prerender benefits in production and still want Vercel stability, build/prerender in CI and deploy prebuilt artifacts.
+## Optional CI Validation
 
-## Prerendered Production Deploy
+The repository includes `.github/workflows/prerender-guard.yml` to validate prerender output on push/PR.
 
-This repository includes `.github/workflows/deploy-prerender-vercel.yml`, which:
-
-- builds with prerender (`npm run build:prerender`)
-- verifies prerender output (`npm run verify:prerender`)
-- deploys the prerendered `dist` output to Vercel
-
-Deployment behavior:
-
-- pushes to `prerender` deploy a prerendered preview
-- pushes to `main` deploy prerendered production
-- manual `workflow_dispatch` supports both preview and production targets
-
-Required GitHub repository secrets:
-
-- `VERCEL_TOKEN`
-- `VERCEL_ORG_ID`
-- `VERCEL_PROJECT_ID`
-
-For deterministic production results, disable automatic Vercel Git deployments in the Vercel dashboard so this workflow is the only production deploy path.
+Default Vercel automatic Git deployment does not require adding GitHub secrets and includes prerendered route output.

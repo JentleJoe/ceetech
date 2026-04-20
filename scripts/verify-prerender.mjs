@@ -64,10 +64,17 @@ for (const route of prerenderRoutes) {
   }
 
   const expectedCanonical = expectedCanonicalByRoute[route];
-  if (expectedCanonical && !html.includes(`href="${expectedCanonical}" rel="canonical"`)) {
-    failures.push(
-      `${route}: expected canonical URL not found -> ${expectedCanonical}`,
+  if (expectedCanonical) {
+    const canonicalPattern = new RegExp(
+      `<link[^>]*rel=["']canonical["'][^>]*href=["']${expectedCanonical.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["'][^>]*>|<link[^>]*href=["']${expectedCanonical.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["'][^>]*rel=["']canonical["'][^>]*>`,
+      "i",
     );
+
+    if (!canonicalPattern.test(html)) {
+      failures.push(
+        `${route}: expected canonical URL not found -> ${expectedCanonical}`,
+      );
+    }
   }
 
   const checks = routeChecks[route] ?? [];

@@ -1,30 +1,42 @@
 import { spawn } from "node:child_process";
 
 const modeArg = process.argv[2];
-const env = { ...process.env };
-
-if (modeArg === "--with-prerender") {
-  env.FORCE_PRERENDER = "1";
-  delete env.DISABLE_PRERENDER;
-} else if (modeArg === "--without-prerender") {
-  env.DISABLE_PRERENDER = "1";
-  delete env.FORCE_PRERENDER;
-} else {
+if (!["--with-prerender", "--without-prerender"].includes(modeArg)) {
   console.error("Usage: node scripts/run-build.mjs --with-prerender|--without-prerender");
   process.exit(1);
 }
 
-const child = spawn("npx vite build", {
-  stdio: "inherit",
-  env,
-  shell: true,
-});
+const runCommand = (command) =>
+  new Promise((resolve, reject) => {
+    const child = spawn(command, {
+      stdio: "inherit",
+      env: process.env,
+      shell: true,
+    });
 
-child.on("exit", (code, signal) => {
-  if (signal) {
-    process.kill(process.pid, signal);
-    return;
+    child.on("exit", (code, signal) => {
+      if (signal) {
+        process.kill(process.pid, signal);
+        return;
+      }
+
+      if ((code ?? 1) !== 0) {
+        reject(new Error(`Command failed: ${command}`));
+        return;
+      }
+
+      resolve();
+    });
+  });
+
+try {
+  await runCommand("npx vite build");
+
+  if (modeArg === "--with-prerender") {
+    await runCommand("npx vite build --ssr src/entry-server.jsx --outDir dist/server --emptyOutDir false");
+    await runCommand("node scripts/prerender-ssr.mjs");
   }
-
-  process.exit(code ?? 1);
-});
+} catch (error) {
+  console.error(error.message);
+  process.exit(1);
+}
