@@ -283,6 +283,11 @@ div[role="region"][aria-label*="Notifications"] ol {
     animation: fade-in 0.3s ease-out forwards;
     opacity: 0;
   }
+
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 900px;
+  }
 }
 
 /* React Multi Carousel Custom Styles */

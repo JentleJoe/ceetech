@@ -15,14 +15,30 @@ const Index = () => {
     <div className="min-h-screen bg-background relative m-0 p-0">
       <Header />
       <Hero />
-      <Collection />
-      <About />
-      <BrandStory />
-      <ProductShowcase />
-      <FurnituresByCeetech />
-      <InteriorsByCeetech />
-      <CustomerReviews />
-      <Footer />
+      <div className="cv-auto">
+        <Collection />
+      </div>
+      <div className="cv-auto">
+        <About />
+      </div>
+      <div className="cv-auto">
+        <BrandStory />
+      </div>
+      <div className="cv-auto">
+        <ProductShowcase />
+      </div>
+      <div className="cv-auto">
+        <FurnituresByCeetech />
+      </div>
+      <div className="cv-auto">
+        <InteriorsByCeetech />
+      </div>
+      <div className="cv-auto">
+        <CustomerReviews />
+      </div>
+      <div className="cv-auto">
+        <Footer />
+      </div>
     </div>
   );
 };
