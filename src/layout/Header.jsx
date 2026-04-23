@@ -69,7 +69,7 @@ const Header = () => {
               alt="Ceetech Crafts Logo" 
               className="h-16 w-auto"
               loading="eager"
-              fetchPriority="high"
+              fetchpriority="high"
               decoding="async"
             />
           </Link>
