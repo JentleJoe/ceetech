@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { Menu, X, Facebook, Instagram } from 'lucide-react'
 import logoVertical from '../assets/logoVertical.png'
+import logoVerticalSmall from '../assets/logoVertical.png?w=224'
+import logoVerticalLarge from '../assets/logoVertical.png?w=449'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -65,7 +67,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="transition-opacity duration-300 hover:opacity-80">
             <img 
-              src={logoVertical} 
+              src={logoVerticalLarge}
+              srcSet={`${logoVerticalSmall} 224w, ${logoVerticalLarge} 449w`}
+              sizes="(max-width: 768px) 112px, 185px"
               alt="Ceetech Crafts Logo" 
               className="h-16 w-auto"
               loading="eager"
