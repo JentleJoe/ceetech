@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { ArrowRight } from 'lucide-react'
 import CarouselModule from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
@@ -68,6 +68,29 @@ const tvConsoleImage = {
 
 const FurnituresByCeetech = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null)
+  const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true)
+            // Only observe once
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
 
   const furnitureProducts = [
     {
@@ -103,7 +126,7 @@ const FurnituresByCeetech = () => {
   ]
 
   const responsive = {
-    superLargeDesktop: {
+    superLargref={sectionRef} eDesktop: {
       breakpoint: { max: 4000, min: 1200 },
       items: 4,
       slidesToSlide: 2
@@ -149,7 +172,7 @@ const FurnituresByCeetech = () => {
           <Carousel
             responsive={responsive}
             infinite={true}
-            autoPlay={true}
+            autoPlay={isVisible}
             autoPlaySpeed={3000}
             keyBoardControl={true}
             customTransition="transform 300ms ease-in-out"
