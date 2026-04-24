@@ -5,7 +5,9 @@ const ELFSIGHT_SCRIPT_SRC = 'https://elfsightcdn.com/platform.js'
 
 const CustomerReviews = () => {
   const widgetSectionRef = useRef(null)
+  const widgetHostRef = useRef(null)
   const [shouldLoadWidget, setShouldLoadWidget] = useState(false)
+  const [isWidgetReady, setIsWidgetReady] = useState(false)
 
   // Defer widget activation until the user scrolls near this section.
   useEffect(() => {
@@ -49,6 +51,34 @@ const CustomerReviews = () => {
     script.defer = true
     script.dataset.elfsightPlatform = 'true'
     document.body.appendChild(script)
+  }, [shouldLoadWidget])
+
+  useEffect(() => {
+    if (!shouldLoadWidget) {
+      setIsWidgetReady(false)
+      return
+    }
+
+    const host = widgetHostRef.current
+    if (!host) return
+
+    const markReadyIfMounted = () => {
+      if (host.childElementCount > 0) {
+        setIsWidgetReady(true)
+      }
+    }
+
+    markReadyIfMounted()
+
+    const observer = new MutationObserver(() => {
+      markReadyIfMounted()
+    })
+
+    observer.observe(host, { childList: true, subtree: true })
+
+    return () => {
+      observer.disconnect()
+    }
   }, [shouldLoadWidget])
 
   const reviews = [
@@ -169,7 +199,22 @@ const CustomerReviews = () => {
             <p className="text-charcoal/70">See what our customers are saying on Google</p>
           </div>
           {shouldLoadWidget ? (
-            <div className="elfsight-app-96fad6cf-47ff-4f0b-acb0-f25bee36f551" data-elfsight-app-lazy></div>
+            <div className="relative min-h-[220px] rounded-xl border border-charcoal/10 bg-white/40 py-4 sm:py-6">
+              <div
+                ref={widgetHostRef}
+                className="elfsight-app-96fad6cf-47ff-4f0b-acb0-f25bee36f551"
+                data-elfsight-app-lazy
+              ></div>
+              {!isWidgetReady && (
+                <div
+                  className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-charcoal"
+                  aria-live="polite"
+                >
+                  <div className="h-8 w-8 animate-spin rounded-full border-2 border-charcoal/20 border-t-charcoal"></div>
+                  <p className="text-sm font-medium tracking-wide">Loading Google reviews...</p>
+                </div>
+              )}
+            </div>
           ) : (
             <div
               className="min-h-[220px] rounded-xl border border-charcoal/10 bg-white/50 animate-pulse"
