@@ -126,7 +126,7 @@ const FurnituresByCeetech = () => {
   ]
 
   const responsive = {
-    superLargref={sectionRef} eDesktop: {
+    superLargeDesktop: {
       breakpoint: { max: 4000, min: 1200 },
       items: 4,
       slidesToSlide: 2
@@ -149,7 +149,7 @@ const FurnituresByCeetech = () => {
   }
 
   return (
-    <section className="py-20 bg-white">
+    <section ref={sectionRef} className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">

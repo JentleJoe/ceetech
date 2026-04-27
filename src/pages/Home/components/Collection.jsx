@@ -155,7 +155,7 @@ const Collection = () => {
   ]
 
   const responsive = {
-    superLargref={sectionRef} eDesktop: {
+    superLargeDesktop: {
       breakpoint: { max: 4000, min: 1200 },
       items: 4,
       slidesToSlide: 2
@@ -178,7 +178,7 @@ const Collection = () => {
   }
 
   return (
-    <section id="collection" className="py-20 bg-charcoal">
+    <section ref={sectionRef} id="collection" className="py-20 bg-charcoal">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-playfair text-white mb-4">Our</h2>
